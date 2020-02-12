@@ -2,7 +2,7 @@
 require __DIR__.'/vendor/autoload.php';
 \Dotenv\Dotenv::create(__DIR__, '.env')->load();
 
-$server = "mailcoach.app";
+$server = "medialibrary.pro";
 $userAndServer = 'forge@'. $server;
 $repository = "spatie/{$server}";
 $baseDir = "/home/forge/{$server}";

@@ -19,26 +19,26 @@ class Satis
     {
         $data = $this->getAllPackageData();
 
-        $mailcoach = $data["spatie/{$package}"];
-        $latest = collect(array_keys($mailcoach))
+        $packageData = $data["spatie/{$package}"];
+        $latest = collect(array_keys($packageData))
             ->reduce(function ($carry, $item) {
                 return version_compare($carry, $item, '>') ? $carry : $item;
             });
 
         return [
             'version' => $latest,
-            'released_at' => Carbon::parse($mailcoach[$latest]['time'])->format('Y-m-d H:i:s'),
+            'released_at' => Carbon::parse($packageData[$latest]['time'])->format('Y-m-d H:i:s'),
         ];
     }
 
     private function getAllPackageData(): array
     {
-        $response = $this->client->get('https://satis.mailcoach.app/packages.json');
+        $response = $this->client->get('https://satis.medialibrary.pro/packages.json');
 
         $data = json_decode($response->getBody()->getContents(), true);
         $all = array_key_first($data['includes']);
 
-        $response = $this->client->get("https://satis.mailcoach.app/{$all}");
+        $response = $this->client->get("https://satis.medialibrary.pro/{$all}");
 
         $data = json_decode($response->getBody()->getContents(), true);
 
