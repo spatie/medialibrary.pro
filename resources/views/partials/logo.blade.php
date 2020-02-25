@@ -1,5 +1,5 @@
 
-<svg class="logo" version="1.1" xmlns="http://www.w3.org/2000/svg"x="0px" y="0px"
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg"x="0px" y="0px"
 viewBox="0 0 512 512">
     <path class="logo-shadow" style="opacity:0.1;" d="M485.2,500.1H71.5c-7.6,0-13.8-6.2-13.8-13.8V72.7c0-7.6,6.2-13.8,13.8-13.8h413.7
    c7.6,0,13.8,6.2,13.8,13.8v413.7C499,494,492.8,500.1,485.2,500.1z"/>

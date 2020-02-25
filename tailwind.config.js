@@ -107,8 +107,7 @@ module.exports = {
                 full: "100%"
             },
             boxShadow: {
-                body: "0 0 50px rgba(0,0,0,.05)",
-                focus: "0 2px 2px var(--gray-100)"
+                logo: "5px 5px 0 var(--dark-100)"
             },
             letterSpacing: {
                 logo: ".35em"

@@ -6,12 +6,12 @@
 
     --blue-50: rgb(246, 249, 251);
     --blue-100: #e8eff6;
-    --blue-200: rgb(192, 224, 250);
+    --blue-200: #a19bb7;
     --blue-300: #97c6f3;
-    --blue-400: #5baaf9;
+    --blue-400: #716993;
     --blue-500: #1288ff;
     --blue-600: #0574e3;
-    --blue-700: #2565a3;
+    --blue-700: #42376e;
     --blue-800: #1d4a75;
     --blue-900: #13034a;
 
@@ -79,7 +79,21 @@
 
 html {
     box-sizing: border-box;
-    font-size: 18px;
+    font-size: 14px;
+}
+
+@screen sm {
+    html {
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+}
+
+@screen md {
+    html {
+        box-sizing: border-box;
+        font-size: 18px;
+    }
 }
 
 /* Exclude iframes like 1Password save modals */

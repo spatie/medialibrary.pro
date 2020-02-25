@@ -1,6 +1,6 @@
 @extends('front.layouts.master')
 
-@section('title', 'Front end components')
+@section('title', 'UI components')
 
 @section('content')
 

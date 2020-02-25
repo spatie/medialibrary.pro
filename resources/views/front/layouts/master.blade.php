@@ -17,53 +17,99 @@
 
     </head>
     <body class="flex flex-col min-h-screen">
-        <header class="py-8 flex justify-center">
+        <div class="logo-backlight"></div>
+
+        <header class="py-12 flex justify-center">
             <a class="flex flex-col items-center" title="Home" href="/">
-                <span class="block h-12 w-12">
-                @include('partials.logo')
+                <span class="logo">
+                    @include('partials.logo')
                 </span>
-                <h1 class="mt-3 text-xs uppercase tracking-logo leading-tight">
+                <h1 class="mt-3 text-xs uppercase tracking-logo leading-tight font-medium">
                     Medialibrary
                     <span class="text-red-500">Pro</span>
                 </h1>
             </a>
         </header>
 
-        <main class="z-10 flex-1 mx-auto px-8 w-full max-w-4xl bg-red-500 text-white">
-            <blockquote class="py-12 font-extrabold text-4xl text-center">
-                ‘Boy, I could cry’
-            </blockquote>
-
-            <div class="flex pb-32">
-                <div class="w-1/2">
-                    <h2 class="text-xl text-center font-semibold">Subscribe for updates</h2>
+        <main class="z-10 mt-2 px-4 | sm:px-8 | md:mt-4 md:px-12 | lg:mt-8 lg:px-16">
+            <div class="mx-auto w-full max-w-4xl bg-red-500 shadow-logo rounded">
+                <div class="😢">
+                    <img loading="eager" srcset="/images/boy-900.jpg 900w,
+                    /images/boy-600.jpg 600w,
+                    /images/boy-300.jpg 300w" sizes="(min-width: 640px) 50vw, 100vw" src="/images/boy-900.jpg" alt="Crying boy by Giovanni Bragolin">
                 </div>
 
-                <ul class="w-1/2 text-xl text-right font-semibold">
-                    <li class="text-yellow-300">
-                        Coming spring 2020
-                    </li>
-                    <li class="mt-6">
-                        Front end components for <span class="whitespace-no-wrap">laravel-medialibrary</span>
-                    </li>
-                    <li class="mt-6">
-                        Includes Vanilla JS, React and Vue components
-                    </li>
-                    <li class="mt-6">
-                        Laravel Vapor support
-                    </li>
-                </ul>
+                <blockquote class="z-10 absolute top-0 left-0 w-full h-48 flex items-center justify-center font-black text-white text-3xl text-center leading-tight | sm:text-4xl md:text-5xl">
+                    <span>
+                        <span class="font-light mr-1">“</span>Boy, I could cry<span class="font-light ml-1">”</span>
+                    </span>
+                </blockquote>
+
+                <div class="pt-48 pb-32 | sm:flex | lg:pb-48">
+                    <div class="px-12 max-w-lg sm:flex flex-col items-center | sm:w-1/2">
+                        <div class="max-w-xs w-full">
+                            <form action="/subscribe" method="post">
+                                <label for="email" class="font-semibold text-yellow-300 text-lg leading-snug">
+                                    {{ session()->has('subscribed')? "Thanks! You'll hear from us soon" : "Subscribe for updates" }}
+                                </label>
+
+                                @honeypot
+                                @csrf
+
+                                <div class="mt-6 subscribe">
+                                    <input placeholder="Your email" class="subscribe-input" type="email" id="email" name="email" required autofocus/>
+
+                                    <button type="submit" class="subscribe-button">
+                                        <span class="subscribe-button-icon">-></span>
+                                    </button>
+                                </div>
+
+                                <div class="mt-6 flex text-white text-xs">
+                                    @error('email')
+                                        <span class="flex-none mr-2 text-red-500 bg-yellow-300 rounded-full h-6 w-6 inline-flex items-center justify-center font-black ">!</span>
+                                        <span class="opacity-50">{{ $message }}</span>
+                                    @else
+                                        <span class="opacity-50">Your address will only be used for updates on Medialibrary Pro</span>
+                                    @enderror
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <ul class="px-12 pt-24 text-lg text-white font-semibold leading-snug | sm:pt-0 sm:w-1/2 sm:text-right">
+                        <li class="text-yellow-300">
+                            Coming spring 2020
+                        </li>
+                        <li class="mt-6">
+                            UI elements for <a class="a-border whitespace-no-wrap" href="https://github.com/spatie/laravel-medialibrary">spatie/laravel-medialibrary</a>
+                        </li>
+                        <li class="mt-6">
+                            Includes React and Vue <span class="whitespace-no-wrap">renderless components</span>
+                        </li>
+                        <li class="mt-6">
+                            Tailwind CSS styles
+                        </li>
+                        <li class="mt-6">
+                            Laravel Vapor support
+                        </li>
+                        <li class="mt-6">
+                            Temporary uploads
+                        </li>
+                    </ul>
+                </div>
             </div>
         </main>
 
-        <footer class="-mt-32 pt-32 bg-blue-900">
-            <p class="py-16 flex justify-center items-baseline text-white text-xs text-center leading-none">
-                <span>
-                    <a href="https://spatie.be">laravel-medialibrary on GitHub</a>
+        <footer class="flex-1 -mt-32 pt-32 bg-blue-900">
+            <p class="py-16 flex justify-center items-center text-white text-xs text-center leading-none">
+                <span >
+                    <a class="a-border text-blue-400 | hover:text-blue-200" href="https://github.com/spatie/laravel-medialibrary">Laravel-medialibrary <span class="hidden | sm:inline">on GitHub</span></a>
                 </span>
-                <span class="mx-3 text-xl text-yellow-300">•</span>
-                <span>
-                    © {{ date('Y') }} <a href="https://spatie.be">spatie.be</a>
+
+                <span class="mx-4 w-2 h-2 rounded-full bg-blue-700"></span>
+
+                <span class="text-blue-400">
+                    Made by <a class="a-border text-blue-400 uppercase tracking-wider | hover:text-blue-200" href="https://spatie.be">spatie</a>
                 </span>
             </p>
         </footer>
