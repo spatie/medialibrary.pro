@@ -82,14 +82,14 @@ html {
     font-size: 14px;
 }
 
-@screen sm {
+@screen md {
     html {
         box-sizing: border-box;
         font-size: 16px;
     }
 }
 
-@screen md {
+@screen lg {
     html {
         box-sizing: border-box;
         font-size: 18px;

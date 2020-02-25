@@ -64,7 +64,7 @@
                                     </button>
                                 </div>
 
-                                <div class="mt-6 flex text-white text-xs">
+                                <div class="mt-6 flex items-baseline text-white text-xs">
                                     @error('email')
                                         <span class="flex-none mr-2 text-red-500 bg-yellow-300 rounded-full h-6 w-6 inline-flex items-center justify-center font-black ">!</span>
                                         <span class="opacity-50">{{ $message }}</span>

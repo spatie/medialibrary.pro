@@ -26,15 +26,15 @@
 }
 
 .logo-sun {
-    animation: ease-out 1s 0.75s 1 sunrise forwards;
+    animation: ease-out 1s 1s 1 sunrise forwards;
 }
 
 .logo-sky {
-    animation: ease-out 1s 0.75s 1 skylight forwards;
+    animation: ease-out 1s 1s 1 skylight forwards;
 }
 
 .logo-backlight {
-    animation: ease-out 1s 0.75s 1 backlight forwards;
+    animation: ease-out 1s 1s 1 backlight forwards;
     @apply bg-blue-200;
     @apply fixed;
     @apply inset-0;
@@ -73,6 +73,8 @@
     @apply rounded-full;
     @apply shadow-logo;
     @apply overflow-hidden;
+    @apply border-2;
+    @apply border-white;
     backface-visibility: hidden;
     transform: translate3d(0, 0, 0);
 }
@@ -80,48 +82,52 @@
 .subscribe-input {
     @apply h-10;
     @apply pl-4;
-    @apply pr-12;
     @apply bg-white;
+    @apply border-none;
     @apply rounded-full;
+    width: calc(100% - 2.25rem);
 }
 
 .subscribe-button {
     @apply absolute;
-    right: 2px;
-    top: 2px;
-    width: calc(2.5rem - 4px);
-    height: calc(2.5rem - 4px);
-    @apply rounded-full;
-    @apply bg-yellow-300;
-    @apply text-blue-900;
-    @apply text-center;
-    @apply font-black;
-    transform: translateY(calc(100% + 4px));
-    transition: transform 0.5s 1s ease;
+    @apply right-0;
+    @apply top-0;
+    transform: scale(0);
+    transition: transform 0.5s ease;
 }
 
-.subscribe-button-icon {
-    margin-right: -0.3em;
+.subscribe-input:focus + .subscribe-button {
+    transform: scale(1);
 }
 
-.subscribe-input:valid + .subscribe-button {
-    transform: translateY(0);
-    transition-delay: 0s;
-}
-
-.subscribe-input:valid:focus + .subscribe-button:hover {
-    transform: scale(0.85);
-}
-
-.subscribe-button:focus {
-    border: dotted 2px;
-    @apply border-blue-900;
-    transform: scale(0.85);
+.subscribe-button:focus,
+.subscribe-button:active {
+    transform: scale(1);
     transition: none;
 }
 
-.subscribe-button:active {
-    transform: scale(0.65) !important;
+.subscribe-button-icon {
+    @apply flex;
+    @apply rounded-full;
+    @apply bg-yellow-300;
+    @apply text-blue-900;
+    @apply items-center;
+    @apply justify-center;
+    @apply font-black;
+    @apply opacity-100;
+    @apply h-10;
+    @apply w-10;
+    text-indent: 0.25em;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.subscribe-input:invalid + .subscribe-button .subscribe-button-icon {
+    @apply opacity-50;
+    @apply cursor-not-allowed;
+}
+
+.subscribe-button:active .subscribe-button-icon {
+    transform: scale(0.65);
 }
 
 .😢 {
