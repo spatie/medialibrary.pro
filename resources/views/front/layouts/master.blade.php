@@ -49,7 +49,7 @@
                     <div class="px-12 max-w-lg sm:flex flex-col items-center | sm:w-1/2">
                         <div class="max-w-xs w-full">
                             <form action="/subscribe" method="post">
-                                <label for="email" class="font-semibold text-yellow-300 text-lg leading-snug">
+                                <label for="email" class="font-semibold text-yellow-300 text-lg leading-snug | lg:text-xl">
                                     {{ session()->has('subscribed')? "Thanks! You'll hear from us soon" : "Subscribe for updates" }}
                                 </label>
 
@@ -76,7 +76,7 @@
                         </div>
                     </div>
 
-                    <ul class="px-12 pt-24 text-lg text-white font-semibold leading-snug | sm:pt-0 sm:w-1/2 sm:text-right">
+                    <ul class="px-12 pt-24 text-lg text-white font-semibold leading-snug | sm:pt-0 sm:w-1/2 sm:text-right | lg:text-xl">
                         <li class="text-yellow-300">
                             Coming spring 2020
                         </li>
