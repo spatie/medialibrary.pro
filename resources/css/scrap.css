@@ -146,6 +146,7 @@
     @apply w-full;
     @apply h-full;
     @apply object-cover;
+    object-position: 50% 75%;
 }
 
 @screen sm {
