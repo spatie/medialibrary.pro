@@ -14,12 +14,11 @@ Route::post('webhook/github', GitHubWebhookController::class);
 
 Route::demoAccess('/demo');
 
-
 Route::group(['middleware' => 'demoMode'], function () {
     Route::get('/', HomeController::class);
     Route::post('subscribe', SubscribeToEmailListController::class)->middleware(ProtectAgainstSpam::class);
 
-    Route::redirect('docs', '/docs/general/welcome')->name('docs');
+    /* Route::redirect('docs', '/docs/general/welcome')->name('docs');
     Route::get('docs/{slug?}', DocumentationController::class)->where('slug', '(.*)');
 
     Route::view('videos', 'front.videos.index')->name('videos');
@@ -29,4 +28,5 @@ Route::group(['middleware' => 'demoMode'], function () {
 
     Route::view('terms-of-use', 'front.legal.terms-of-use')->name('termsOfUse');
     Route::view('privacy', 'front.legal.privacy')->name('privacy');
+    */
 });
