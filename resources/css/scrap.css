@@ -1,0 +1,26 @@
+/* Start position also repeat in inline styles in the SVG */
+.logo-sun {
+    animation: 1.5s ease-out 0.5s 1 sunrise forwards;
+}
+
+.logo-sky {
+    animation: 1.5s ease-out 0.5s 1 skylight forwards;
+}
+
+@keyframes sunrise {
+    0% {
+        transform: translateY(200px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes skylight {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}

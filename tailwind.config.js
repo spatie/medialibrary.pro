@@ -16,14 +16,12 @@ module.exports = {
                 '"Segoe UI Emoji"',
                 '"Segoe UI Symbol"',
                 '"Noto Color Emoji"'
-            ],
-            serif: ["Playfair Display", "serif"]
+            ]
         },
         colors: {
             transparent: "transparent",
             white: "var(--white)",
             black: "var(--black)",
-            backdrop: "var(--backdrop)",
             blue: {
                 50: "var(--blue-50)",
                 100: "var(--blue-100)",
@@ -47,16 +45,16 @@ module.exports = {
                 800: "var(--green-800)",
                 900: "var(--green-900)"
             },
-            orange: {
-                100: "var(--orange-100)",
-                200: "var(--orange-200)",
-                300: "var(--orange-300)",
-                400: "var(--orange-400)",
-                500: "var(--orange-500)",
-                600: "var(--orange-600)",
-                700: "var(--orange-700)",
-                800: "var(--orange-800)",
-                900: "var(--orange-900)"
+            yellow: {
+                100: "var(--yellow-100)",
+                200: "var(--yellow-200)",
+                300: "var(--yellow-300)",
+                400: "var(--yellow-400)",
+                500: "var(--yellow-500)",
+                600: "var(--yellow-600)",
+                700: "var(--yellow-700)",
+                800: "var(--yellow-800)",
+                900: "var(--yellow-900)"
             },
             red: {
                 100: "var(--red-100)",
@@ -112,9 +110,8 @@ module.exports = {
                 body: "0 0 50px rgba(0,0,0,.05)",
                 focus: "0 2px 2px var(--gray-100)"
             },
-            opacity: {
-                80: "0.8",
-                90: "0.9"
+            letterSpacing: {
+                logo: ".35em"
             },
             minHeight: {
                 10: "2.5rem"
