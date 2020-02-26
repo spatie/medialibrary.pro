@@ -49,7 +49,7 @@
                     <div class="px-12 max-w-lg sm:flex flex-col items-center | sm:w-1/2">
                         <div class="max-w-xs w-full">
                             <form action="/subscribe" method="post">
-                                <label for="email" class="font-semibold text-yellow-300 text-lg leading-snug | lg:text-xl">
+                                <label for="email" class="font-bold text-yellow-300 text-lg leading-snug | lg:text-xl">
                                     {{ session()->has('subscribed')? "Thanks! You'll hear from us soon" : "Subscribe for updates" }}
                                 </label>
 
@@ -64,9 +64,9 @@
                                     </button>
                                 </div>
 
-                                <div class="mt-6 flex items-baseline text-white text-xs">
+                                <div class="mt-6 flex items-baseline text-white text-xs font-medium">
                                     @error('email')
-                                        <span class="flex-none mr-2 text-red-500 bg-yellow-300 rounded-full h-6 w-6 inline-flex items-center justify-center font-black ">!</span>
+                                        <span class="flex-none mr-2 text-red-500 bg-yellow-300 rounded-full h-6 w-6 inline-flex items-center justify-center font-bold ">!</span>
                                         <span class="opacity-50">{{ $message }}</span>
                                     @else
                                         <span class="opacity-50">Your address will only be used for updates on Medialibrary Pro</span>
@@ -76,7 +76,7 @@
                         </div>
                     </div>
 
-                    <ul class="px-12 pt-24 text-lg text-white font-semibold leading-snug | sm:pt-0 sm:w-1/2 sm:text-right | lg:text-xl">
+                    <ul class="px-12 pt-24 text-lg text-white font-bold leading-snug | sm:pt-0 sm:w-1/2 sm:text-right | lg:text-xl">
                         <li class="text-yellow-300">
                             Coming spring 2020
                         </li>
@@ -101,12 +101,12 @@
         </main>
 
         <footer class="flex-1 -mt-32 pt-32 bg-blue-900">
-            <p class="py-16 flex justify-center items-center text-white text-xs text-center leading-none">
+            <p class="py-16 flex justify-center items-center text-white text-xs text-center leading-none font-medium">
                 <span >
                     <a class="a-border text-blue-400 | hover:text-blue-200" href="https://docs.spatie.be/laravel-medialibrary">laravel-medialibrary <span class="hidden | sm:inline">documentation</span></a>
                 </span>
 
-                <span class="mx-4 w-2 h-2 rounded-full bg-blue-700"></span>
+                <span class="mx-4 w-2 h-2 rounded-full bg-yellow-300"></span>
 
                 <span class="text-blue-400">
                     Made by <a class="a-border text-blue-400 uppercase tracking-wider | hover:text-blue-200" href="https://spatie.be">spatie</a>
