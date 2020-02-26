@@ -1,0 +1,179 @@
+.a-border {
+    z-index: 1;
+}
+.a-border:after {
+    content: "";
+    @apply absolute;
+    @apply w-full;
+    @apply left-0;
+    @apply bottom-0;
+    @apply bg-yellow-300;
+    opacity: 0.25;
+    height: 0.2em;
+    transition: opacity 0.3s ease-out;
+    z-index: -1;
+}
+
+.a-border:hover:after {
+    opacity: 0.5;
+}
+
+/* Start position also repeat in inline styles in the SVG */
+.logo {
+    @apply block;
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.logo-sun {
+    animation: ease-out 1s 1s 1 sunrise forwards;
+}
+
+.logo-sky {
+    animation: ease-out 1s 1s 1 skylight forwards;
+}
+
+.logo-backlight {
+    animation: ease-out 1s 1s 1 backlight forwards;
+    @apply bg-blue-200;
+    @apply fixed;
+    @apply inset-0;
+    opacity: 0.2;
+}
+
+@keyframes sunrise {
+    0% {
+        transform: translateY(200px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes skylight {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes backlight {
+    0% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 0.1;
+    }
+}
+
+.subscribe {
+    @apply bg-white;
+    @apply rounded-full;
+    @apply shadow-logo;
+    @apply overflow-hidden;
+    @apply border-2;
+    @apply border-white;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+}
+
+.subscribe-input {
+    @apply h-10;
+    @apply pl-4;
+    @apply bg-white;
+    @apply border-none;
+    @apply rounded-full;
+    width: calc(100% - 2.25rem);
+}
+
+.subscribe-button {
+    @apply absolute;
+    @apply right-0;
+    @apply top-0;
+    transform: scale(1);
+    transition: transform 0.5s ease;
+}
+
+.subscribe-input:invalid + .subscribe-button {
+    @apply cursor-not-allowed;
+}
+
+.subscribe-input:valid + .subscribe-button:hover {
+    transform: scale(0.85);
+}
+
+.subscribe-input:valid + .subscribe-button:active {
+    transform: scale(0.5);
+}
+
+.subscribe-button-icon {
+    @apply flex;
+    @apply rounded-full;
+    @apply text-blue-900;
+    @apply bg-yellow-300;
+    @apply items-center;
+    @apply justify-center;
+    @apply font-black;
+    @apply h-10;
+    @apply w-10;
+    @apply leading-none;
+    text-indent: 0.25em;
+    transform: rotate(0);
+    transition: transform 0.5s ease, color 0.5s ease, background 0.5s ease;
+}
+
+.subscribe-input:invalid + .subscribe-button .subscribe-button-icon {
+    transform: rotate(180deg);
+    @apply bg-gray-100;
+    @apply text-red-500;
+    transition-delay: 0.5s;
+}
+
+.🖼 {
+    @apply rounded;
+    @apply overflow-hidden;
+    left: 1rem;
+    right: 1rem;
+    top: -1rem;
+    opacity: 0.67;
+    width: calc(100% - 2rem);
+    height: 24rem;
+    margin-bottom: -24rem;
+}
+
+.🖼 img {
+    @apply w-full;
+    @apply h-full;
+    @apply object-cover;
+    object-position: center center;
+}
+
+@screen sm {
+    .🖼 {
+        @apply absolute;
+        left: -1rem;
+        right: 50%;
+        bottom: 1rem;
+        width: auto;
+        height: auto;
+        margin-bottom: 0;
+    }
+}
+
+@screen md {
+    .🖼 {
+        left: -1.5rem;
+        top: -1.5rem;
+        bottom: 1.5rem;
+    }
+}
+
+@screen lg {
+    .🖼 {
+        left: -2rem;
+        top: -2rem;
+        bottom: 2rem;
+    }
+}

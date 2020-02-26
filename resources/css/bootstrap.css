@@ -2,19 +2,18 @@
 
 :root {
     --white: #fff;
-    --black: #0b2642;
-    --backdrop: rgba(0, 0, 0, 0.75);
+    --black: #13034a;
 
     --blue-50: rgb(246, 249, 251);
     --blue-100: #e8eff6;
-    --blue-200: rgb(192, 224, 250);
+    --blue-200: #a19bb7;
     --blue-300: #97c6f3;
-    --blue-400: #5baaf9;
+    --blue-400: #716993;
     --blue-500: #1288ff;
     --blue-600: #0574e3;
-    --blue-700: #2565a3;
+    --blue-700: #42376e;
     --blue-800: #1d4a75;
-    --blue-900: rgb(11, 38, 66);
+    --blue-900: #13034a;
 
     --green-100: #ebf9ea;
     --green-200: #c7f0bf;
@@ -26,21 +25,21 @@
     --green-800: #235c41;
     --green-900: #133d35;
 
-    --orange-100: #f5f1e4;
-    --orange-200: #fde4a0;
-    --orange-300: #f6cc6e;
-    --orange-400: #fcc95c;
-    --orange-500: #ffca2b;
-    --orange-600: #da9215;
-    --orange-700: #995218;
-    --orange-800: #74431b;
-    --orange-900: #4f331d;
+    --yellow-100: #f5f1e4;
+    --yellow-200: #fde4a0;
+    --yellow-300: #ffe375;
+    --yellow-400: #fcc95c;
+    --yellow-500: #ffca2b;
+    --yellow-600: #da9215;
+    --yellow-700: #995218;
+    --yellow-800: #74431b;
+    --yellow-900: #4f331d;
 
     --red-100: #f0e7e6;
     --red-200: #f0d2d1;
     --red-300: #de9fa6;
     --red-400: #cc6875;
-    --red-500: #cc344c;
+    --red-500: #c42543;
     --red-600: #a93147;
     --red-700: #862f42;
     --red-800: #632c3d;
@@ -80,18 +79,20 @@
 
 html {
     box-sizing: border-box;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 @screen md {
     html {
-        font-size: 14px;
+        box-sizing: border-box;
+        font-size: 16px;
     }
 }
 
 @screen lg {
     html {
-        font-size: 16px;
+        box-sizing: border-box;
+        font-size: 18px;
     }
 }
 
@@ -111,6 +112,4 @@ body {
     @apply text-black;
     @apply leading-normal;
     @apply w-full;
-
-    font-feature-settings: "ss01" 1;
 }
