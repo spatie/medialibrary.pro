@@ -152,7 +152,7 @@ ls -dt {{ $releasesDir }}/* | tail -n +6 | xargs -d "\n" rm -rf;
 {{ logMessage("💻  Deploying code changes...") }}
 cd {{ $currentDir }}
 git pull origin master
-php artisan mailcoach:update-docs
+php artisan app:update-docs
 php artisan config:clear
 php artisan cache:clear
 php artisan config:cache
