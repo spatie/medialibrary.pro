@@ -41,7 +41,7 @@
 
                 <blockquote class="z-10 absolute top-0 left-0 w-full h-64 flex items-center justify-center font-bold text-white text-3xl text-center leading-tight | md:text-4xl | lg:text-5xl">
                     <span>
-                        A good picture<br>needs a frame
+                        Every picture<br>needs a frame
                     </span>
                 </blockquote>
 
