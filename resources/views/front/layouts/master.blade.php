@@ -67,49 +67,54 @@
                                 <div class="mt-6 flex items-baseline text-white text-xs font-medium">
                                     @error('email')
                                         <span class="flex-none mr-2 text-red-500 bg-yellow-300 rounded-full h-6 w-6 inline-flex items-center justify-center font-bold ">!</span>
-                                        <span class="opacity-50">{{ $message }}</span>
+                                        <span class="opacity-75">{{ $message }}</span>
                                     @else
-                                        <span class="opacity-50">Your address will only be used for updates on Medialibrary Pro</span>
+                                        <span class="opacity-75">Your address will only be used for updates on Medialibrary Pro</span>
                                     @enderror
                                 </div>
                             </form>
                         </div>
                     </div>
 
-                    <ul class="px-12 pt-24 text-lg text-white font-bold leading-snug | sm:pt-0 sm:w-1/2 sm:text-right | lg:text-xl">
-                        <li class="text-yellow-300">
-                            Coming spring 2020
-                        </li>
-                        <li class="mt-6">
-                            UI elements for <a class="a-border whitespace-no-wrap" href="https://docs.spatie.be/">spatie/laravel-medialibrary</a>
-                        </li>
-                        <li class="mt-6">
-                            Includes React and Vue <span class="whitespace-no-wrap">renderless components</span>
-                        </li>
-                        <li class="mt-6">
-                            Tailwind CSS styles
-                        </li>
-                        <li class="mt-6">
-                            Laravel Vapor support
-                        </li>
-                        <li class="mt-6">
-                            Temporary uploads
-                        </li>
-                    </ul>
+                    <div class="px-12 pt-24 | sm:pt-0 sm:w-1/2 sm:text-right">
+                        <ul class="text-lg text-white font-bold leading-snug | lg:text-xl">
+                            <li class="text-yellow-300">
+                                Coming spring 2020
+                            </li>
+                            <li class="mt-6">
+                                UI elements for <a class="a-border whitespace-no-wrap" href="https://docs.spatie.be/laravel-medialibrary/">spatie/laravel-medialibrary</a>
+                            </li>
+                            <li class="mt-6">
+                                Includes React and Vue <span class="whitespace-no-wrap">renderless components</span>
+                            </li>
+                            <li class="mt-6">
+                                Tailwind CSS styles
+                            </li>
+                            <li class="mt-6">
+                                Laravel Vapor support
+                            </li>
+                            <li class="mt-6">
+                                Temporary uploads
+                            </li>
+                        </ul>
+                        <p class="mt-6 text-white text-xs font-medium opacity-75">
+                            This will be a fair-priced add-on. <br>Don't worry, the original Medialibrary will still be free!
+                        </p>
+                    </div>
                 </div>
             </div>
         </main>
 
         <footer class="flex-1 -mt-32 pt-32 bg-blue-900">
-            <p class="py-16 flex justify-center items-center text-white text-xs text-center leading-none font-medium">
-                <span >
-                    <a class="a-border text-blue-400 | hover:text-blue-200" href="https://docs.spatie.be/laravel-medialibrary">laravel-medialibrary <span class="hidden | sm:inline">documentation</span></a>
+            <p class="py-16 flex justify-around items-center text-white text-xs text-center leading-none font-medium">
+                <span class="w-1/2 text-right">
+                    <a class="a-border text-blue-300 | hover:text-blue-200" href="https://docs.spatie.be/laravel-medialibrary/">Laravel-medialibrary<span class="hidden | sm:inline"> documentation</span></a>
                 </span>
 
                 <span class="mx-4 w-2 h-2 rounded-full bg-yellow-300"></span>
 
-                <span class="text-blue-400">
-                    Made by <a class="a-border text-blue-400 uppercase tracking-wider | hover:text-blue-200" href="https://spatie.be">spatie</a>
+                <span class="w-1/2 text-left text-blue-300">
+                    Made by <a class="a-border text-blue-300 uppercase tracking-wider | hover:text-blue-200" href="https://spatie.be">spatie</a>
                 </span>
             </p>
         </footer>
