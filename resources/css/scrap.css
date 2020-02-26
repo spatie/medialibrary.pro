@@ -126,7 +126,7 @@
 
 .subscribe-input:invalid + .subscribe-button .subscribe-button-icon {
     transform: rotate(180deg);
-    @apply bg-gray-100;
+    @apply bg-blue-50;
     @apply text-red-500;
     transition-delay: 0.5s;
 }

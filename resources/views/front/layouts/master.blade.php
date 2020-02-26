@@ -106,7 +106,7 @@
                     <a class="a-border text-blue-400 | hover:text-blue-200" href="https://github.com/spatie/laravel-medialibrary">Laravel-medialibrary <span class="hidden | sm:inline">on GitHub</span></a>
                 </span>
 
-                <span class="mx-4 w-2 h-2 rounded-full bg-blue-700"></span>
+                <span class="mx-4 w-2 h-2 rounded-full bg-yellow-300"></span>
 
                 <span class="text-blue-400">
                     Made by <a class="a-border text-blue-400 uppercase tracking-wider | hover:text-blue-200" href="https://spatie.be">spatie</a>
