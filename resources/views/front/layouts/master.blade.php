@@ -88,13 +88,13 @@
                                 Includes React and Vue <span class="whitespace-no-wrap">renderless components</span>
                             </li>
                             <li class="mt-6">
-                                Tailwind CSS styles
-                            </li>
-                            <li class="mt-6">
                                 Laravel Vapor support
                             </li>
                             <li class="mt-6">
                                 Temporary uploads
+                            </li>
+                            <li class="mt-6">
+                                Tailwind CSS styles
                             </li>
                         </ul>
                         <p class="mt-6 text-white text-xs font-medium opacity-75">
