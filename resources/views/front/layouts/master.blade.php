@@ -108,7 +108,7 @@
         <footer class="flex-1 -mt-32 pt-32 bg-blue-900">
             <p class="py-16 flex justify-around items-center text-white text-xs text-center leading-none font-medium">
                 <span class="w-1/2 text-right">
-                    <a class="a-border text-blue-300 | hover:text-blue-200" href="https://docs.spatie.be/laravel-medialibrary/">Laravel-medialibrary<span class="hidden | sm:inline"> documentation</span></a>
+                    <a class="a-border text-blue-300 | hover:text-blue-200" href="https://docs.spatie.be/laravel-medialibrary/">laravel-medialibrary<span class="hidden | sm:inline"> documentation</span></a>
                 </span>
 
                 <span class="mx-4 w-2 h-2 rounded-full bg-yellow-300"></span>
