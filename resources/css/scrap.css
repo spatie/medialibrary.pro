@@ -115,7 +115,7 @@
     @apply bg-yellow-300;
     @apply items-center;
     @apply justify-center;
-    @apply font-black;
+    @apply font-bold;
     @apply h-10;
     @apply w-10;
     @apply leading-none;
