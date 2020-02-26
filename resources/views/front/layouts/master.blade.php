@@ -33,19 +33,19 @@
 
         <main class="z-10 mt-2 px-4 | sm:px-8 | md:mt-4 md:px-12 | lg:mt-8 lg:px-16">
             <div class="mx-auto w-full max-w-4xl bg-red-500 shadow-logo rounded">
-                <div class="😢">
-                    <img loading="eager" srcset="/images/boy-900.jpg 900w,
-                    /images/boy-600.jpg 600w,
-                    /images/boy-300.jpg 300w" sizes="(min-width: 640px) 50vw, 100vw" src="/images/boy-900.jpg" alt="Crying boy by Giovanni Bragolin">
+                <div class="🖼">
+                    <img loading="eager" srcset="/images/frames-1000.jpg 1000w,
+                    /images/frames-750.jpg 750w,
+                    /images/frames-500.jpg 500w," sizes="(min-width: 1024px) 540px, (min-width: 640px) 50vw, 100vw" src="/images/frames-1000.jpg" alt="Picture by Andrew Neel | Unsplash">
                 </div>
 
-                <blockquote class="z-10 absolute top-0 left-0 w-full h-48 flex items-center justify-center font-black text-white text-3xl text-center leading-tight | sm:text-4xl md:text-5xl">
+                <blockquote class="z-10 absolute top-0 left-0 w-full h-64 flex items-center justify-center font-bold text-white text-3xl text-center leading-tight | md:text-4xl | lg:text-5xl">
                     <span>
-                        <span class="font-light mr-1">“</span>Boy, I could cry<span class="font-light ml-1">”</span>
+                        A good picture<br>needs a frame
                     </span>
                 </blockquote>
 
-                <div class="pt-48 pb-32 | sm:flex | lg:pb-48">
+                <div class="pt-48 pb-32 | sm:flex | lg:pt-64 lg:pb-48">
                     <div class="px-12 max-w-lg sm:flex flex-col items-center | sm:w-1/2">
                         <div class="max-w-xs w-full">
                             <form action="/subscribe" method="post">

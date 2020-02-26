@@ -96,6 +96,7 @@
     transition: transform 0.5s ease;
 }
 
+.subscribe-input:valid + .subscribe-button,
 .subscribe-input:focus + .subscribe-button {
     transform: scale(1);
 }
@@ -114,15 +115,14 @@
     @apply items-center;
     @apply justify-center;
     @apply font-black;
-    @apply opacity-100;
     @apply h-10;
     @apply w-10;
     text-indent: 0.25em;
-    transition: transform 0.5s ease, opacity 0.5s ease;
+    transition: transform 0.5s ease;
 }
 
-.subscribe-input:invalid + .subscribe-button .subscribe-button-icon {
-    @apply opacity-50;
+.subscribe-input:invalid + .subscribe-button {
+    transform: scale(0.65);
     @apply cursor-not-allowed;
 }
 
@@ -130,27 +130,27 @@
     transform: scale(0.65);
 }
 
-.😢 {
+.🖼 {
     @apply rounded;
     @apply overflow-hidden;
     left: 1rem;
     right: 1rem;
     top: -1rem;
-    opacity: 0.65;
+    opacity: 0.67;
     width: calc(100% - 2rem);
     height: 24rem;
     margin-bottom: -24rem;
 }
 
-.😢 img {
+.🖼 img {
     @apply w-full;
     @apply h-full;
     @apply object-cover;
-    object-position: 50% 75%;
+    object-position: center center;
 }
 
 @screen sm {
-    .😢 {
+    .🖼 {
         @apply absolute;
         left: -1rem;
         right: 50%;
@@ -162,7 +162,7 @@
 }
 
 @screen md {
-    .😢 {
+    .🖼 {
         left: -1.5rem;
         top: -1.5rem;
         bottom: 1.5rem;
@@ -170,7 +170,7 @@
 }
 
 @screen lg {
-    .😢 {
+    .🖼 {
         left: -2rem;
         top: -2rem;
         bottom: 2rem;
