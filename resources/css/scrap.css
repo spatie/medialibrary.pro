@@ -92,42 +92,43 @@
     @apply absolute;
     @apply right-0;
     @apply top-0;
-    transform: scale(0);
+    transform: scale(1);
     transition: transform 0.5s ease;
 }
 
-.subscribe-input:valid + .subscribe-button,
-.subscribe-input:focus + .subscribe-button {
-    transform: scale(1);
+.subscribe-input:invalid + .subscribe-button {
+    @apply cursor-not-allowed;
 }
 
-.subscribe-button:focus,
-.subscribe-button:active {
-    transform: scale(1);
-    transition: none;
+.subscribe-input:valid + .subscribe-button:hover {
+    transform: scale(0.85);
+}
+
+.subscribe-input:valid + .subscribe-button:active {
+    transform: scale(0.5);
 }
 
 .subscribe-button-icon {
     @apply flex;
     @apply rounded-full;
-    @apply bg-yellow-300;
     @apply text-blue-900;
+    @apply bg-yellow-300;
     @apply items-center;
     @apply justify-center;
     @apply font-black;
     @apply h-10;
     @apply w-10;
+    @apply leading-none;
     text-indent: 0.25em;
-    transition: transform 0.5s ease;
+    transform: rotate(0);
+    transition: transform 0.5s ease, color 0.5s ease, background 0.5s ease;
 }
 
-.subscribe-input:invalid + .subscribe-button {
-    transform: scale(0.65);
-    @apply cursor-not-allowed;
-}
-
-.subscribe-button:active .subscribe-button-icon {
-    transform: scale(0.65);
+.subscribe-input:invalid + .subscribe-button .subscribe-button-icon {
+    transform: rotate(180deg);
+    @apply bg-gray-100;
+    @apply text-red-500;
+    transition-delay: 0.5s;
 }
 
 .🖼 {
