@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
         <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-        
+
         @include('shared.partials.favicon')
 
         <meta name="twitter:card" content="summary_large_image"/>
@@ -51,7 +51,7 @@
 
         <main class="z-10 mt-8 -mb-24">
             <div class="absolute w-full top-0" style="bottom: 4rem">
-                @include('front.partials.swooshBottom')
+
             </div>
             <section class="layout-col">
                 <div class="sm:flex items-start">
