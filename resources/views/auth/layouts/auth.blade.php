@@ -1,6 +1,3 @@
-@extends('front.layouts.master')
-
-@section('content')
 <main class="z-10 mt-16 -mb-24">
     <div class="absolute w-full top-0" style="bottom: 4rem">
 
@@ -15,4 +12,3 @@
         </div>
     </section>
 </main>
-@endsection
