@@ -81,7 +81,7 @@
                             Coming spring 2020
                         </li>
                         <li class="mt-6">
-                            UI elements for <a class="a-border whitespace-no-wrap" href="https://github.com/spatie/laravel-medialibrary">spatie/laravel-medialibrary</a>
+                            UI elements for <a class="a-border whitespace-no-wrap" href="https://docs.spatie.be/">spatie/laravel-medialibrary</a>
                         </li>
                         <li class="mt-6">
                             Includes React and Vue <span class="whitespace-no-wrap">renderless components</span>
@@ -103,7 +103,7 @@
         <footer class="flex-1 -mt-32 pt-32 bg-blue-900">
             <p class="py-16 flex justify-center items-center text-white text-xs text-center leading-none">
                 <span >
-                    <a class="a-border text-blue-400 | hover:text-blue-200" href="https://github.com/spatie/laravel-medialibrary">Laravel-medialibrary <span class="hidden | sm:inline">on GitHub</span></a>
+                    <a class="a-border text-blue-400 | hover:text-blue-200" href="https://docs.spatie.be/laravel-medialibrary">laravel-medialibrary <span class="hidden | sm:inline">documentation</span></a>
                 </span>
 
                 <span class="mx-4 w-2 h-2 rounded-full bg-blue-700"></span>
