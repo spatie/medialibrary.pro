@@ -79,7 +79,7 @@
                     <div class="px-12 pt-24 | sm:pt-0 sm:w-1/2 sm:text-right">
                         <ul class="text-lg text-white font-bold leading-snug | lg:text-xl">
                             <li class="text-yellow-300">
-                                Coming spring 2020
+                                Coming fall 2020
                             </li>
                             <li class="mt-6">
                                 UI elements for <a class="a-border whitespace-no-wrap" href="https://docs.spatie.be/laravel-medialibrary/">spatie/laravel-medialibrary</a>
