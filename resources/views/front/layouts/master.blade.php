@@ -88,6 +88,9 @@
                                 Includes React and Vue <span class="whitespace-no-wrap">renderless components</span>
                             </li>
                             <li class="mt-6">
+                                Includes Livewire components
+                            </li>
+                            <li class="mt-6">
                                 Laravel Vapor support
                             </li>
                             <li class="mt-6">
