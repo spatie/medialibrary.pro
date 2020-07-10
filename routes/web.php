@@ -14,6 +14,9 @@ Route::post('webhook/github', GitHubWebhookController::class);
 
 Route::demoAccess('/demo');
 
+Route::permanentRedirect('/mailcoach', 'https://spatie.be/mailcoach');
+Route::permanentRedirect('/mailcoach/campaigns', 'https://spatie.be/mailcoach/campaigns');
+
 Route::group(['middleware' => 'demoMode'], function () {
     Route::get('/', HomeController::class);
     Route::post('subscribe', SubscribeToEmailListController::class)->middleware(ProtectAgainstSpam::class);
