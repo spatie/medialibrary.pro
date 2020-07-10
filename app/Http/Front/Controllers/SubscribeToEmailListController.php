@@ -13,8 +13,10 @@ class SubscribeToEmailListController
         $client = new Client();
 
         $response = $client->post('https://spatie.be/mailcoach/subscribe/4af46b59-3784-41a5-9272-6da31afa3a02', [
-            'email' => $request->email,
-            'tags' => 'medialibrary-pro',
+            'form_params' => [
+                'email' => $request->email,
+                'tags' => 'medialibrary-pro',
+            ],
         ]);
 
         if ($response->getStatusCode() !== 201 && $response->getStatusCode() !== 200) {
