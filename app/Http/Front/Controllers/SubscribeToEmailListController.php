@@ -18,7 +18,7 @@ class SubscribeToEmailListController
         ]);
 
         if ($response->getStatusCode() !== 201 || $response->getStatusCode() !== 200) {
-            throw new Exception('Could not subscribe');
+            throw new Exception('Could not subscribe, status code is ' . $response->getStatusCode());
         }
 
         session()->flash('subscribed');
