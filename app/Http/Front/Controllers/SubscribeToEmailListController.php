@@ -17,7 +17,7 @@ class SubscribeToEmailListController
             'tags' => 'medialibrary-pro',
         ]);
 
-        if ($response->getStatusCode() !== 201 || $response->getStatusCode() !== 200) {
+        if ($response->getStatusCode() !== 201 && $response->getStatusCode() !== 200) {
             throw new Exception('Could not subscribe, status code is ' . $response->getStatusCode());
         }
 
