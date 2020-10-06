@@ -18,24 +18,12 @@
         @include('partials.socialMetaTags')
 
     </head>
-    <body class="flex flex-col min-h-screen font-sans">
+    <body class="flex flex-col min-h-screen font-sans text-blue-900">
 
          @include('partials.header')
 
         @yield('content')
 
-        <footer class="flex-1 -mt-32 pt-32 bg-blue-900">
-            <p class="py-16 flex justify-around items-center text-white text-xs text-center leading-none font-medium">
-                <span class="w-1/2 text-right">
-                    <a class="a-border text-blue-300 | hover:text-blue-200" href="https://docs.spatie.be/laravel-medialibrary/">laravel-medialibrary<span class="hidden | sm:inline"> documentation</span></a>
-                </span>
-
-                <span class="mx-4 w-2 h-2 rounded-full bg-yellow-300"></span>
-
-                <span class="w-1/2 text-left text-blue-300">
-                    Made by <a class="a-border text-blue-300 uppercase tracking-wider | hover:text-blue-200" href="https://spatie.be">spatie</a>
-                </span>
-            </p>
-        </footer>
+        @include('partials.footer')
     </body>
 </html>

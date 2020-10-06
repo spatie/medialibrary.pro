@@ -15,7 +15,17 @@
 
 .logo-shine {
     animation: ease-out 1s 1s 1 shine forwards;
+    opacity: 0.65;
+}
+
+.logo-shadow {
+    fill: #000;
+}
+
+.logo-author {
+    animation: ease-out 0.35s 1.7s 1 author forwards;
     opacity: 0;
+    transform-origin: 0 0;
 }
 
 @keyframes sunrise {
@@ -38,9 +48,24 @@
 
 @keyframes shine {
     0% {
-        opacity: 0;
+        opacity: 0.65;
     }
     100% {
-        opacity: 0.25;
+        opacity: 1;
+    }
+}
+
+@keyframes author {
+    0% {
+        opacity: 0;
+        transform: scaleX(.85);
+    }
+    90% {
+        opacity: 1;
+        transform: scaleX(1.02);
+    }
+    100% {
+        opacity: 1;
+        transform: scaleX(1);
     }
 }

@@ -21,15 +21,15 @@ module.exports = {
         colors: {
             transparent: "transparent",
             white: "#fff",
-            black: "#13034a",
+            black: "#000",
             blue: {
                 50: "#eae8f4",
                 100: "#d4d0e1",
                 200: "#a19bb7",
                 300: "#938bae",
                 400: "#716993",
-                500: "#1288ff",
-                600: "#0574e3",
+                500: "#4d457c",
+                600: "#514982",
                 700: "#42376e",
                 800: "#1d4a75",
                 900: "#13034a",
@@ -87,7 +87,7 @@ module.exports = {
                 logo: "5px 5px 0 var(--dark-100)"
             },
             letterSpacing: {
-                logo: ".35em"
+                logo: ".25em"
             },
             minHeight: {
                 10: "2.5rem"
@@ -99,6 +99,7 @@ module.exports = {
     },
     variants: {
         boxShadow: ["responsive", "hover", "focus", "focus-within"],
-        backgroundColor: ["responsive", "hover", "focus", "group-hover"]
+        backgroundColor: ["responsive", "hover", "focus", "group-hover"],
+        opacity: ({ after }) => after(['group-hover']),
     }
 };
