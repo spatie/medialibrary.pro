@@ -1,6 +1,8 @@
 @charset 'UTF-8';
 
 @import "./bootstrap.css";
+
+@import "./components/logo.css";
 @import "./scrap.css";
 
 @tailwind utilities;

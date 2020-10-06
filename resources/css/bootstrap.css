@@ -54,46 +54,14 @@
     --gray-700: #4f4e4c;
     --gray-800: #3d3c3b;
     --gray-900: #242323;
-
-    --light-100: rgba(255, 255, 255, 0.1);
-    --light-200: rgba(255, 255, 255, 0.2);
-    --light-300: rgba(255, 255, 255, 0.3);
-    --light-400: rgba(255, 255, 255, 0.4);
-    --light-500: rgba(255, 255, 255, 0.5);
-    --light-600: rgba(255, 255, 255, 0.6);
-    --light-700: rgba(255, 255, 255, 0.7);
-    --light-800: rgba(255, 255, 255, 0.8);
-    --light-900: rgba(255, 255, 255, 0.9);
-
-    --dark-50: rgba(0, 0, 0, 0.05);
-    --dark-100: rgba(0, 0, 0, 0.1);
-    --dark-200: rgba(0, 0, 0, 0.2);
-    --dark-300: rgba(0, 0, 0, 0.3);
-    --dark-400: rgba(0, 0, 0, 0.4);
-    --dark-500: rgba(0, 0, 0, 0.5);
-    --dark-600: rgba(0, 0, 0, 0.6);
-    --dark-700: rgba(0, 0, 0, 0.7);
-    --dark-800: rgba(0, 0, 0, 0.8);
-    --dark-900: rgba(0, 0, 0, 0.9);
 }
 
-html {
+:root {
     box-sizing: border-box;
-    font-size: 14px;
-}
-
-@screen md {
-    html {
-        box-sizing: border-box;
-        font-size: 16px;
-    }
-}
-
-@screen lg {
-    html {
-        box-sizing: border-box;
-        font-size: 18px;
-    }
+    font-size: 16px;
+    font-size: clamp(1rem, 1.25vw, 2rem);
+    /* Safari resize fix */
+    min-height: 0vw; 
 }
 
 /* Exclude iframes like 1Password save modals */
@@ -105,11 +73,4 @@ html {
 
 *:focus {
     outline: 0 !important;
-}
-
-body {
-    @apply font-sans;
-    @apply text-black;
-    @apply leading-normal;
-    @apply w-full;
 }

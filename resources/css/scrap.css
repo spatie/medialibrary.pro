@@ -18,55 +18,7 @@
     opacity: 0.5;
 }
 
-/* Start position also repeat in inline styles in the SVG */
-.logo {
-    @apply block;
-    width: 3.5rem;
-    height: 3.5rem;
-}
 
-.logo-sun {
-    animation: ease-out 1s 1s 1 sunrise forwards;
-}
-
-.logo-sky {
-    animation: ease-out 1s 1s 1 skylight forwards;
-}
-
-.logo-backlight {
-    animation: ease-out 1s 1s 1 backlight forwards;
-    @apply bg-blue-200;
-    @apply fixed;
-    @apply inset-0;
-    opacity: 0.2;
-}
-
-@keyframes sunrise {
-    0% {
-        transform: translateY(200px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-@keyframes skylight {
-    0% {
-        opacity: 0.5;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes backlight {
-    0% {
-        opacity: 0.2;
-    }
-    100% {
-        opacity: 0.1;
-    }
-}
 
 .subscribe {
     @apply bg-white;

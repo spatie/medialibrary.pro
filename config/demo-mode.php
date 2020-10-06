@@ -5,7 +5,7 @@ return [
     /*
      * This is the master switch to enable demo mode.
      */
-    'enabled' => env('DEMO_MODE_ENABLED', true),
+    'enabled' => env('DEMO_MODE_ENABLED', false),
 
     /*
      * Guard to be used in order to grant or deny access.
