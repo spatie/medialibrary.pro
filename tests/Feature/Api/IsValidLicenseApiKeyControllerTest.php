@@ -11,7 +11,7 @@ class IsValidLicenseApiKeyControllerTest extends TestCase
     /** @test */
     public function it_will_return_200_if_the_key_is_valid()
     {
-        $license = factory(License::class)->create();
+        $license = License::factory()->create();
 
         $basicAuth = base64_encode("{$license->key}:{$license->key}");
 

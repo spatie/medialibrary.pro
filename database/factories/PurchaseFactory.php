@@ -1,21 +1,38 @@
 <?php
 
+namespace Database\Factories;
+
 use App\Models\Product;
 use App\Models\Purchase;
 use App\Models\User;
-use Faker\Generator as Faker;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
-$factory->define(Purchase::class, function (Faker $faker) {
-    return [
-        'product_id' => factory(Product::class),
-        'user_id' => factory(User::class),
-        'paddle_alert_id' => $faker->word,
-        'payment_method' => 'visa',
-        'receipt_url' => $faker->url,
-        'paddle_webhook_payload' => '{}',
-        'paddle_fee' => '0',
-        'payment_tax' => '0',
-        'earnings' => '0',
-    ];
-});
+class PurchaseFactory extends Factory
+{
+    /**
+     * The name of the factory's corresponding model.
+     *
+     * @var string
+     */
+    protected $model = Purchase::class;
+
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     */
+    public function definition()
+    {
+        return [
+            'product_id' => Product::factory(),
+            'user_id' => User::factory(),
+            'paddle_alert_id' => $this->faker->word,
+            'payment_method' => 'visa',
+            'receipt_url' => $this->faker->url,
+            'paddle_webhook_payload' => '{}',
+            'paddle_fee' => '0',
+            'payment_tax' => '0',
+            'earnings' => '0',
+        ];
+    }
+}

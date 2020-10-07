@@ -18,11 +18,11 @@ class VideoTest extends TestCase
     {
         parent::setUp();
 
-        $chapter = factory(Chapter::class)->create();
+        $chapter = Chapter::factory()->create();
 
-        $this->video1 = factory(Video::class)->create(['chapter_id' => $chapter->id, 'sort' => 0]);
-        $this->video2 = factory(Video::class)->create(['chapter_id' => $chapter->id, 'sort' => 1]);
-        $this->video3 = factory(Video::class)->create(['chapter_id' => $chapter->id, 'sort' => 2]);
+        $this->video1 = Video::factory()->create(['chapter_id' => $chapter->id, 'sort' => 0]);
+        $this->video2 = Video::factory()->create(['chapter_id' => $chapter->id, 'sort' => 1]);
+        $this->video3 = Video::factory()->create(['chapter_id' => $chapter->id, 'sort' => 2]);
     }
 
     /** @test */

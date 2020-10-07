@@ -72,7 +72,7 @@ class UpdateVideosCommandTest extends TestCase
     /** @test */
     public function it_deletes_chapters_and_videos_that_dont_exist_anymore()
     {
-        factory(Video::class)->create();
+        Video::factory()->create();
 
         config()->set('videos.chapters', []);
 

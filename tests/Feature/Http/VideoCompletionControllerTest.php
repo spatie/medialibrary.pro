@@ -22,14 +22,14 @@ class VideoCompletionControllerTest extends TestCase
 
         $this->withExceptionHandling();
 
-        $this->user = factory(User::class)->create();
-        $this->purchase = factory(Purchase::class)->make([
-            'product_id' => factory(Product::class)->create(['type' => Product::TYPE_STANDARD])
+        $this->user = User::factory()->create();
+        $this->purchase = Purchase::factory()->make([
+            'product_id' => Product::factory()->create(['type' => Product::TYPE_STANDARD])
         ]);
 
         $this->user->licenses()->save($this->purchase);
 
-        $this->video = factory(Video::class)->create();
+        $this->video = Video::factory()->create();
     }
 
     /** @test */

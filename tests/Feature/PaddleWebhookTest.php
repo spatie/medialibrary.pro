@@ -21,13 +21,13 @@ class PaddleWebhookTest extends TestCase
     /** @var \App\Models\Product */
     private $product;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         parent::setUp();
 
         TestTime::freeze();
 
-        $this->user = factory(User::class)->create([
+        $this->user = User::factory()->create([
             'email' => $this->getWebhookAttributes()['email'],
         ]);
     }
@@ -147,7 +147,7 @@ class PaddleWebhookTest extends TestCase
     {
         $webhookAttributes = $this->getWebhookAttributes();
 
-        $product = factory(Product::class)->create([
+        $product = Product::factory()->create([
             'paddle_product_id' => $this->getWebhookAttributes()['product_id'],
             'type' => $packageType,
         ]);
@@ -157,7 +157,7 @@ class PaddleWebhookTest extends TestCase
 
     protected function getProductAndWebhookAttributesForRenewal(string $packageType): array
     {
-        $license = factory(License::class)->create([
+        $license = License::factory()->create([
             'expires_at' => now()->subWeek(),
             'user_id' => $this->user->id,
             'expiration_warning_mail_sent_at' => now(),
@@ -171,7 +171,7 @@ class PaddleWebhookTest extends TestCase
             'license' => $license->key,
         ]);
 
-        $product = factory(Product::class)->create([
+        $product = Product::factory()->create([
             'paddle_product_id' => $this->getWebhookAttributes()['product_id'],
             'type' => $packageType,
         ]);
