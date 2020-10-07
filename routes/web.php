@@ -21,6 +21,9 @@ Route::group(['middleware' => 'demoMode'], function () {
     Route::get('/', HomeController::class);
     Route::post('subscribe', SubscribeToEmailListController::class)->middleware(ProtectAgainstSpam::class);
 
+    Route::view('terms-of-use', 'front.legal.terms-of-use')->name('termsOfUse');
+    Route::view('privacy', 'front.legal.privacy')->name('privacy');
+
     /* Route::redirect('docs', '/docs/general/welcome')->name('docs');
     Route::get('docs/{slug?}', DocumentationController::class)->where('slug', '(.*)');
 
@@ -29,7 +32,5 @@ Route::group(['middleware' => 'demoMode'], function () {
     Route::get('download-latest/{license}', DownloadLatestController::class);
     Route::get('is-valid-license/{license}', IsValidLicenseController::class);
 
-    Route::view('terms-of-use', 'front.legal.terms-of-use')->name('termsOfUse');
-    Route::view('privacy', 'front.legal.privacy')->name('privacy');
     */
 });

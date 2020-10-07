@@ -1,4 +1,3 @@
-
 .subscribe {
     @apply bg-white;
     @apply rounded-full;
@@ -60,51 +59,4 @@
     @apply bg-blue-50;
     @apply text-red-500;
     transition-delay: 0.5s;
-}
-
-.🖼 {
-    @apply rounded;
-    @apply overflow-hidden;
-    left: 1rem;
-    right: 1rem;
-    top: -1rem;
-    opacity: 0.67;
-    width: calc(100% - 2rem);
-    height: 24rem;
-    margin-bottom: -24rem;
-}
-
-.🖼 img {
-    @apply w-full;
-    @apply h-full;
-    @apply object-cover;
-    object-position: center center;
-}
-
-@screen sm {
-    .🖼 {
-        @apply absolute;
-        left: -1rem;
-        right: 50%;
-        bottom: 1rem;
-        width: auto;
-        height: auto;
-        margin-bottom: 0;
-    }
-}
-
-@screen md {
-    .🖼 {
-        left: -1.5rem;
-        top: -1.5rem;
-        bottom: 1.5rem;
-    }
-}
-
-@screen lg {
-    .🖼 {
-        left: -2rem;
-        top: -2rem;
-        bottom: 2rem;
-    }
 }

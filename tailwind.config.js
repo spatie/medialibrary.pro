@@ -24,10 +24,10 @@ module.exports = {
             black: "#000",
             blue: {
                 50: "#eae8f4",
-                100: "#d4d0e1",
-                200: "#a19bb7",
-                300: "#938bae",
-                400: "#716993",
+                100: "#e4e2ed",
+                200: "#bbb7ce",
+                300: "#a9a5bf",
+                400: "#9a97af",
                 500: "#4d457c",
                 600: "#514982",
                 700: "#42376e",
@@ -69,11 +69,11 @@ module.exports = {
             },
             gray: {
                 100: "#f8f7f6",
-                200: "#e5e3e1",
-                300: "#b8b5b0",
-                400: "#918f8b",
-                500: "#6b6a67",
-                600: "#575654",
+                200: "#eae9e8",
+                300: "#d1cec9",
+                400: "#b7b4b0",
+                500: "#898784",
+                600: "#6b6966",
                 700: "#4f4e4c",
                 800: "#3d3c3b",
                 900: "#242323",
@@ -84,7 +84,8 @@ module.exports = {
                 full: "100%"
             },
             boxShadow: {
-                logo: "5px 5px 0 var(--dark-100)"
+                hard: "5px 5px 0 rgba(0,0,0,0.05)",
+                "hard-xl": "1em 1em 0 0px rgba(0,0,0,0.05), 2em 2em 0 0px rgba(0,0,0,0.05)"
             },
             letterSpacing: {
                 logo: ".25em"
@@ -94,12 +95,17 @@ module.exports = {
             },
             fontSize: {
                 "xxs" : "0.6rem"
+            },
+            backgroundColor: {
+                'inherit' : 'inherit'
             }
         }
     },
     variants: {
         boxShadow: ["responsive", "hover", "focus", "focus-within"],
         backgroundColor: ["responsive", "hover", "focus", "group-hover"],
+        translate: ({ after }) => after(['group-hover']),
         opacity: ({ after }) => after(['group-hover']),
+        fontWeight: ({ after }) => after(['group-hover']),
     }
 };

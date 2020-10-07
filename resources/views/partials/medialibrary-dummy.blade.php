@@ -91,7 +91,7 @@
 
 <div class="medialibrary medialibrary-multiple medialibrary-sortable medialibrary-filled bg-white shadow-2xl">
     <ul class="medialibrary-dragula-container medialibrary-items">
-        <li class="bg-white medialibrary-item medialibrary-item-row">
+        <li class="group bg-white medialibrary-item medialibrary-item-row hover:bg-blue-50">
             <div class="dragula-handle medialibrary-row-drag">
                 <svg class="medialibrary-icon ">
                     <use xlink:href="#icon-drag"></use>
@@ -121,14 +121,14 @@
                     2.09 MB
                 </div>
                 <div class="medialibrary-property">
-                    <a href="http://laravel-medialibrary-pro-app.test/storage/256/laravel-beyond-crud.jpg" download="" class="medialibrary-text-link">Watch intro</a>
+                    <a href="http://laravel-medialibrary-pro-app.test/storage/256/laravel-beyond-crud.jpg" download="" class="medialibrary-text-link group-hover:font-bold">Watch intro</a>
                 </div>
             </div>
 
             <div class="medialibrary-properties">
                 <div class="medialibrary-field">
                     <label class="medialibrary-label">Name</label>
-                    <input class="medialibrary-input" type="text" value="Intro.mov">
+                    <input class="medialibrary-input group-hover:bg-blue-100" type="text" value="Intro.mov">
                 </div>
             </div>
 
@@ -138,7 +138,7 @@
                 </svg>
             </div>
         </li>
-        <li class="bg-white medialibrary-item medialibrary-item-row">
+        <li class="group bg-white medialibrary-item medialibrary-item-row hover:bg-blue-50">
             <div class="dragula-handle medialibrary-row-drag">
                 <svg class="medialibrary-icon ">
                     <use xlink:href="#icon-drag"></use>
@@ -168,14 +168,14 @@
                     25.09 KB
                 </div>
                 <div class="medialibrary-property">
-                    <a href="http://laravel-medialibrary-pro-app.test/storage/256/laravel-beyond-crud.jpg" download="" class="medialibrary-text-link">Try demo</a>
+                    <a href="http://laravel-medialibrary-pro-app.test/storage/256/laravel-beyond-crud.jpg" download="" class="medialibrary-text-link group-hover:font-bold">Try demo</a>
                 </div>
             </div>
 
             <div class="medialibrary-properties">
                 <div class="medialibrary-field">
                     <label class="medialibrary-label">Name</label>
-                    <input class="medialibrary-input" type="text" value="Demo.php">
+                    <input class="medialibrary-input group-hover:bg-blue-100" type="text" value="Demo.php">
                 </div>
             </div>
 
@@ -185,7 +185,7 @@
                 </svg>
             </div>
         </li>
-        <li class="bg-white medialibrary-item medialibrary-item-row">
+        <li class="group bg-white medialibrary-item medialibrary-item-row hover:bg-blue-50">
             <div class="dragula-handle medialibrary-row-drag">
                 <svg class="medialibrary-icon ">
                     <use xlink:href="#icon-drag"></use>
@@ -215,14 +215,14 @@
                     245.09 KB
                 </div>
                 <div class="medialibrary-property">
-                    <a href="http://laravel-medialibrary-pro-app.test/storage/256/laravel-beyond-crud.jpg" download="" class="medialibrary-text-link">Read docs</a>
+                    <a href="http://laravel-medialibrary-pro-app.test/storage/256/laravel-beyond-crud.jpg" download="" class="medialibrary-text-link group-hover:font-bold">Read docs</a>
                 </div>
             </div>
 
             <div class="medialibrary-properties">
                 <div class="medialibrary-field">
                     <label class="medialibrary-label">Name</label>
-                    <input class="medialibrary-input" type="text" value="Documentation.html">
+                    <input class="medialibrary-input group-hover:bg-blue-100" type="text" value="Documentation.html">
                 </div>
             </div>
 

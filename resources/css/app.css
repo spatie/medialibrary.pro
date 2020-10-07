@@ -3,7 +3,8 @@
 @import "./bootstrap.css";
 
 @import "./components/logo.css";
+@import "./components/markup.css";
 @import "./components/medialibrary.css";
-@import "./scrap.css";
+@import "./components/painting.css";
 
 @tailwind utilities;

@@ -20,8 +20,6 @@
     </head>
     <body class="flex flex-col min-h-screen font-sans text-blue-900">
 
-         @include('partials.header')
-
         @yield('content')
 
         @include('partials.footer')
