@@ -15,7 +15,8 @@
         "laravel-mix": "^4.0.7",
         "laravel-mix-purgecss": "^4.2.0",
         "lint-staged": "^8.1.5",
-        "tailwindcss": "^1.8.0"
+        "tailwindcss": "^1.8.0",
+        "vue-template-compiler": "^2.6.12"
     },
     "husky": {
         "hooks": {
@@ -29,5 +30,8 @@
                 "git add"
             ]
         }
+    },
+    "dependencies": {
+        "@babel/plugin-proposal-class-properties": "^7.10.4"
     }
 }

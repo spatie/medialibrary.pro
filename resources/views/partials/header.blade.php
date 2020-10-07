@@ -21,15 +21,15 @@
 
         <nav>
             <ul class="flex space-x-4 sm:space-x-12 text-xs uppercase tracking-logo leading-tight font-medium text-blue-100">
-                <li><a href="#" class="hover:text-yellow-300">Demo</a></li>
-                <li><a href="#" class="hover:text-yellow-300">Docs</a></li>
-                <li><a href="#" class=" hover:text-blue-900 bg-blue-500 hover:bg-yellow-300 rounded-sm px-4 py-2 transition-colors duration-200">Buy</a></li>
+                <li><a href="{{ route('demo') }}" class="hover:text-yellow-300">Demo</a></li>
+                <li><a href="https://docs.spatie.be/laravel-medialibrary" class="hover:text-yellow-300">Docs</a></li>
+                <li><a href="https://spatie.be/products" class=" hover:text-blue-900 bg-blue-500 hover:bg-yellow-300 rounded-sm px-4 py-2 transition-colors duration-200">Buy</a></li>
             </ul>
         </nav>
     </div>
 
     <div class="mt-16 w-full max-w-4xl mx-auto px-4 sm:px-12">
-        <h1 class="mb-16 font-bold text-white leading-tight 
+        <h1 class="mb-16 font-bold text-white leading-tight
                 text-2xl md:text-3xl lg:text-4xl">
             @yield('h1')
         </h1>

@@ -15,23 +15,23 @@
         "aws/aws-sdk-php": "^3.158",
         "facade/ignition": "^2.3.6",
         "fideloper/proxy": "^4.2",
+        "fruitcake/laravel-cors": "^2.0",
         "fzaninotto/faker": "^1.4",
+        "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.9",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^3.0",
-        "league/flysystem-aws-s3-v3": "^1.0",
-        "spatie/commonmark-highlighter": "^2.0",
         "spatie/laravel-backup": "^6.11",
         "spatie/laravel-flash": "^1.7",
         "spatie/laravel-honeypot": "^3.0",
+        "spatie/laravel-medialibrary": "v9.x-dev",
+        "spatie/laravel-medialibrary-pro": "dev-master",
         "spatie/laravel-menu": "^3.6",
         "spatie/laravel-tail": "^4.3",
         "spatie/laravel-webhook-client": "^2.7",
         "spatie/temporary-directory": "^1.2",
         "spatie/test-time": "^1.1",
-        "spatie/yaml-front-matter": "^2.0",
-        "fruitcake/laravel-cors": "^2.0",
-        "guzzlehttp/guzzle": "^7.0.1"
+        "spatie/yaml-front-matter": "^2.0"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.8",
@@ -66,6 +66,16 @@
             "Tests\\": "tests/"
         }
     },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../laravel-medialibrary"
+        },
+        {
+            "type": "path",
+            "url": "../laravel-medialibrary-pro"
+        }
+    ],
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
