@@ -1,5 +1,7 @@
 <?php
 
+namespace Database\Seeders;
+
 use App\Console\UpdateVideosCommand;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Artisan;
