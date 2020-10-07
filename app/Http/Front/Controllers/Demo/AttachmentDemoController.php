@@ -18,6 +18,8 @@ class AttachmentDemoController
          *
          * This is how you would normally handle the upload
          */
+//        $yourModel->update(['name' => $request->name);
+//
 //        $yourModel
 //            ->addFromMediaLibraryRequest($request->media)
 //            ->toMediaLibrary();

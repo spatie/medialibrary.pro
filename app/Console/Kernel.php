@@ -9,7 +9,7 @@ class Kernel extends ConsoleKernel
 {
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command(UpdateDocumentationCommand::class)->daily();
+        $schedule->command('media-library:delete-old-temporary-uploads');
     }
 
     protected function commands()
