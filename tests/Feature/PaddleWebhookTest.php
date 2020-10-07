@@ -21,7 +21,7 @@ class PaddleWebhookTest extends TestCase
     /** @var \App\Models\Product */
     private $product;
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         parent::setUp();
 
