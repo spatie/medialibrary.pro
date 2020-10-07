@@ -1,7 +1,6 @@
 <header class="relative bg-blue-900 pt-8 mb-16">
-    <img style="opacity:0.45" class="absolute top-0 left-0 h-full w-full object-cover" loading="eager" srcset="/images/frames-1000.jpg 1000w,
-                    /images/frames-750.jpg 750w,
-                    /images/frames-500.jpg 500w," sizes="(min-width: 1024px) 540px, (min-width: 640px) 50vw, 100vw" src="/images/frames-1000.jpg" alt="Picture by Andrew Neel | Unsplash">
+    <img style="opacity:0.45" class="absolute top-0 left-0 h-full w-full object-cover" loading="eager" srcset="/images/header-600.jpg 600w,
+                    /images/header-1200.jpg 1200w, /images/header-2400.jpg 2400w" sizes="100vw" src="/images/header-2400.jpg" alt="Picture by Andrew Neel | Unsplash">
 
     <div class="w-full max-w-4xl mx-auto px-4 sm:px-12 flex items-center justify-between">
         <div class="flex items-center">

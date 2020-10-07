@@ -18,7 +18,7 @@
 
 
             <div class="text-right">
-                @include('partials.button', ["label" => "Pick a license", "class" => "bg-yellow-300 text-2xl"])
+                @include('partials.button', ["label" => "Pick a license", "textClass" => "text-2xl", "bgClass" => "bg-yellow-300"])
             </div>
         </div>
     </div>

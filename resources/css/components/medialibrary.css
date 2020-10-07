@@ -341,7 +341,8 @@
 
 .medialibrary-dropzone:not(:disabled):hover,
 .medialibrary-dropzone-drag {
-    @apply bg-blue-100;
+    @apply bg-blue-200;
+    @apply bg-opacity-75;
     
 }
 

@@ -98,6 +98,10 @@ module.exports = {
             },
             backgroundColor: {
                 'inherit' : 'inherit'
+            },
+            spacing: {
+                "2-em": "0.5em",
+                "5-em": "1.25em",
             }
         }
     },
