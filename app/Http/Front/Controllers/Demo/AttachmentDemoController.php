@@ -2,6 +2,8 @@
 
 namespace App\Http\Front\Controllers\Demo;
 
+use App\Http\Front\Requests\Demo\AttachmentDemoRequest;
+
 class AttachmentDemoController
 {
     public function create()
@@ -9,7 +11,19 @@ class AttachmentDemoController
         return view('front.demo.attachment');
     }
 
-    public function store()
+    public function store(AttachmentDemoRequest $request)
     {
+        /**
+         * We're not going to persist in this demo.
+         *
+         * This is how you would normally handle the upload
+         */
+//        $yourModel
+//            ->addFromMediaLibraryRequest($request->media)
+//            ->toMediaCollection('images');
+
+        flash()->success('Your form has been submitted');
+
+        return back();
     }
 }
