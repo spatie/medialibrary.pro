@@ -99,6 +99,10 @@ return [
         'flare' => [
             'driver' => 'flare',
         ],
+
+        'emergency' => [
+            'path' => storage_path('logs/laravel.log'),
+        ],
     ],
 
 ];
