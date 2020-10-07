@@ -20,7 +20,7 @@ class AttachmentDemoController
          */
 //        $yourModel
 //            ->addFromMediaLibraryRequest($request->media)
-//            ->toMediaCollection('images');
+//            ->toMediaLibrary();
 
         flash()->success('Your form has been submitted');
 
