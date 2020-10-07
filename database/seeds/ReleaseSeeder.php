@@ -7,6 +7,6 @@ class ReleaseSeeder extends Seeder
 {
     public function run()
     {
-        factory(Release::class)->create();
+        Release::factory()->create();
     }
 }

@@ -19,8 +19,8 @@ class LicenseControllerTest extends TestCase
     /** @test */
     public function it_allows_updating_of_the_domain_of_a_license()
     {
-        $user = factory(User::class)->create();
-        $license = factory(License::class)->create(['user_id' => $user->id]);
+        $user = User::factory()->create();
+        $license = License::factory()->create(['user_id' => $user->id]);
 
         $this
             ->actingAs($user)
@@ -36,8 +36,8 @@ class LicenseControllerTest extends TestCase
     /** @test */
     public function it_must_have_an_authenticated_user()
     {
-        $user = factory(User::class)->create();
-        $license = factory(License::class)->create(['user_id' => $user->id]);
+        $user = User::factory()->create();
+        $license = License::factory()->create(['user_id' => $user->id]);
 
         $this
             ->put(action([UpdateLicenseController::class, 'update'], $license), [
@@ -49,9 +49,9 @@ class LicenseControllerTest extends TestCase
     /** @test */
     public function it_allows_only_owners_of_the_license_to_update()
     {
-        $user = factory(User::class)->create();
-        $anotherUser = factory(User::class)->create();
-        $license = factory(License::class)->create(['user_id' => $user->id]);
+        $user = User::factory()->create();
+        $anotherUser = User::factory()->create();
+        $license = License::factory()->create(['user_id' => $user->id]);
 
         $this
             ->actingAs($anotherUser)

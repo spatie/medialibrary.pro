@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use App\Models\Concerns\HasUuid;
 use Carbon\Carbon;
 use Illuminate\Auth\Authenticatable;
@@ -14,6 +15,8 @@ use Illuminate\Support\Str;
 
 class License extends Model implements AuthenticatableContract
 {
+    use HasFactory;
+
     use HasUuid, Authenticatable;
 
     public $casts = [

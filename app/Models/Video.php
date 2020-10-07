@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use App\Http\App\Controllers\Videos\VideosController;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -14,6 +15,8 @@ use Vimeo\Laravel\Facades\Vimeo;
 
 class Video extends Model
 {
+    use HasFactory;
+
     public function getRouteKeyName()
     {
         return 'slug';

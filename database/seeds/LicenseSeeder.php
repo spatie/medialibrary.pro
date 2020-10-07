@@ -14,11 +14,11 @@ class LicenseSeeder extends Seeder
             Product::query()
                 ->where('type', [Product::TYPE_STANDARD])
                 ->each(function (Product $product) use ($user) {
-                    factory(Purchase::class)->create([
+                    Purchase::factory()->create([
                         'user_id' => $user->id,
                         'product_id' => $product->id,
                     ]);
-                    factory(License::class)->create([
+                    License::factory()->create([
                         'user_id' => $user->id,
                         'product_id' => $product->id,
                     ]);

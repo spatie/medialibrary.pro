@@ -18,7 +18,7 @@ class IsValidLicenseControllerTest extends TestCase
     /** @test */
     public function it_will_return_200_if_the_license_is_valid()
     {
-        $license = factory(License::class)->create();
+        $license = License::factory()->create();
 
         $this
             ->get(action(IsValidLicenseController::class, $license))
@@ -37,7 +37,7 @@ class IsValidLicenseControllerTest extends TestCase
     /** @test */
     public function it_will_return_401_if_the_license_is_expired()
     {
-        $license = factory(License::class)->create([
+        $license = License::factory()->create([
             'expires_at' => now()->subWeek(),
         ]);
         $this

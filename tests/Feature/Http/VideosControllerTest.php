@@ -28,7 +28,7 @@ class VideosControllerTest extends TestCase
             ->withPurchase(Product::TYPE_STANDARD)
             ->create();
 
-        $video = factory(Video::class)->create();
+        $video = Video::factory()->create();
 
         $this
             ->actingAs($user)
@@ -47,7 +47,7 @@ class VideosControllerTest extends TestCase
             ->create();
 
         /** @var \App\Models\Video $video */
-        $video = factory(Video::class)->create();
+        $video = Video::factory()->create();
 
         $this->actingAs($user)->get(action([VideosController::class, 'show'], [$video->chapter, $video]))
             ->assertSuccessful()
@@ -62,7 +62,7 @@ class VideosControllerTest extends TestCase
     /** @test */
     public function it_doesnt_show_videos_for_guests()
     {
-        $video = factory(Video::class)->create();
+        $video = Video::factory()->create();
 
         $this->get(action([VideosController::class, 'index']))
             ->assertRedirect('/login');
@@ -74,9 +74,9 @@ class VideosControllerTest extends TestCase
     /** @test */
     public function it_doesnt_show_videos_if_it_has_no_license()
     {
-        $user = factory(User::class)->create();
+        $user = User::factory()->create();
 
-        $video = factory(Video::class)->create();
+        $video = Video::factory()->create();
 
         $this->actingAs($user)->get(action([VideosController::class, 'index']))
             ->assertUnauthorized();

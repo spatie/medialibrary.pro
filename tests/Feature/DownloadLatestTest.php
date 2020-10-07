@@ -13,7 +13,7 @@ class DownloadLatestTest extends TestCase
     {
         $this->withoutExceptionHandling();
 
-        $license = factory(License::class)->create();
+        $license = License::factory()->create();
 
         /** @var \Illuminate\Foundation\Testing\TestResponse $response */
         $response = $this

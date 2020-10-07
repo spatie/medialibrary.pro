@@ -7,7 +7,7 @@ class ProductSeeder extends Seeder
 {
     public function run()
     {
-        factory(Product::class)->create([
+        Product::factory()->create([
             'type' => Product::TYPE_STANDARD,
             'name' => 'Medialibrary Pro',
             'paddle_product_id' => '578345',
