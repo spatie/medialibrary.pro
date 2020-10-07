@@ -9,7 +9,6 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;
-use Spatie\BladeX\Facades\BladeX;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -26,9 +25,6 @@ class AppServiceProvider extends ServiceProvider
                 'auth' => ['user', config('services.satis.license')]
             ]));
         });
-
-        BladeX::component('app.components.*');
-        BladeX::prefix('x');
 
         Blade::directive('markdown', function () {
             return "<?php echo (new \League\CommonMark\CommonMarkConverter())->convertToHtml(<<<HEREDOC";
