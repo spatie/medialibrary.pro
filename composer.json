@@ -25,7 +25,7 @@
         "laravel/framework": "^6.8",
         "laravel/horizon": "^3.4",
         "laravel/tinker": "^1.0",
-        "laravel/ui": "^1.1",
+        "laravel/ui": "^2.0",
         "league/flysystem-aws-s3-v3": "^1.0",
         "spatie/commonmark-highlighter": "^1.0",
         "spatie/laravel-backup": "^6.7",
