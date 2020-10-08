@@ -90,8 +90,13 @@
 </script>
 
 <div class="medialibrary medialibrary-multiple medialibrary-sortable medialibrary-filled bg-white shadow-2xl">
+    <a href="{{ route('demo') }}" class="z-50 flex justify-center items-center absolute inset-0 
+                opacity-0 hover:opacity-100 transition-opacity duration-200
+                bg-blue-900 bg-opacity-25">
+        <span class="bg-white rounded-sm px-4 py-3 text-xs uppercase tracking-logo leading-tight font-semibold">View demo</span>
+    </a>
     <ul class="medialibrary-dragula-container medialibrary-items">
-        <li class="group bg-white medialibrary-item medialibrary-item-row hover:bg-blue-50">
+        <li class="group bg-white medialibrary-item medialibrary-item-row">
             <div class="dragula-handle medialibrary-row-drag">
                 <svg class="medialibrary-icon ">
                     <use xlink:href="#icon-drag"></use>
@@ -99,7 +104,7 @@
             </div>
 
             <div class="medialibrary-thumb">
-                <img class="medialibrary-thumb-img" src="/images/intro-1600.jpg" alt="laravel-beyond-crud.jpg">
+                <img class="medialibrary-thumb-img" src="/images/dummy-01.jpg" alt="laravel-beyond-crud.jpg">
 
                 <div class="medialibrary-replace">
                     <button type="button" class="medialibrary-dropzone medialibrary-dropzone-replace">
@@ -115,20 +120,20 @@
             </div>
             <div class="medialibrary-properties medialibrary-properties-fixed">
                 <div class="medialibrary-property">
-                    MOV
+                    JPG
                 </div>
                 <div class="medialibrary-property">
-                    2.09 MB
+                    375 KB
                 </div>
                 <div class="medialibrary-property">
-                    <a href="http://laravel-medialibrary-pro-app.test/storage/256/laravel-beyond-crud.jpg" download="" class="medialibrary-text-link group-hover:font-bold">Watch intro</a>
+                    <a href="#" download="" class="medialibrary-text-link">Download</a>
                 </div>
             </div>
 
             <div class="medialibrary-properties">
                 <div class="medialibrary-field">
                     <label class="medialibrary-label">Name</label>
-                    <input class="medialibrary-input group-hover:bg-blue-100" type="text" value="Intro.mov">
+                    <input class="medialibrary-input group-hover:bg-blue-100" type="text" value="laravel-beyond-crud.jpg">
                 </div>
             </div>
 
@@ -138,7 +143,7 @@
                 </svg>
             </div>
         </li>
-        <li class="group bg-white medialibrary-item medialibrary-item-row hover:bg-blue-50">
+        <li class="group bg-white medialibrary-item medialibrary-item-row">
             <div class="dragula-handle medialibrary-row-drag">
                 <svg class="medialibrary-icon ">
                     <use xlink:href="#icon-drag"></use>
@@ -146,7 +151,7 @@
             </div>
 
             <div class="medialibrary-thumb">
-                <img class="medialibrary-thumb-img" src="/images/demo.png" alt="laravel-beyond-crud.jpg">
+                <img class="medialibrary-thumb-img" src="/images/dummy-02.jpg" alt="mailcoach.jpg">
 
                 <div class="medialibrary-replace">
                     <button type="button" class="medialibrary-dropzone medialibrary-dropzone-replace">
@@ -162,20 +167,20 @@
             </div>
             <div class="medialibrary-properties medialibrary-properties-fixed">
                 <div class="medialibrary-property">
-                    PHP
+                    PNG
                 </div>
                 <div class="medialibrary-property">
                     25.09 KB
                 </div>
                 <div class="medialibrary-property">
-                    <a href="http://laravel-medialibrary-pro-app.test/storage/256/laravel-beyond-crud.jpg" download="" class="medialibrary-text-link group-hover:font-bold">Try demo</a>
+                    <a href="#" download="" class="medialibrary-text-link">Download</a>
                 </div>
             </div>
 
             <div class="medialibrary-properties">
                 <div class="medialibrary-field">
                     <label class="medialibrary-label">Name</label>
-                    <input class="medialibrary-input group-hover:bg-blue-100" type="text" value="Demo.php">
+                    <input class="medialibrary-input group-hover:bg-blue-100" type="text" value="mailcoach.jpg">
                 </div>
             </div>
 
@@ -185,7 +190,7 @@
                 </svg>
             </div>
         </li>
-        <li class="group bg-white medialibrary-item medialibrary-item-row hover:bg-blue-50">
+        <li class="group bg-white medialibrary-item medialibrary-item-row">
             <div class="dragula-handle medialibrary-row-drag">
                 <svg class="medialibrary-icon ">
                     <use xlink:href="#icon-drag"></use>
@@ -193,7 +198,7 @@
             </div>
 
             <div class="medialibrary-thumb">
-                <img class="medialibrary-thumb-img" src="/images/docs.png" alt="laravel-beyond-crud.jpg">
+                <img class="medialibrary-thumb-img" src="/images/dummy-03.jpg" alt="front-line-php.jpg">
 
                 <div class="medialibrary-replace">
                     <button type="button" class="medialibrary-dropzone medialibrary-dropzone-replace">
@@ -209,20 +214,20 @@
             </div>
             <div class="medialibrary-properties medialibrary-properties-fixed">
                 <div class="medialibrary-property">
-                    HTML
+                    PDF
                 </div>
                 <div class="medialibrary-property">
                     245.09 KB
                 </div>
                 <div class="medialibrary-property">
-                    <a href="http://laravel-medialibrary-pro-app.test/storage/256/laravel-beyond-crud.jpg" download="" class="medialibrary-text-link group-hover:font-bold">Read docs</a>
+                    <a href="#" download="" class="medialibrary-text-link">Download</a>
                 </div>
             </div>
 
             <div class="medialibrary-properties">
                 <div class="medialibrary-field">
                     <label class="medialibrary-label">Name</label>
-                    <input class="medialibrary-input group-hover:bg-blue-100" type="text" value="Documentation.html">
+                    <input class="medialibrary-input group-hover:bg-blue-100" type="text" value="front-line-php.pdf">
                 </div>
             </div>
 
@@ -245,7 +250,7 @@
                     </span>
                 </div>
                 <div class="medialibrary-help">
-                    <span>Click to set media | PNG or JPEG</span>
+                    <span>Click or drag to set media | PNG, JPEG or PDF</span>
                 </div>
             </button>
         </div>

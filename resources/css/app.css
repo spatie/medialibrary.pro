@@ -6,5 +6,6 @@
 @import "./components/markup.css";
 @import "./components/medialibrary.css";
 @import "./components/painting.css";
+@import "./components/updates.css";
 
 @tailwind utilities;

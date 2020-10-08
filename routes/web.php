@@ -13,10 +13,12 @@ Route::post('subscribe', SubscribeToEmailListController::class)->middleware(Prot
 Route::view('terms-of-use', 'front.legal.terms-of-use')->name('termsOfUse');
 Route::view('privacy', 'front.legal.privacy')->name('privacy');
 
-
 Route::redirect('demo', 'demo-attachment')->name('demo');
 
 Route::get('demo-attachment', [AttachmentDemoController::class, 'create']);
 Route::post('demo-attachment', [AttachmentDemoController::class, 'store']);
 
 Route::post('temp-upload', MediaLibraryUploadController::class)->name('media-library-upload');
+
+Route::redirect('/docs', 'https://spatie.be/docs/laravel-medialibrary/v8/introduction')->name('docs');
+Route::redirect('/buy', 'https://spatie.be/products/medialibrary-pro')->name('buy');

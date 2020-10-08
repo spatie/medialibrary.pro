@@ -1,5 +1,5 @@
 <section id="features" class="bg-blue-100">
-    <div class="w-full max-w-4xl mx-auto px-4 sm:px-12 pt-12 pb-24">
+    <div class="w-full max-w-5xl mx-auto px-4 sm:px-12 pt-12 pb-24">
         <h2 class="text-xs uppercase tracking-logo leading-tight font-medium text-blue-400 text-center">Key features</h2>
 
         <div class="mt-12 grid md:grid-cols-2 gap-x-16 gap-y-24">
@@ -69,8 +69,8 @@
         </div>
 
         <div class="mt-24 flex justify-center space-x-8 pt-8 border-t-8 border-blue-200">
-            <a href="#" class="underline text-xl font-medium hover:text-blue-600">Read the docs</a>
-            <a href="#" class="underline text-xl font-medium hover:text-blue-600">Try the demo</a>
+            <a href="{{ route('docs') }}" class="underline text-xl font-medium hover:text-blue-600">Read the docs</a>
+            <a href="{{ route('demo') }}" class="underline text-xl font-medium hover:text-blue-600">Try the demo</a>
         </div>
     </div>
 </section>

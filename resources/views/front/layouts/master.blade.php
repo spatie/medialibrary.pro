@@ -16,6 +16,8 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
 
+    <script src="/js/alpine.js" defer></script>
+    
     @include('partials.favicon')
     @include('partials.socialMetaTags')
 </head>

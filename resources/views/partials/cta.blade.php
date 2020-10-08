@@ -1,5 +1,5 @@
 <section class="z-10 mt-16 sm:mt-32">
-    <div class="mx-auto w-full max-w-4xl px-4 sm:px-12">
+    <div class="mx-auto w-full max-w-5xl px-4 sm:px-12">
         <div class="px-4 py-16 sm:px-16 sm:py-24  bg-red-500 shadow-logo rounded-sm">
             <div class="🖼">
                 <img loading="eager" srcset="/images/frames-1000.jpg 1000w,
@@ -15,10 +15,10 @@
                 Ends in 09 days 3 hours
             </p>
 
-
-
             <div class="text-right">
-                @include('partials.button', ["label" => "Pick a license", "textClass" => "text-2xl", "bgClass" => "bg-yellow-300"])
+                <a href="{{ route('buy') }}">
+                    @include('partials.button', ["label" => "Pick a license", "textClass" => "text-2xl", "bgClass" => "bg-yellow-300", "shadowClass" => "bg-white"])
+                </a>
             </div>
         </div>
     </div>
