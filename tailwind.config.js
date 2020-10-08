@@ -100,7 +100,7 @@ module.exports = {
                 'inherit' : 'inherit'
             },
             spacing: {
-                "2-em": "0.5em",
+                "1-em": "0.5em",
                 "5-em": "1.25em",
             }
         }
@@ -110,6 +110,7 @@ module.exports = {
         backgroundColor: ["responsive", "hover", "focus", "group-hover"],
         translate: ({ after }) => after(['group-hover']),
         opacity: ({ after }) => after(['group-hover']),
-        fontWeight: ({ after }) => after(['group-hover']),
+        zIndex: ({ after }) => after(['hover']),
+        textColor: ({ after }) => after(['group-hover']),
     }
 };

@@ -1,4 +1,4 @@
-<section id="pricecard" class="mt-12 w-full max-w-5xl mx-auto px-4 sm:px-12">
+<section id="pricecard" class="mt-16 w-full max-w-5xl mx-auto px-4 sm:px-12">
     <div class="mb-8 flex justify-center">
         <div class="px-4 sm:px-12 py-2 text-center text-blue-500 bg-blue-50 rounded text-lg">
             Introduction offer ends in <strong class="font-semibold">09 days 3 hours</strong>
@@ -35,7 +35,7 @@
             </ul>
 
             <div class="flex justify-center">
-                <a href="{{ route('buy') }}">
+                <a href="https://spatie.be/products/medialibrary-pro">
                     @include('partials.button', ["label" => "Buy license"])
                 </a>
             </div>
@@ -70,7 +70,7 @@
             </ul>
 
             <div class="flex justify-center">
-                <a href="{{ route('buy') }}">
+                <a href="https://spatie.be/products/medialibrary-pro">
                     @include('partials.button', ["label" => "Buy license", "class" => "bg-blue-100"])
                 </a>
             </div>

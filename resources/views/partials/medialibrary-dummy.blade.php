@@ -90,11 +90,6 @@
 </script>
 
 <div class="medialibrary medialibrary-multiple medialibrary-sortable medialibrary-filled bg-white shadow-2xl">
-    <a href="{{ route('demo') }}" class="z-50 flex justify-center items-center absolute inset-0 
-                opacity-0 hover:opacity-100 transition-opacity duration-200
-                bg-blue-900 bg-opacity-25">
-        <span class="bg-white rounded-sm px-4 py-3 text-xs uppercase tracking-logo leading-tight font-semibold">View demo</span>
-    </a>
     <ul class="medialibrary-dragula-container medialibrary-items">
         <li class="group bg-white medialibrary-item medialibrary-item-row">
             <div class="dragula-handle medialibrary-row-drag">
