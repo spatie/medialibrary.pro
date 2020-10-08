@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use App\Models\Concerns\HasUuid;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
@@ -14,7 +13,7 @@ class User extends Authenticatable
 {
     use HasFactory;
 
-    use Notifiable, HasUuid;
+    use Notifiable;
 
     protected $hidden = [
         'password', 'remember_token',

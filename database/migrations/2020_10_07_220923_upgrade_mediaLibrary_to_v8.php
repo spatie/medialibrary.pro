@@ -11,6 +11,7 @@ class UpgradeMediaLibraryToV8 extends Migration
         Schema::table('media', function (Blueprint $table) {
             $table->uuid('uuid')->nullable();
             $table->string('conversions_disk')->nullable();
+            $table->string('generated_conversions')->nullable();
         });
     }
 }

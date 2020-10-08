@@ -27,6 +27,7 @@
         "spatie/laravel-medialibrary": "v9.x-dev",
         "spatie/laravel-medialibrary-pro": "dev-master",
         "spatie/laravel-menu": "^3.6",
+        "spatie/laravel-stubs": "^2.0",
         "spatie/laravel-tail": "^4.3",
         "spatie/laravel-webhook-client": "^2.7",
         "spatie/temporary-directory": "^1.2",
