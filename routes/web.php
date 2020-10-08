@@ -19,4 +19,4 @@ Route::redirect('demo', 'demo-attachment')->name('demo');
 Route::get('demo-attachment', [AttachmentDemoController::class, 'create']);
 Route::post('demo-attachment', [AttachmentDemoController::class, 'store']);
 
-Route::post('temp-upload', MediaLibraryUploadController::class);
+Route::post('temp-upload', MediaLibraryUploadController::class)->name('media-library-upload');
