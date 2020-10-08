@@ -22,8 +22,8 @@
         <nav>
             <ul class="flex space-x-4 sm:space-x-12 text-xs uppercase tracking-logo leading-tight font-medium text-blue-100">
                 <li><a href="{{ route('demo') }}" class="hover:text-yellow-300">Demo</a></li>
-                <li><a href="{{ route('docs') }}" class="hover:text-yellow-300">Docs</a></li>
-                <li><a href="{{ route('buy') }}" class=" hover:text-blue-900 bg-blue-500 hover:bg-yellow-300 rounded-sm px-4 py-2 transition-colors duration-200">Buy</a></li>
+                <li><a href="https://spatie.be/docs/laravel-medialibrary" class="hover:text-yellow-300">Docs</a></li>
+                <li><a href="https://spatie.be/products/medialibrary-pro" class=" hover:text-blue-900 bg-blue-500 hover:bg-yellow-300 rounded-sm px-4 py-2 transition-colors duration-200">Buy</a></li>
             </ul>
         </nav>
     </div>
@@ -35,31 +35,80 @@
         </h1>
 
         @unless($compact ?? false)
-        <div class="md:grid md:grid-cols-2 gap-8 justify-between">
-            <ul class="text-blue-100 text-lg font-medium space-y-4 pb-16">
+        <div class="grid md:grid-cols-2 gap-16 justify-between">
+            <ul class="text-blue-100 text-lg font-medium space-y-4 pb-8 md:pb-16">
                 <li class="flex items-baseline">
                     <i class="mr-2 far fa-check text-yellow-300 text-sm"></i>
-                     Components for uploads &amp; media collections
+                    Components for uploads &amp; media collections
                 </li>
                 <li class="flex items-baseline">
                     <i class="mr-2 far fa-check text-yellow-300 text-sm"></i>
-                     React, Vue &amp; Livewire powered Blade components
+                    React, Vue &amp; Livewire powered Blade components
                 </li>
                 <li class="flex items-baseline">
                     <i class="mr-2 far fa-check text-yellow-300 text-sm"></i>
-                     Clean UI in Tailwind CSS
+                    Clean UI in Tailwind CSS
                 </li>
                 <li class="flex items-baseline">
                     <i class="mr-2 far fa-check text-yellow-300 text-sm"></i>
-                     Built for customization
+                    Built for customization
                 </li>
                 <li class="flex items-baseline">
                     <i class="mr-2 far fa-check text-yellow-300 text-sm"></i>
-                     Couples with a media manipulation powerhouse with more than 3 million downloads
+                    Couples with a media manipulation powerhouse with more than 3 million downloads
                 </li>
             </ul>
-            <div class="md:ml-8 -mb-12">
-                @include('partials.medialibrary-dummy')
+            <div x-data="{ zIndex: false, video: false }">
+                <div id="intro" @mouseLeave="hideIntro()" @mouseEnter="showIntro()"  class="my-8
+                            md:absolute top-0 left-0 w-full h-full md:ml-8 md:-mt-32 
+                            bg-yellow-300 shadow-2xl">
+                    <img src="/images/intro-1600.jpg" class="border-2 border-blue-500 md:absolute inset-0 w-full h-full object-cover">
+                    <a @click="video=true" href="#" class="group flex justify-center items-start absolute inset-0 
+                                bg-opacity-0 hover:bg-opacity-25 transition-all duration-200
+                                bg-blue-900">
+                        <span class="bg-blue-900 text-blue-200 group-hover:text-white shadow-lg border-t-2 border-blue-800 rounded-b-sm px-3 py-2 flex items-center justify-center text-xxs uppercase tracking-logo leading-tight font-semibold">
+                            Watch intro
+                        </span>
+                        <span class="absolute flex items-center justify-center inset-0">
+                            <span class="rounded-full bg-blue-500 text-white w-12 h-12 flex items-center justify-center text-xxs uppercase tracking-logo leading-tight font-semibold">
+                                <i class="ml-1 text-lg far fa-play"></i>
+                            </span>
+                        </span>
+                    </a>
+
+                    <template x-if="video">
+                        <div class="fixed bg-blue-900 bg-opacity-75 inset-0 p-8 lg:p-16 z-50 fix-z flex items-center justify-center" @keydown.window.escape="video=false">
+                            <button class="absolute top-0 right-0 m-6 leading-none text-yellow-300 text-3xl">×</button>
+                            <iframe src="https://player.vimeo.com/video/463793201?autoplay=1" class="w-full h-full" frameborder="0" allow="autoplay; fullscreen" allowfullscreen="" @click.away="video=false">
+                            </iframe>
+                        </div>
+                    </template>
+
+                    <script>
+                        function showIntro(){
+                            window.intro = setTimeout(function(){
+                                document.getElementById('intro').classList.add('z-20');
+                            }, 500)
+                        }
+
+                        function hideIntro(){
+                            clearTimeout(window.intro);
+                            document.getElementById('intro').classList.remove('z-20');
+                        }
+                    </script>
+                </div>
+
+                <div class="z-10 -mb-6 md:-mb-12">
+                    <a href="{{ route('demo') }}" class="group z-50 flex justify-center items-start absolute inset-0 
+                                bg-opacity-0 hover:bg-opacity-25 transition-all duration-200
+                                bg-blue-900">
+                        <span class="bg-blue-900 text-blue-200 group-hover:text-white shadow-lg border-t-2 border-blue-800 rounded-b-sm px-3 py-2 flex items-center justify-center text-xxs uppercase tracking-logo leading-tight font-semibold">
+                            View demo
+                        </span>
+                    </a>
+                    @include('partials.medialibrary-dummy')
+                </div>
+
             </div>
         </div>
         @endunless

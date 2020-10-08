@@ -16,7 +16,7 @@
             </p>
 
             <div class="text-right">
-                <a href="{{ route('buy') }}">
+                <a href="https://spatie.be/products/medialibrary-pro">
                     @include('partials.button', ["label" => "Pick a license", "textClass" => "text-2xl", "bgClass" => "bg-yellow-300", "shadowClass" => "bg-white"])
                 </a>
             </div>
