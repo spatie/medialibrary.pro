@@ -19,6 +19,3 @@ Route::get('demo-attachment', [AttachmentDemoController::class, 'create']);
 Route::post('demo-attachment', [AttachmentDemoController::class, 'store']);
 
 Route::post('temp-upload', MediaLibraryUploadController::class)->name('media-library-upload');
-
-Route::redirect('/docs', 'https://spatie.be/docs/laravel-medialibrary/v8/introduction')->name('docs');
-Route::redirect('/buy', 'https://spatie.be/products/medialibrary-pro')->name('buy');
