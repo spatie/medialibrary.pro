@@ -1,4 +1,4 @@
-<section id="pricecard" class="mt-16 w-full max-w-5xl mx-auto px-4 sm:px-12">
+<section id="pricecard" class="mt-16 md:mt-24 w-full max-w-5xl mx-auto px-4 sm:px-12">
     <div class="mb-8 flex justify-center">
         <div class="px-4 sm:px-12 py-2 text-center text-blue-500 bg-blue-50 rounded text-lg">
             Introduction offer ends in <strong class="font-semibold">09 days 3 hours</strong>

@@ -16,8 +16,14 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
 
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.min.js" defer></script>
-    
+    <script src="/js/alpine.js" defer></script>
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            hljs.initHighlightingOnLoad();
+        });
+    </script>
+
     @include('partials.favicon')
     @include('partials.socialMetaTags')
 </head>

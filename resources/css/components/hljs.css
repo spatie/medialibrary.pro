@@ -1,0 +1,83 @@
+.hljs {
+    display: block;
+    @apply bg-blue-900;
+    @apply text-blue-100;
+    padding: 0.5em;
+    overflow-x: auto;
+    @apply leading-loose;
+    @apply text-xs;
+    @apply h-48;
+}
+
+.hljs::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+.hljs::-webkit-scrollbar-corner {
+    @apply bg-transparent;
+}
+
+.hljs-comment,
+.hljs-meta {
+    @apply text-blue-500;
+}
+
+.hljs-variable,
+.hljs-template-variable,
+.hljs-strong,
+.hljs-emphasis,
+.hljs-quote {
+    color: #df5000;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-type {
+    color: #d73a49;
+}
+
+.hljs-literal,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-attribute {
+    color: #0086b3;
+}
+
+.hljs-section,
+.hljs-name {
+    @apply text-yellow-200;
+}
+
+.hljs-tag {
+    @apply text-blue-300;
+}
+
+.hljs-title,
+.hljs-attr,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+    @apply text-red-400;
+}
+
+.hljs-addition {
+    color: #55a532;
+    background-color: #eaffea;
+}
+
+.hljs-deletion {
+    color: #bd2c00;
+    background-color: #ffecec;
+}
+
+.hljs-link {
+    text-decoration: underline;
+}
+
+.hljs-number {
+    color: #005cc5;
+}
+
+.hljs-string {
+    @apply text-blue-200;
+}

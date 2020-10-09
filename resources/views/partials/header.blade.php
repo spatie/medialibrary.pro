@@ -35,8 +35,8 @@
         </h1>
 
         @unless($compact ?? false)
-        <div class="grid md:grid-cols-2 gap-16 justify-between">
-            <ul class="text-blue-100 text-lg font-medium space-y-4 pb-8 md:pb-16">
+        <div class="grid md:grid-cols-2 gap-16 justify-between items-stretch">
+            <ul class="text-blue-100 text-lg font-medium space-y-4 md:pb-24">
                 <li class="flex items-baseline">
                     <i class="mr-2 far fa-check text-yellow-300 text-sm"></i>
                     Components for uploads &amp; media collections
@@ -60,7 +60,7 @@
             </ul>
             <div x-data="{ zIndex: false, video: false }">
                 <div id="intro" @mouseLeave="hideIntro()" @mouseEnter="showIntro()"  class="my-8
-                            md:absolute top-0 left-0 w-full h-full md:ml-8 md:-mt-32 
+                            md:absolute top-0 left-0 w-full h-full md:ml-8 md:-mt-16 
                             bg-yellow-300 shadow-2xl">
                     <img src="/images/intro-1600.jpg" class="border-2 border-blue-500 md:absolute inset-0 w-full h-full object-cover">
                     <a @click="video=true" href="#" class="group flex justify-center items-start absolute inset-0 
@@ -70,7 +70,7 @@
                             Watch intro
                         </span>
                         <span class="absolute flex items-center justify-center inset-0">
-                            <span class="rounded-full bg-blue-500 text-white w-12 h-12 flex items-center justify-center text-xxs uppercase tracking-logo leading-tight font-semibold">
+                            <span class="opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-full bg-blue-500 text-white w-12 h-12 flex items-center justify-center">
                                 <i class="ml-1 text-lg far fa-play"></i>
                             </span>
                         </span>
@@ -88,7 +88,7 @@
                         function showIntro(){
                             window.intro = setTimeout(function(){
                                 document.getElementById('intro').classList.add('z-20');
-                            }, 500)
+                            }, 750)
                         }
 
                         function hideIntro(){
@@ -97,8 +97,7 @@
                         }
                     </script>
                 </div>
-
-                <div class="z-10 -mb-6 md:-mb-12">
+                <div class="z-10 md:absolute md:bottom-0 md:left-0 w-full md:-mb-8" @mouseEnter="hideIntro()">
                     <a href="{{ route('demo') }}" class="group z-50 flex justify-center items-start absolute inset-0 
                                 bg-opacity-0 hover:bg-opacity-25 transition-all duration-200
                                 bg-blue-900">
