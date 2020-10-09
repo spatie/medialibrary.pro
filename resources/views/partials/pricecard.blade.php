@@ -36,7 +36,9 @@
 
             <div class="flex justify-center">
                 <a href="https://spatie.be/products/medialibrary-pro">
-                    @include('partials.button', ["label" => "Buy license"])
+                    <x-animated-button textClass="text-xl">
+                        Buy license
+                    </x-animated-button>
                 </a>
             </div>
         </div>
@@ -71,7 +73,9 @@
 
             <div class="flex justify-center">
                 <a href="https://spatie.be/products/medialibrary-pro">
-                    @include('partials.button', ["label" => "Buy license", "class" => "bg-blue-100"])
+                    <x-animated-button bgClass="bg-blue-100">
+                        Buy license
+                    </x-animated-button>
                 </a>
             </div>
         </div>

@@ -17,7 +17,9 @@
 
             <div class="text-right">
                 <a href="https://spatie.be/products/medialibrary-pro">
-                    @include('partials.button', ["label" => "Pick a license", "textClass" => "text-2xl", "bgClass" => "bg-yellow-300", "shadowClass" => "bg-white"])
+                    <x-animated-button textClass="text-2xl" bgClass="bg-yellow-300" shadowClass="bg-white">
+                        Pick a license
+                    </x-animated-button>
                 </a>
             </div>
         </div>

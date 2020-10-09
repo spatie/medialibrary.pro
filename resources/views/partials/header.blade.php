@@ -88,7 +88,7 @@
                         function showIntro(){
                             window.intro = setTimeout(function(){
                                 document.getElementById('intro').classList.add('z-20');
-                            }, 750)
+                            }, 500)
                         }
 
                         function hideIntro(){

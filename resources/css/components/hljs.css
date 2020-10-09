@@ -6,7 +6,7 @@
     overflow-x: auto;
     @apply leading-loose;
     @apply text-xs;
-    @apply h-48;
+    @apply h-64;
 }
 
 .hljs::-webkit-scrollbar-track {

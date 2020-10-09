@@ -94,7 +94,7 @@ module.exports = {
                 10: "2.5rem"
             },
             fontSize: {
-                "xxs" : "0.6rem"
+                "xxs" : "0.65rem"
             },
             backgroundColor: {
                 'inherit' : 'inherit'
