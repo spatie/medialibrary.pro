@@ -1,4 +1,6 @@
-@extends('layouts.master')
+@extends('layouts.demo')
+
+@section('title', 'Demo: collection')
 
 @push('scripts')
     <script defer src="/js/vue/app.js"></script>
@@ -11,12 +13,14 @@
 
 @section('content')
 
-    <x-h2>Collection demo</x-h2>
-
     <form method="POST" ref="form">
         @csrf
 
-        <x-grid>
+        <div class="grid gap-8 justify-items-start">
+            <p class="text-lg">
+                A <em>Collection</em> is a component to manage your media data. Load and add items, fill in properties and sort rows.
+            </p>
+
             <x-field label="name">
                 <x-input id="name" name="name" placeholder="Your first name" value="{{ old('name', $formSubmission->name) }}" />
             </x-field>
@@ -43,8 +47,15 @@
                 />
             </x-field>
 
-            <x-button dusk="submit">Submit</x-button>
-        </x-grid>
+            <x-animated-button>Submit</x-animated-button>
+        </div>
+
+        <h3 class="mt-24 pt-8 border-t-8 border-blue-300 border-opacity-25">Source</h3>
+
+        <pre><code class="vue">   
+        /* Vue */  
+        …
+        </code></pre>
     </form>
 
 @endsection

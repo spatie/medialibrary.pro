@@ -84,20 +84,13 @@
 
 .markup-lists ol > li,
 .markup-ol > li {
+    @apply flex;
+    @apply items-baseline;
     counter-increment: customOl;
-    padding-left: 1.5em;
-}
-
-.markup-lists ol > li:before {
-    @apply absolute;
-    @apply left-0;
-    content: counter(customOl) ".";
 }
 
 .markup-lists ol > li:before,
 .markup-ol > li:before {
-    @apply absolute;
-    @apply left-0;
     content: counter(customOl);
     @apply rounded-full;
     @apply flex-none;
@@ -111,7 +104,8 @@
     font-size: 0.65em;
     width: 1.5em;
     height: 1.5em;
-    transform: translateY(0.35em);
+    transform: translateY(-0.35em);
+    @apply mr-2;
 }
 
 .markup-lists-spaced ol,

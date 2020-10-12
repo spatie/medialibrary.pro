@@ -1,6 +1,6 @@
 @extends('front.layouts.demo')
 
-@section('title', 'Attachment demo')
+@section('title', 'Demo: attachment')
 
 @push('scripts')
 <script defer src="/js/vue/app.js"></script>
@@ -11,7 +11,11 @@
 <form method="POST">
     @csrf
 
-    <x-grid>
+    <div class="grid gap-8 justify-items-start">
+        <p class="text-lg">
+            The <em>Attachment</em> is a typical component in a front facing form. Think uploading a CV, an avatar etc.
+        </p>
+
         <x-field label="name">
             <x-input id="name" name="name" placeholder="Name" value="{{ old('name') }}" />
         </x-field>
@@ -27,7 +31,14 @@
         </x-field>
 
         <x-animated-button>Submit</x-animated-button>
-    </x-grid>
+    </div>
+
+    <h3 class="mt-24 pt-8 border-t-8 border-blue-300 border-opacity-25">Source</h3>
+
+    <pre><code class="vue">   
+    /* Vue */  
+    …
+    </code></pre>
 </form>
 
 @endsection
