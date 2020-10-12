@@ -29,7 +29,7 @@
     </div>
 
     <div class="mt-16 w-full max-w-5xl mx-auto px-4 sm:px-12">
-        <h1 class="mb-16 font-bold text-white leading-tight 
+        <h1 class="pb-16 font-bold text-white leading-tight 
                 text-2xl md:text-3xl lg:text-4xl">
             @yield('h1')
         </h1>

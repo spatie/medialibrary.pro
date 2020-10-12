@@ -1,14 +1,14 @@
-@extends('front.layouts.master')
+@extends('front.layouts.demo')
+
+@section('title', 'Attachment demo')
 
 @push('scripts')
 <script defer src="/js/vue/app.js"></script>
 @endpush
 
-@section('content')
+@section('demo')
 
-<x-h2>Attachment demo</x-h2>
-
-<form method="POST" class="mb-64">
+<form method="POST">
     @csrf
 
     <x-grid>
@@ -26,7 +26,7 @@
             />
         </x-field>
 
-        <x-button>Submit</x-button>
+        <x-animated-button>Submit</x-animated-button>
     </x-grid>
 </form>
 
