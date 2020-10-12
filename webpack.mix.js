@@ -22,6 +22,10 @@ mix.js("resources/js/app.js", "public/js/vue")
 
 mix.webpackConfig({
     resolve: {
-        symlinks: false
+        symlinks: false,
+        alias: {
+            react: path.resolve("./node_modules/react"),
+            vue: path.resolve("./node_modules/vue")
+        }
     }
 });
