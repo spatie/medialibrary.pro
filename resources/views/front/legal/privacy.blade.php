@@ -6,7 +6,7 @@
 
 @section('article')
 
-@markdown
+<x-markdown>
 This the Medialibrary Pro privacy and cookie policy. Medialibrary Pro is a product of Spatie BVBA, with a registered office at Kruikstraat 22/12, 2018 Antwerp, Belgium, and registered at the CBE under number BE 0809.387.596, here hereafter referred to as Spatie.
 
 Please read this privacy policy carefully, because it contains essential information about the processing of your data and the use of cookies by Spatie. By using the website, provided through URL [https://front-line-php.com](https://front-line-php.com/); by creating an account, by contacting us by email/phone, by subscribing for our newsletter, you declare that you have read this privacy policy and that you explicitly agree to its content as well as to the processing itself.
@@ -138,6 +138,6 @@ You can always adjust your browser settings if you choose to refuse the setting 
 When you visit our website for the first time, we will ask you to accept our different kinds of cookies. We will always offer the option to withdraw your consent.
 
 You can block cookies by adjusting your browser settings, which allows you to deny the cookies. Refusing certain cookies can lead to the effect of not being able to use some functionalities of the website. In case you have any more questions or remarks regarding the processing of your data, you may contact us by email at <a href="mailto:info@spatie.be">info@spatie.be</a>.
-@endmarkdown
+</x-markdown>
 
 @endsection

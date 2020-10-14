@@ -6,7 +6,7 @@
 
 @section('article')
 
-@markdown
+<x-markdown>
 These Medialibrary Pro terms of use (the “Terms of Use”) apply to all services provided through <https://front-line-php.com/terms-of-use> by Spatie BV, with registered offices at Kruikstraat 22/12, 2060 Antwerp, Belgium and registered at the CBE under number BE 0809.387.596 hereafter referred to as “Medialibrary Pro” “we”, “us” or “our”.
 
 By buying and downloading our video course, You explicitly agree to these Terms of Use.
@@ -129,5 +129,6 @@ The following definitions apply to these Terms of Use:
 13.2. If any provision of these Terms of Use shall be unlawful, void, or for any reason unenforceable, then that provision shall be deemed severable from these Terms of Use and shall not affect the validity and enforceability of any remaining provisions.
 
 13.3. In case and insofar express or implied restrictions are not permitted by applicable law, these express or implied restrictions remain valid and enforceable to the extent permitted by this applicable law.
-@endmarkdown
+<x-markdown />
+
 @endsection
