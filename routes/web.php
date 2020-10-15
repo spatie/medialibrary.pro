@@ -16,10 +16,10 @@ Route::view('privacy', 'front.legal.privacy')->name('privacy');
 
 Route::redirect('demo', 'demo-attachment')->name('demo');
 
-Route::get('demo-attachment', [AttachmentDemoController::class, 'create']);
+Route::get('demo-attachment', [AttachmentDemoController::class, 'create'])->name('demo-attachment');
 Route::post('demo-attachment', [AttachmentDemoController::class, 'store']);
 
-Route::get('demo-collection', [CollectionDemoController::class, 'create']);
+Route::get('demo-collection', [CollectionDemoController::class, 'create'])->name('demo-collection');
 Route::post('demo-collection', [CollectionDemoController::class, 'store']);
 
 Route::post('temp-upload', MediaLibraryUploadController::class)->name('media-library-upload');
