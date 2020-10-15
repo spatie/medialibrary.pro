@@ -3,32 +3,39 @@
 namespace App\Http\Front\Controllers\Demo;
 
 use App\Http\Front\Requests\Demo\CollectionDemoRequest;
+use App\Models\FormSubmission;
 
 class CollectionDemoController
 {
     public function create()
     {
-        return view('front.demo.attachment');
+        /** @var \App\Models\FormSubmission $formSubmission */
+        $formSubmission = FormSubmission::first() ?? FormSubmission::create(['name' => 'test']);
+
+        return view('front.demo.collection', [
+            'formSubmission' => $formSubmission,
+            'images' => $formSubmission->getMedia('images'),
+            'downloads' => $formSubmission->getMedia('downloads'),
+        ]);
     }
 
     public function store(CollectionDemoRequest $request)
     {
-        /**
-         * We're not going to persist in this demo.
-         *
-         * This is how you would normally handle the upload
-         */
-//        $yourModel->update(['name' => $request->name);
-//
-//        $yourModel
-//            ->syncFromMediaLibraryRequest($request->images)
-//            ->toMediaCollection('images');
-//
-//        $yourModel
-//            ->syncFromMediaLibraryRequest($request->downloads)
-//            ->toMediaCollection('downloads');
+        /** @var \App\Models\FormSubmission $formSubmission */
+        $formSubmission = FormSubmission::first();
 
-        flash()->success('The form has been submitted');
+        $formSubmission
+            ->syncFromMediaLibraryRequest($request->images)
+            ->toMediaCollection('images');
+
+        $formSubmission
+            ->syncFromMediaLibraryRequest($request->downloads)
+            ->toMediaCollection('downloads');
+
+        $formSubmission->name = $request->name;
+        $formSubmission->save();
+
+        flash()->success('Your form has been submitted');
 
         return back();
     }

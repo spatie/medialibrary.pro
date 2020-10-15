@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Front\Controllers\Demo\AttachmentDemoController;
+use App\Http\Front\Controllers\Demo\CollectionDemoController;
 use App\Http\Front\Controllers\HomeController;
 use App\Http\Front\Controllers\SubscribeToEmailListController;
 use Illuminate\Support\Facades\Route;
@@ -17,5 +18,8 @@ Route::redirect('demo', 'demo-attachment')->name('demo');
 
 Route::get('demo-attachment', [AttachmentDemoController::class, 'create']);
 Route::post('demo-attachment', [AttachmentDemoController::class, 'store']);
+
+Route::get('demo-collection', [CollectionDemoController::class, 'create']);
+Route::post('demo-collection', [CollectionDemoController::class, 'store']);
 
 Route::post('temp-upload', MediaLibraryUploadController::class)->name('media-library-upload');

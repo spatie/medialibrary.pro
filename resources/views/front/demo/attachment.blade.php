@@ -4,6 +4,9 @@
 
 @push('scripts')
 <script defer src="/js/vue/app.js"></script>
+<script>
+    window.errors = {!! $errors->isEmpty() ? '{}' : $errors !!};
+</script>
 @endpush
 
 @section('demo')
@@ -19,13 +22,15 @@
         <x-field label="name">
             <x-input id="name" name="name" placeholder="Name" value="{{ old('name') }}" />
         </x-field>
-
+{{ print_r($errors) }}
+        {{ json_encode($errors->all()) }}
         <x-field label="file">
             <media-library-attachment
                 name="media"
                 upload-endpoint="/temp-upload"
                 :validation="{ accept: ['image/png', 'image/jpeg'] }"
-                :validation-errors="{}"
+                :validation-errors="window.errors || {}"
+
                 :initial-value="{{ json_encode(old('media')) }}"
             />
         </x-field>
@@ -35,8 +40,8 @@
 
     <h3 class="mt-24 pt-8 border-t-8 border-blue-300 border-opacity-25">Source</h3>
 
-    <pre><code class="vue">   
-    /* Vue */  
+    <pre><code class="vue">
+    /* Vue */
     …
     </code></pre>
 </form>

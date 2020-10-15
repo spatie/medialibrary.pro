@@ -1,4 +1,4 @@
-@extends('layouts.demo')
+@extends('front.layouts.demo')
 
 @section('title', 'Demo: collection')
 
@@ -11,7 +11,7 @@
     </script>
 @endpush
 
-@section('content')
+@section('demo')
 
     <form method="POST" ref="form">
         @csrf
@@ -52,8 +52,8 @@
 
         <h3 class="mt-24 pt-8 border-t-8 border-blue-300 border-opacity-25">Source</h3>
 
-        <pre><code class="vue">   
-        /* Vue */  
+        <pre><code class="vue">
+        /* Vue */
         …
         </code></pre>
     </form>

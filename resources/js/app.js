@@ -5,6 +5,8 @@ import { MediaLibraryCollection } from "../../vendor/spatie/laravel-medialibrary
 
 var app = new Vue({
     components: { MediaLibraryAttachment, MediaLibraryCollection },
-
+    data: () => ({
+        window,
+    }),
     el: "#app"
 });
