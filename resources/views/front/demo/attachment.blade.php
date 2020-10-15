@@ -3,10 +3,10 @@
 @section('title', 'Demo: attachment')
 
 @push('scripts')
-<script defer src="/js/vue/app.js"></script>
 <script>
     window.errors = {!! $errors->isEmpty() ? '{}' : $errors !!};
 </script>
+<script defer src="/js/vue/app.js"></script>
 @endpush
 
 @section('demo')
