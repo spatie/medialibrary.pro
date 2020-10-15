@@ -22,8 +22,7 @@
         <x-field label="name">
             <x-input id="name" name="name" placeholder="Name" value="{{ old('name') }}" />
         </x-field>
-{{ print_r($errors) }}
-        {{ json_encode($errors->all()) }}
+
         <x-field label="file">
             <media-library-attachment
                 name="media"
