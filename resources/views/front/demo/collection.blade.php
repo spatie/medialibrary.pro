@@ -21,10 +21,15 @@
                 A <em>Collection</em> is a component to manage your media data. Load and add items, fill in properties and sort rows.
             </p>
 
+            <p class="text-lg">
+                The collection below will display files that are uploaded in this session. We'll delete any files that are older than 10 minutes.
+                You can test out the component with any file under 512 Kb. We've configured this collection so it can hold a maximum of three files.
+            </p>
+
             <x-field label="name">
                 <x-input id="name" name="name" placeholder="Your first name" value="{{ old('name', $formSubmission->name) }}" />
             </x-field>
-{{ $errors }}
+
             <x-field label="downloads">
                 <media-library-collection
                     name="downloads"
