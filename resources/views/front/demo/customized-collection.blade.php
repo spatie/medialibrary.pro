@@ -18,8 +18,7 @@
 
         <div class="grid gap-8 justify-items-start">
             <p class="text-lg">
-                A <em>Collection</em> is a component to manage your media data. Load and add items, fill in properties
-                and sort rows.
+                A both the <em>Attachment</em> and <em>Collection</em> components can be customized. You can change the looks and event can add extra fields.
             </p>
 
             <p class="text-lg">
