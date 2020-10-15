@@ -13,11 +13,7 @@ class CollectionDemoRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'images' => [$this->validateMultipleMedia()
-                ->maxItems(3)
-                ->attribute('name', 'required')
-                 ->maxItemSizeInKb(512),
-            ],
+
             'downloads' => [$this->validateMultipleMedia()
                 ->maxItems(3)
                 ->maxItemSizeInKb(512),

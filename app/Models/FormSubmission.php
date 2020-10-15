@@ -21,4 +21,9 @@ class FormSubmission extends Model implements HasMedia
             ->fit(Manipulations::FIT_CROP, 300, 300)
             ->nonQueued();
     }
+
+    public static function findForCurrentSession(): FormSubmission
+    {
+        return FormSubmission::firstOrCreate(['session_id' => session()->getId()]);
+    }
 }

@@ -9,8 +9,7 @@ class CollectionDemoController
 {
     public function create()
     {
-        /** @var \App\Models\FormSubmission $formSubmission */
-        $formSubmission = FormSubmission::first() ?? FormSubmission::create(['name' => 'test']);
+        $formSubmission = FormSubmission::findForCurrentSession();
 
         return view('front.demo.collection', [
             'formSubmission' => $formSubmission,
@@ -21,12 +20,7 @@ class CollectionDemoController
 
     public function store(CollectionDemoRequest $request)
     {
-        /** @var \App\Models\FormSubmission $formSubmission */
-        $formSubmission = FormSubmission::first();
-
-        $formSubmission
-            ->syncFromMediaLibraryRequest($request->images)
-            ->toMediaCollection('images');
+        $formSubmission = FormSubmission::findForCurrentSession();
 
         $formSubmission
             ->syncFromMediaLibraryRequest($request->downloads)

@@ -5,8 +5,8 @@
 @push('scripts')
     <script defer src="/js/vue/app.js"></script>
     <script>
+        window.oldValues = @json(Session::getOldInput());
         window.initialValues = {};
-        window.initialValues.images = {{ $images }};
         window.initialValues.downloads = {{ $downloads }};
     </script>
 @endpush
@@ -24,26 +24,15 @@
             <x-field label="name">
                 <x-input id="name" name="name" placeholder="Your first name" value="{{ old('name', $formSubmission->name) }}" />
             </x-field>
-
-            <x-field label="images">
-                <media-library-collection
-                    name="images"
-                    :initial-value="window.oldValues.images || window.initialValues.images"
-                    upload-endpoint="{{ route('media-library-upload') }}"
-                    :validation="{ accept: ['image/png', 'image/jpeg'] }"
-                    :validation-errors="window.errors"
-                    :max-items="3"
-                />
-            </x-field>
-
+{{ $errors }}
             <x-field label="downloads">
                 <media-library-collection
                     name="downloads"
                     :initial-value="window.oldValues.downloads || window.initialValues.downloads"
                     upload-endpoint="{{ route('media-library-upload') }}"
-                    :validation="{ accept: ['application/pdf'] }"
+                    :validation="{ accept: ['image/png', 'image/jpeg'], maxSize: 500 }"
                     :validation-errors="window.errors"
-                    :max-items="2"
+                    :max-items="3"
                 />
             </x-field>
 

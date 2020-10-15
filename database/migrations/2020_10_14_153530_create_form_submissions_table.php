@@ -11,6 +11,7 @@ class CreateFormSubmissionsTable extends Migration
         Schema::create('form_submissions', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name')->nullable();
+            $table->string('session_id');
             $table->timestamps();
         });
     }
