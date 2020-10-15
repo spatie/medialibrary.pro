@@ -26,10 +26,7 @@ class CollectionDemoController
             ->syncFromMediaLibraryRequest($request->downloads)
             ->toMediaCollection('downloads');
 
-        $formSubmission->name = $request->name;
-        $formSubmission->save();
-
-        flash()->success('Your form has been submitted');
+        flash()->success('The collection has been saved!');
 
         return back();
     }

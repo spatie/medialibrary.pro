@@ -12,12 +12,9 @@ class CollectionDemoRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required',
-
-            'downloads' => [$this->validateMultipleMedia()
+            'downloads' => $this->validateMultipleMedia()
                 ->maxItems(3)
                 ->maxItemSizeInKb(512),
-            ],
         ];
     }
 }

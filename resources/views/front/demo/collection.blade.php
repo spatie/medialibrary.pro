@@ -26,10 +26,6 @@
                 You can test out the component with any file under 512 Kb. We've configured this collection so it can hold a maximum of three files.
             </p>
 
-            <x-field label="name">
-                <x-input id="name" name="name" placeholder="Your first name" value="{{ old('name', $formSubmission->name) }}" />
-            </x-field>
-
             <x-field label="downloads">
                 <media-library-collection
                     name="downloads"

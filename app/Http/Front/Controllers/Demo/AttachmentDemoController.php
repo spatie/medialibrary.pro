@@ -18,13 +18,11 @@ class AttachmentDemoController
          *
          * This is how you would normally handle the upload
          */
-//        $yourModel->update(['name' => $request->name);
-
 //        $yourModel
 //            ->addFromMediaLibraryRequest($request->media)
 //            ->toMediaLibrary();
 
-        flash()->success('Your form has been submitted');
+        flash()->success('Thanks for uploading your file! ');
 
         return back();
     }
