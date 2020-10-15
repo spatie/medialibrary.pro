@@ -16,6 +16,8 @@
                 <ul class="markup-ol text-sm grid gap-2">
                     <li><x-navigation-item route="demo-attachment">Attachment</x-navigation-item></li>
                     <li><x-navigation-item route="demo-collection">Collection</x-navigation-item></li>
+                    <li><x-navigation-item route="demo-customized-collection">Customized Collection</x-navigation-item></li>
+
                 </ul>
             </nav>
         </div>

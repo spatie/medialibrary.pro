@@ -2,6 +2,7 @@
 
 use App\Http\Front\Controllers\Demo\AttachmentDemoController;
 use App\Http\Front\Controllers\Demo\CollectionDemoController;
+use App\Http\Front\Controllers\Demo\CustomizedCollectionDemoController;
 use App\Http\Front\Controllers\HomeController;
 use App\Http\Front\Controllers\SubscribeToEmailListController;
 use Illuminate\Support\Facades\Route;
@@ -21,5 +22,8 @@ Route::post('demo-attachment', [AttachmentDemoController::class, 'store']);
 
 Route::get('demo-collection', [CollectionDemoController::class, 'create'])->name('demo-collection');
 Route::post('demo-collection', [CollectionDemoController::class, 'store']);
+
+Route::get('demo-customized-collection', [CustomizedCollectionDemoController::class, 'create'])->name('demo-customized-collection');
+Route::post('demo-customized-collection', [CustomizedCollectionDemoController::class, 'store']);
 
 Route::post('temp-upload', MediaLibraryUploadController::class)->name('media-library-upload');
