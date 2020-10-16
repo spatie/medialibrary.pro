@@ -21,16 +21,15 @@
             </p>
 
             <p class="text-lg">
-                You can test out the component with any file under 512 Kb. Uploaded files will immediately be discarded.
+                You can test out the component with any file under 1 Mb. Uploaded files will immediately be discarded.
             </p>
 
             <x-field label="file">
                 <media-library-attachment
                     name="media"
-                    upload-endpoint="/temp-upload"
-                    :validation="{ accept: ['image/png', 'image/jpeg'], maxSize: 1  }"
-                    :validation-errors="window.errors || {}"
-
+                    upload-endpoint="{{ route('media-library-temporary-uploads') }}"
+                    :validation="{ accept: ['image/png', 'image/jpeg'], maxSize: 1024  }"
+                    :validation-errors="{{ $errors }}"
                     :initial-value="{{ json_encode(old('media')) }}"
                 />
             </x-field>

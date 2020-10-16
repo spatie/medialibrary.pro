@@ -4,11 +4,6 @@
 
 @push('scripts')
     <script defer src="/js/vue/app.js"></script>
-    <script>
-        window.oldValues = @json(Session::getOldInput());
-        window.initialValues = {};
-        window.initialValues.downloads = {{ $downloads }};
-    </script>
 @endpush
 
 @section('demo')
@@ -25,19 +20,17 @@
             <p class="text-lg">
                 The collection below will display files that are uploaded in this session. We'll delete any files that
                 are older than 10 minutes.
-                You can test out the component with any file under 512 Kb. We've configured this collection so it can
+                You can test out the component with any file under 1 Mb. We've configured this collection so it can
                 hold a maximum of three files.
             </p>
-            {{ $errors }}
-            {{ $downloads }}
-                    {{--  :initial-value="window.oldValues.downloads || window.initialValues.downloads" --}}
+
             <x-field label="downloads">
     <media-library-collection
         name="downloads"
         upload-endpoint="{{ route('media-library-temporary-uploads') }}"
-        :validation="{ accept: ['image/png', 'image/jpeg'], maxSize: 512 }"
-        :initial-value={!! $downloads !!}
-        :validation-errors={!! $errors !!}
+        :validation="{ accept: ['image/png', 'image/jpeg'], maxSize: 1024 }"
+        :initial-value="{{ $downloads }}"
+        :validation-errors="{{ $errors }}"
         :max-items="3"
     />
             </x-field>

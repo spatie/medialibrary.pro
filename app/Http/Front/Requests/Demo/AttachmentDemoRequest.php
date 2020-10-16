@@ -12,7 +12,7 @@ class AttachmentDemoRequest extends FormRequest
     public function rules()
     {
         return [
-            'media' => $this->validateSingleMedia()->maxItemSizeInKb(512),
+            'media' => $this->validateSingleMedia()->maxItemSizeInKb(1024),
         ];
     }
 }
