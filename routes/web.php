@@ -25,4 +25,4 @@ Route::post('demo-collection', [CollectionDemoController::class, 'store']);
 Route::get('demo-customized-collection', [CustomizedCollectionDemoController::class, 'create'])->name('demo-customized-collection');
 Route::post('demo-customized-collection', [CustomizedCollectionDemoController::class, 'store']);
 
-Route::temporaryUploads('tem-upload')->name('media-library-upload');
+Route::temporaryUploads('temporary-uploads');

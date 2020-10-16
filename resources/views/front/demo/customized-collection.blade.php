@@ -32,7 +32,7 @@
                 <media-library-collection
                     name="downloads"
                     :initial-value="window.oldValues.downloads || window.initialValues.downloads"
-                    upload-endpoint="{{ route('media-library-upload') }}"
+                    upload-endpoint="{{ route('media-library-temporary-uploads') }}"
                     :validation="{ accept: ['image/png', 'image/jpeg'], maxSize: 500 }"
                     :validation-errors="window.errors"
                     :max-items="3">
