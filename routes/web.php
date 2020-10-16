@@ -7,7 +7,6 @@ use App\Http\Front\Controllers\HomeController;
 use App\Http\Front\Controllers\SubscribeToEmailListController;
 use Illuminate\Support\Facades\Route;
 use Spatie\Honeypot\ProtectAgainstSpam;
-use Spatie\MediaLibraryPro\Http\Controllers\MediaLibraryUploadController;
 
 Route::get('/', HomeController::class);
 Route::post('subscribe', SubscribeToEmailListController::class)->middleware(ProtectAgainstSpam::class);
@@ -26,4 +25,4 @@ Route::post('demo-collection', [CollectionDemoController::class, 'store']);
 Route::get('demo-customized-collection', [CustomizedCollectionDemoController::class, 'create'])->name('demo-customized-collection');
 Route::post('demo-customized-collection', [CustomizedCollectionDemoController::class, 'store']);
 
-Route::post('temp-upload', MediaLibraryUploadController::class)->name('media-library-upload');
+Route::temporaryUploads('tem-upload')->name('media-library-upload');
