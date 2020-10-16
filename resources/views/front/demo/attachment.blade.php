@@ -30,7 +30,6 @@
                     upload-endpoint="{{ route('media-library-temporary-uploads') }}"
                     :validation="{ accept: ['image/png', 'image/jpeg'], maxSize: 1024  }"
                     :validation-errors="{{ $errors }}"
-                    :initial-value="{{ json_encode(old('media')) }}"
                 />
             </x-field>
 
