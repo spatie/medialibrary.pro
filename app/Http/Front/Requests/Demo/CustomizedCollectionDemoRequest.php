@@ -13,6 +13,7 @@ class CustomizedCollectionDemoRequest extends FormRequest
     {
         return [
             'downloads' => $this->validateMultipleMedia()
+                ->itemName('required')
                 ->maxItems(3)
                 ->maxItemSizeInKb(512)
                 ->customProperty('extra_field', 'required'),

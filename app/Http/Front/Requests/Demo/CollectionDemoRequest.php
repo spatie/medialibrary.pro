@@ -13,6 +13,7 @@ class CollectionDemoRequest extends FormRequest
     {
         return [
             'downloads' => $this->validateMultipleMedia()
+                ->itemName('required')
                 ->maxItems(3)
                 ->maxItemSizeInKb(512),
         ];

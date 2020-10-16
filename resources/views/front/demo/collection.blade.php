@@ -18,23 +18,28 @@
 
         <div class="grid gap-8 justify-items-start">
             <p class="text-lg">
-                A <em>Collection</em> is a component to manage your media data. Load and add items, fill in properties and sort rows.
+                A <em>Collection</em> is a component to manage your media data. Load and add items, fill in properties
+                and sort rows.
             </p>
 
             <p class="text-lg">
-                The collection below will display files that are uploaded in this session. We'll delete any files that are older than 10 minutes.
-                You can test out the component with any file under 512 Kb. We've configured this collection so it can hold a maximum of three files.
+                The collection below will display files that are uploaded in this session. We'll delete any files that
+                are older than 10 minutes.
+                You can test out the component with any file under 512 Kb. We've configured this collection so it can
+                hold a maximum of three files.
             </p>
-
+            {{ $errors }}
+            {{ $downloads }}
+                    {{--  :initial-value="window.oldValues.downloads || window.initialValues.downloads" --}}
             <x-field label="downloads">
-                <media-library-collection
-                    name="downloads"
-                    :initial-value="window.oldValues.downloads || window.initialValues.downloads"
-                    upload-endpoint="{{ route('media-library-upload') }}"
-                    :validation="{ accept: ['image/png', 'image/jpeg'], maxSize: 500 }"
-                    :validation-errors="window.errors"
-                    :max-items="3"
-                />
+    <media-library-collection
+        name="downloads"
+        upload-endpoint="{{ route('media-library-upload') }}"
+        :validation="{ accept: ['image/png', 'image/jpeg'], maxSize: 512 }"
+        :initial-value={!! $downloads !!}
+        :validation-errors={!! $errors !!}
+        :max-items="3"
+    />
             </x-field>
 
             <x-animated-button>Submit</x-animated-button>
