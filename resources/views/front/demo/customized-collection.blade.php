@@ -26,10 +26,10 @@
             <x-field label="downloads">
                 <media-library-collection
                     name="downloads"
-                    :initial-value='{{ $downloads }}'
+                    :initial-value="{{ $downloads }}"
                     upload-endpoint="{{ route('media-library-temporary-uploads') }}"
                     :validation-rules="{ accept: ['image/png', 'image/jpeg'], maxSize: 500 }"
-                    :validation-errors='{{ $errors }}'
+                    :validation-errors="{{ $errors }}"
                     :max-items="3"
                 >
                     <template

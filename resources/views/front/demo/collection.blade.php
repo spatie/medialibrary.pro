@@ -29,8 +29,8 @@
                     name="downloads"
                     upload-endpoint="{{ route('media-library-temporary-uploads') }}"
                     :validation-rules="{ accept: ['image/png', 'image/jpeg'], maxSize: 1024 }"
-                    :initial-value='{{ $downloads }}'
-                    :validation-errors='{{ $errors }}'
+                    :initial-value="{{ $downloads }}"
+                    :validation-errors="{{ $errors }}"
                     :max-items="3"
                 />
             </x-field>
