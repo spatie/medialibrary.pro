@@ -28,7 +28,7 @@
                 <media-library-attachment
                     name="media"
                     upload-endpoint="{{ route('media-library-temporary-uploads') }}"
-                    :validation="{ accept: ['image/png', 'image/jpeg'], maxSize: 1024  }"
+                    :validation-rules="{ accept: ['image/png', 'image/jpeg'], maxSize: 1024  }"
                     :validation-errors="{{ $errors }}"
                 />
             </x-field>

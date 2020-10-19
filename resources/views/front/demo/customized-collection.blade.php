@@ -28,37 +28,49 @@
                     name="downloads"
                     :initial-value="{{ $downloads }}"
                     upload-endpoint="{{ route('media-library-temporary-uploads') }}"
-                    :validation="{ accept: ['image/png', 'image/jpeg'], maxSize: 500 }"
+                    :validation-rules="{ accept: ['image/png', 'image/jpeg'], maxSize: 500 }"
                     :validation-errors="{{ $errors }}"
-                    :max-items="3">
-
+                    :max-items="3"
+                >
                     <template
                         slot="fieldsView"
                         slot-scope="{
-            object,
-            getCustomPropertyInputProps,
-            getCustomPropertyInputListeners,
-            getCustomPropertyInputErrors,
-            getNameInputProps,
-            getNameInputListeners,
-            getNameInputErrors,
-        }"
+                            object,
+                            getCustomPropertyInputProps,
+                            getCustomPropertyInputListeners,
+                            getCustomPropertyInputErrors,
+                            getNameInputProps,
+                            getNameInputListeners,
+                            getNameInputErrors,
+                        }"
                     >
-                        <input
-                            placeholder="name"
-                            v-bind="getNameInputProps()"
-                            v-on="getNameInputListeners()"
-                        />
-                        <p v-for="error in getNameInputErrors()" :key="error">@{{ error }}</p>
+                        <div class="medialibrary-properties">
+                            <div class="medialibrary-field">
+                                <label class="medialibrary-label">Name</label>
+                                <input
+                                    class="medialibrary-input"
+                                    v-bind="getNameInputProps()"
+                                    v-on="getNameInputListeners()"
+                                    dusk="medialibrary-field-name"
+                                />
+                                <p v-for="error in getNameInputErrors()" :key="error" class="medialibrary-text-error">
+                                    @{{ error }}
+                                </p>
+                            </div>
 
-                        <input
-                            placeholder="Extra field"
-                            v-bind="getCustomPropertyInputProps('extra_field')"
-                            v-on="getCustomPropertyInputListeners('extra_field')"
-                        />
-                        <p v-for="error in getCustomPropertyInputErrors('extra_field')" :key="error">
-                            @{{ error }}
-                        </p>
+                            <div class="medialibrary-field">
+                                <label class="medialibrary-label">Extra field</label>
+                                <input
+                                    class="medialibrary-input"
+                                    v-bind="getCustomPropertyInputProps('extra_field')"
+                                    v-on="getCustomPropertyInputListeners('extra_field')"
+                                    dusk="medialibrary-extra-field"
+                                />
+                                <p v-for="error in getCustomPropertyInputErrors('extra_field')" :key="error" class="medialibrary-text-error">
+                                    @{{ error }}
+                                </p>
+                            </div>
+                        </div>
                     </template>
                 </media-library-collection>
             </x-field>

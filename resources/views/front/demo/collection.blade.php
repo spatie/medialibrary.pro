@@ -25,14 +25,14 @@
             </p>
 
             <x-field label="downloads">
-    <media-library-collection
-        name="downloads"
-        upload-endpoint="{{ route('media-library-temporary-uploads') }}"
-        :validation="{ accept: ['image/png', 'image/jpeg'], maxSize: 1024 }"
-        :initial-value="{{ $downloads }}"
-        :validation-errors="{{ $errors }}"
-        :max-items="3"
-    />
+                <media-library-collection
+                    name="downloads"
+                    upload-endpoint="{{ route('media-library-temporary-uploads') }}"
+                    :validation-rules="{ accept: ['image/png', 'image/jpeg'], maxSize: 1024 }"
+                    :initial-value="{{ $downloads }}"
+                    :validation-errors="{{ $errors }}"
+                    :max-items="3"
+                />
             </x-field>
 
             <x-animated-button>Submit</x-animated-button>
