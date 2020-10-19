@@ -12,7 +12,8 @@
             </h2>
             <p class="py-8 flex justify-center items-start">
                 <del class="text-red-400">
-                    -30%
+                    <span data-id="original-currency-{{ config('services.paddle.product_id_unlimited') }}"></span>
+                    <span data-id="original-price-{{ config('services.paddle.product_id_unlimited') }}"></span>
                 </del>
                 <ins class="ml-2 no-underline text-3xl font-semibold">
                     <span data-id="current-currency-{{ config('services.paddle.product_id_unlimited') }}"></span>
@@ -53,7 +54,10 @@
                 Single application
             </h2>
             <p class="py-8 flex justify-center items-start">
-                <del class="text-blue-300">-30%</del>
+                <del class="text-blue-300">
+                    <span data-id="original-currency-{{ config('services.paddle.product_id_single') }}"></span>
+                    <span data-id="original-price-{{ config('services.paddle.product_id_single') }}"></span>
+                </del>
                 <ins class="ml-2 no-underline text-3xl font-semibold">
                     <span data-id="current-currency-{{ config('services.paddle.product_id_single') }}"></span>
                     <span data-id="current-price-{{ config('services.paddle.product_id_single') }}"></span>
