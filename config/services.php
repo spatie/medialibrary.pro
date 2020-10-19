@@ -15,7 +15,9 @@ return [
     */
 
     'paddle' => [
-        'vendor_id' => env('PADDLE_VENDOR_ID')
+        'vendor_id' => env('PADDLE_VENDOR_ID'),
+        'product_id_single' => '633977',
+        'product_id_unlimited' => '633990',
     ],
 
     'mailgun' => [
@@ -37,5 +39,4 @@ return [
         'secret' => env('SES_AWS_SECRET_ACCESS_KEY'),
         'region' => env('SES_AWS_DEFAULT_REGION', 'us-east-1'),
     ],
-
 ];

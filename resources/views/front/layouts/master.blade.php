@@ -18,6 +18,8 @@
 
     <script src="/js/alpine.js" defer></script>
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js"></script>
+    <script src="https://cdn.paddle.com/paddle/paddle.js"></script>
+
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
             hljs.initHighlightingOnLoad();

@@ -11,8 +11,13 @@
                 Unlimited applications
             </h2>
             <p class="py-8 flex justify-center items-start">
-                <del class="text-red-400">$249</del>
-                <ins class="ml-2 no-underline text-3xl font-semibold">$199</ins>
+                <del class="text-red-400">
+                    -30%
+                </del>
+                <ins class="ml-2 no-underline text-3xl font-semibold">
+                    <span data-id="current-currency-{{ config('services.paddle.product_id_unlimited') }}"></span>
+                    <span data-id="current-price-{{ config('services.paddle.product_id_unlimited') }}"></span>
+                </ins>
             </p>
 
             <ul class="mb-8 text-sm lg:text-base text-blue-600 font-medium space-y-2 leading-snug">
@@ -48,8 +53,11 @@
                 Single application
             </h2>
             <p class="py-8 flex justify-center items-start">
-                <del class="text-blue-300">$49</del>
-                <ins class="ml-2 no-underline text-3xl font-semibold">$35</ins>
+                <del class="text-blue-300">-30%</del>
+                <ins class="ml-2 no-underline text-3xl font-semibold">
+                    <span data-id="current-currency-{{ config('services.paddle.product_id_single') }}"></span>
+                    <span data-id="current-price-{{ config('services.paddle.product_id_single') }}"></span>
+                </ins>
             </p>
 
             <ul class="mb-8 text-sm lg:text-base text-blue-600 font-medium space-y-2 leading-snug">
@@ -81,3 +89,36 @@
         </div>
     </div>
 </section>
+
+<script type="text/javascript">
+    function indexOfFirstDigitInString(string) {
+        let firstDigit = string.match(/\d/);
+
+        return string.indexOf(firstDigit);
+    }
+
+    function displayPaddleProductPrice(productId) {
+        Paddle.Product.Prices(productId, function(prices) {
+            let priceString = prices.price.net;
+
+            let indexOFirstDigitInString = indexOfFirstDigitInString(priceString);
+
+            let price = priceString.substring(indexOFirstDigitInString);
+            price = price.replace('.00', '').replace(/,/g, '');
+
+            let currencySymbol = priceString.substring(0, indexOFirstDigitInString);
+            currencySymbol = currencySymbol.replace('US', '');
+
+            document.querySelector(`[data-id="current-currency-${productId}"]`).innerHTML = currencySymbol;
+            document.querySelector(`[data-id="current-price-${productId}"]`).innerHTML = price;
+
+            document.querySelector(`[data-id="original-currency-${productId}"]`).innerHTML = currencySymbol;
+            document.querySelector(`[data-id="original-price-${productId}"]`).innerHTML = Math.round(price * 1.3355);
+        });
+    }
+
+
+    displayPaddleProductPrice({{ config('services.paddle.product_id_single') }});
+    displayPaddleProductPrice({{ config('services.paddle.product_id_unlimited') }});
+</script>
+
