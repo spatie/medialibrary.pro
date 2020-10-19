@@ -22,14 +22,14 @@
         <nav>
             <ul class="flex space-x-4 sm:space-x-12 text-xs uppercase tracking-logo leading-tight font-medium text-blue-100">
                 <li><a href="{{ route('demo') }}" class="hover:text-yellow-300">Demo</a></li>
-                <li><a href="https://spatie.be/docs/laravel-medialibrary" class="hover:text-yellow-300">Docs</a></li>
+                <li><a href="https://spatie.be/docs/laravel-medialibrary/v9/handling-uploads-with-media-library-pro/general" class="hover:text-yellow-300">Docs</a></li>
                 <li><a href="https://spatie.be/products/medialibrary-pro" class=" hover:text-blue-900 bg-blue-500 hover:bg-yellow-300 rounded-sm px-4 py-2 transition-colors duration-200">Buy</a></li>
             </ul>
         </nav>
     </div>
 
     <div class="mt-16 w-full max-w-5xl mx-auto px-4 sm:px-12">
-        <h1 class="pb-16 font-bold text-white leading-tight 
+        <h1 class="pb-16 font-bold text-white leading-tight
                 text-2xl md:text-3xl lg:text-4xl">
             @yield('h1')
         </h1>
@@ -60,10 +60,10 @@
             </ul>
             <div x-data="{ zIndex: false, video: false }">
                 <div id="intro" @mouseLeave="hideIntro()" @mouseEnter="showIntro()"  class="my-8
-                            md:absolute top-0 left-0 w-full h-full md:ml-8 md:-mt-16 
+                            md:absolute top-0 left-0 w-full h-full md:ml-8 md:-mt-16
                             bg-yellow-300 shadow-2xl">
                     <img src="/images/intro-1600.jpg" class="border-2 border-blue-500 md:absolute inset-0 w-full h-full object-cover">
-                    <a @click="video=true" href="#" class="group flex justify-center items-start absolute inset-0 
+                    <a @click="video=true" href="#" class="group flex justify-center items-start absolute inset-0
                                 bg-opacity-0 hover:bg-opacity-25 transition-all duration-200
                                 bg-blue-900">
                         <span class="bg-blue-900 text-blue-200 group-hover:text-white shadow-lg border-t-2 border-blue-800 rounded-b-sm px-3 py-2 flex items-center justify-center text-xxs uppercase tracking-logo leading-tight font-semibold">
@@ -98,7 +98,7 @@
                     </script>
                 </div>
                 <div class="z-10 md:absolute md:bottom-0 md:left-0 w-full md:-mb-8" @mouseEnter="hideIntro()">
-                    <a href="{{ route('demo') }}" class="group z-50 flex justify-center items-start absolute inset-0 
+                    <a href="{{ route('demo') }}" class="group z-50 flex justify-center items-start absolute inset-0
                                 bg-opacity-0 hover:bg-opacity-25 transition-all duration-200
                                 bg-blue-900">
                         <span class="bg-blue-900 text-blue-200 group-hover:text-white shadow-lg border-t-2 border-blue-800 rounded-b-sm px-3 py-2 flex items-center justify-center text-xxs uppercase tracking-logo leading-tight font-semibold">

@@ -8,7 +8,7 @@
             @include('partials.features.useCase')
 
             @include('partials.features.customization')
-            
+
             @include('partials.features.tailwind')
 
             <div>
@@ -39,7 +39,7 @@
         </div>
 
         <div class="mt-24 flex justify-center space-x-8 pt-8 border-t-8 border-blue-200">
-            <a href="https://spatie.be/docs/laravel-medialibrary" class="underline text-xl font-medium hover:text-blue-600">Read the docs</a>
+            <a href="https://spatie.be/docs/laravel-medialibrary/v9/handling-uploads-with-media-library-pro/general" class="underline text-xl font-medium hover:text-blue-600">Read the docs</a>
             <a href="{{ route('demo') }}" class="underline text-xl font-medium hover:text-blue-600">Try the demo</a>
         </div>
     </div>
