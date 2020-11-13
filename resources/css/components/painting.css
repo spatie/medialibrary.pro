@@ -1,0 +1,31 @@
+
+.🖼 {
+    @apply absolute;
+    @apply rounded-sm;
+    @apply overflow-hidden;
+    left: 2rem;
+    top: -2rem;
+    opacity: 0.67;
+    width: 75%;
+    height: 100%;   
+}
+
+
+.🖼 img {
+    @apply w-full;
+    @apply h-full;
+    @apply object-cover;  
+}
+
+@screen sm {
+    .🖼 {
+        @apply absolute;
+        @apply rounded-sm;
+        @apply overflow-hidden;
+        left: -2rem;
+        top: -2rem;
+        opacity: 0.67;
+        width: 66%;
+        height: 100%;   
+    }
+}

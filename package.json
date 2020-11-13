@@ -1,0 +1,37 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "npm run development -- --watch",
+        "watch-poll": "npm run watch -- --watch-poll",
+        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "prod": "npm run production",
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    },
+    "dependencies": {
+        "vue": "^2.6.12"
+    },
+    "devDependencies": {
+        "cross-env": "^7.0",
+        "husky": "^3.0.9",
+        "laravel-mix": "^5.0.1",
+        "laravel-mix-purgecss": "^4.2.0",
+        "lint-staged": "^8.1.5",
+        "tailwindcss": "^1.8.0",
+        "vue-template-compiler": "^2.6.12"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "linters": {
+            "*.php": [
+                "php ./vendor/bin/php-cs-fixer fix --config .php_cs",
+                "git add"
+            ]
+        }
+    }
+}

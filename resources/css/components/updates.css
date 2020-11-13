@@ -1,0 +1,63 @@
+.updates {
+    @apply bg-white;
+    @apply rounded-full;
+    @apply shadow-hard;
+    @apply overflow-hidden;
+    @apply border-2;
+    @apply border-white;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+}
+
+.updates-input {
+    @apply h-10;
+    @apply pl-4;
+    @apply bg-white;
+    @apply text-blue-900;
+    @apply border-none;
+    @apply rounded-full;
+    width: calc(100% - 2.25rem);
+}
+
+.updates-button {
+    @apply absolute;
+    @apply right-0;
+    @apply top-0;
+    transform: scale(1);
+    transition: transform 0.5s ease;
+}
+
+.updates-input:invalid + .updates-button {
+    @apply cursor-not-allowed;
+}
+
+.updates-input:valid + .updates-button:hover {
+    transform: scale(0.85);
+}
+
+.updates-input:valid + .updates-button:active {
+    transform: scale(0.5);
+}
+
+.updates-button-icon {
+    @apply flex;
+    @apply rounded-full;
+    @apply text-blue-900;
+    @apply bg-yellow-300;
+    @apply items-center;
+    @apply justify-center;
+    @apply font-bold;
+    @apply h-10;
+    @apply w-10;
+    @apply leading-none;
+    text-indent: 0.25em;
+    transform: rotate(0);
+    transition: transform 0.5s ease, color 0.5s ease, background 0.5s ease;
+}
+
+.updates-input:invalid + .updates-button .updates-button-icon {
+    transform: rotate(180deg);
+    @apply bg-blue-50;
+    @apply text-blue-500;
+    transition-delay: 0.5s;
+}

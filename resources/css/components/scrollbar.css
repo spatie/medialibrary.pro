@@ -1,0 +1,11 @@
+::-webkit-scrollbar { width: 6px; height: 6px; }
+
+::-webkit-scrollbar-track {
+  @apply bg-blue-50;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-blue-500;
+    @apply rounded-full;
+  /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d8eff3', endColorstr='#bae2e9', GradientType=1); */
+}

@@ -1,0 +1,71 @@
+/* Start position also repeat in inline styles in the SVG */
+.logo {
+    @apply block;
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.logo-sun {
+    animation: ease-out 1s 1s 1 sunrise forwards;
+}
+
+.logo-sky {
+    animation: ease-out 1s 1s 1 skylight forwards;
+}
+
+.logo-shine {
+    animation: ease-out 1s 1s 1 shine forwards;
+    opacity: 0.65;
+}
+
+.logo-shadow {
+    fill: #000;
+}
+
+.logo-author {
+    animation: ease-out 0.35s 1.7s 1 author forwards;
+    opacity: 0;
+    transform-origin: 0 0;
+}
+
+@keyframes sunrise {
+    0% {
+        transform: translateY(200px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes skylight {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes shine {
+    0% {
+        opacity: 0.65;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes author {
+    0% {
+        opacity: 0;
+        transform: scaleX(.85);
+    }
+    90% {
+        opacity: 1;
+        transform: scaleX(1.02);
+    }
+    100% {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
