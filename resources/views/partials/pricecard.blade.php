@@ -131,7 +131,7 @@
     </div>
 
     <div class="markup-links text-xs text-center opacity-75">
-        Are you planning to distribute these components in a commercial or open source product? 
+        Are you planning to distribute these components in a commercial product? 
         <br>
         <a href="mailto:support@spatie.be">Contact us</a> to discuss licensing. 
     </div>
