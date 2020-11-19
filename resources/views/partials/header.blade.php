@@ -55,7 +55,7 @@
                 </li>
                 <li class="flex items-baseline">
                     <i class="mr-2 far fa-check text-yellow-300 text-sm"></i>
-                    Couples with a media manipulation powerhouse with more than 3 million downloads
+                    Backed by a media manipulation powerhouse with more than 3 million downloads
                 </li>
             </ul>
             <div x-data="{ zIndex: false, video: false }">
