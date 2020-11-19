@@ -19,6 +19,7 @@
                 </p>
                 <ul class="font-medium mt-2 list-disc list-outside pl-4  leading-snug  grid gap-2">
                     <li>Temporary uploads ensure that users don't need to upload files when submitting an invalid form</li>
+                    <li>You can use the components inside your Blade views, no Livewire knowledge needed. Alternatively, you can also used them within Livewire components</li>
                     <li>Extensive validation rules ensure that only files you expect get persisted</li>
                     <li>Support for Laravel Vapor (Vue and React components)</li>
                     <li>Built on rock solid foundation of <a class="underline" href="https://spatie.be/docs/laravel-medialibrary/v9/introduction">Media Library</a> which has been downloaded over three million times.</li>

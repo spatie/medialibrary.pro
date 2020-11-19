@@ -37,9 +37,9 @@
 
     <div x-data="{ tech: 'blade' }">
         @include('partials.features.techNav')
-        
+
         <div x-show="tech === 'blade'">
-        <pre><code class="html h-auto">&lt;!-- Blade --&gt;
+        <pre><code class="html h-auto">&lt;!-- Livewire and Blade --&gt;
 &lt;x-media-library-attachment
    name="media"
    rules="mimes:png,jpeg,pdf|max:1024"
@@ -48,7 +48,7 @@
         </div>
 
         <div x-show="tech === 'react'">
-        <pre><code class="html h-auto"><span class="hljs-comment">/* React */</span>  
+        <pre><code class="html h-auto"><span class="hljs-comment">/* React */</span>
 &lt;MediaLibraryAttachment
     name="media"
     validationRules=@{{ accept: ['image/png', 'image/jpeg', 'application/pdf'], maxSizeInKB: 1024  }}

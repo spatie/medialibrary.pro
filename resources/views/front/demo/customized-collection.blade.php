@@ -80,9 +80,9 @@
 
     <div x-data="{ tech: 'blade' }">
         @include('partials.features.techNav')
-        
+
         <div x-show="tech === 'blade'">
-        <pre><code class="html h-auto">&lt;!-- Blade --&gt;
+        <pre><code class="html h-auto">&lt;!-- Livewire and Blade --&gt;
 &lt;x-media-library-collection
     name="downloads"
     :model="$formSubmission"
@@ -95,7 +95,7 @@
         </div>
 
         <div x-show="tech === 'react'">
-        <pre><code class="html h-auto"><span class="hljs-comment">/* React */</span>  
+        <pre><code class="html h-auto"><span class="hljs-comment">/* React */</span>
 &lt;MediaLibraryCollection
     name="downloads"
     initialValue={downloads}
@@ -194,6 +194,6 @@
         </code></pre>
         </div>
     </div>
-    
+
 
 @endsection

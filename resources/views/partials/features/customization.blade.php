@@ -3,16 +3,16 @@
     @include('partials.features.techNav')
     <div class="code-center">
         <div x-show="tech === 'blade'">
-            <pre><code class="html">&lt;!-- Blade --&gt;  
-&lt;x-media-library-collection 
-    name="media" 
+            <pre><code class="html">&lt;!-- Livewire and Blade --&gt;
+&lt;x-media-library-collection
+    name="media"
     properties-view="uploads.partials.properties"
 /&gt;
                         </code></pre>
         </div>
 
         <div x-show="tech === 'react'">
-            <pre><code class="html"><span class="hljs-comment">/* React */</span>  
+            <pre><code class="html"><span class="hljs-comment">/* React */</span>
 &lt;MediaLibraryCollection
     name="media"
     propertiesView={({ object }) => (
@@ -23,7 +23,7 @@
         </div>
 
         <div x-show="tech === 'vue'">
-            <pre><code class="html">&lt;!-- Vue --&gt;  
+            <pre><code class="html">&lt;!-- Vue --&gt;
 &lt;media-library-collection name="media"&gt;
     &lt;div slot="properties" slot-scope="{ object }"&gt;
         &lt;div&gt;@{{ object.attributes.name }}&lt;/div&gt;

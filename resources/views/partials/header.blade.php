@@ -43,7 +43,7 @@
                 </li>
                 <li class="flex items-baseline">
                     <i class="mr-2 far fa-check text-yellow-300 text-sm"></i>
-                    React, Vue 2 / 3, Livewire powered Blade components
+                    React, Vue 2 / 3, Livewire, and Blade components
                 </li>
                 <li class="flex items-baseline">
                     <i class="mr-2 far fa-check text-yellow-300 text-sm"></i>
