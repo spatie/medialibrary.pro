@@ -5,10 +5,10 @@
 <section id="pricecard" class="mt-16 md:mt-24 w-full max-w-5xl mx-auto px-4 sm:px-12">
     <div class="mb-8 flex justify-center">
         @if($coupon->active())
-            <div class="flex items-center px-4 sm:px-12 py-2 text-center text-blue-500 bg-blue-50 rounded text-lg">
+            <div class="md:flex items-center px-4 sm:px-12 py-2 text-center text-blue-500 bg-blue-50 rounded md:text-lg">
                 <span>{{ $coupon->label() }} ends in</span>
                 <span class="font-semibold">
-                    <x-countdown class="ml-2 space-x-1" :expires="$coupon->expiresAt()">
+                    <x-countdown class="md:ml-2 space-x-1" :expires="$coupon->expiresAt()">
                         <span>
                             <span class="markup-tabular" x-text="timer.days">{{ $component->days() }}</span> <span class="text-sm">days</span>
                         </span>

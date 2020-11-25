@@ -60,7 +60,7 @@
             </ul>
             <div x-data="{ zIndex: false, video: false }">
                 <div id="intro" @mouseLeave="hideIntro()" @mouseEnter="showIntro()"  class="my-8
-                            md:absolute top-0 left-0 w-full h-full md:ml-8 md:-mt-16
+                            md:absolute top-0 left-0 w-full md:h-full md:ml-8 md:-mt-16
                             bg-blue-900 shadow-2xl">
                     <img src="/images/intro-1600.jpg" class="border-2 border-blue-500 md:absolute inset-0 w-full h-full object-cover">
                     <a @click="video=true" href="#" class="group flex justify-center items-start absolute inset-0

@@ -2,7 +2,7 @@
     <div x-data="{ tech: 'blade' }" class="w-full max-w-5xl mx-auto px-4 sm:px-12 pt-12 pb-24">
         <h2 class="text-xs uppercase tracking-logo leading-tight font-medium text-blue-400 text-center">Key features</h2>
 
-        <div class="mt-12 grid md:grid-cols-2 gap-16">
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-16">
             @include('partials.features.flavor')
 
             @include('partials.features.useCase')

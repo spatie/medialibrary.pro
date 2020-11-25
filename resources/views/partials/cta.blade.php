@@ -20,9 +20,9 @@
             </h2>
 
             @if($coupon->active())
-            <div class="flex items-center mt-4 text-lg text-yellow-300 font-bold leading-snug | lg:text-xl">
+            <div class="md:flex items-center mt-4 text-lg text-yellow-300 font-bold leading-snug | lg:text-xl">
                     <span>Ends in</span>
-                    <x-countdown class="ml-2 space-x-1" :expires="$coupon->expiresAt()">
+                    <x-countdown class="md:ml-2 space-x-1" :expires="$coupon->expiresAt()">
                         <span>
                             <span class="markup-tabular" x-text="timer.days">{{ $component->days() }}</span> <span class="text-sm">days</span>
                         </span>

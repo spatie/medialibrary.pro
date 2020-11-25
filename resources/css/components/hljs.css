@@ -8,6 +8,7 @@
     @apply py-4;
     @apply px-8;
     overflow-x: auto;
+    overflow-y: hidden;
     @apply leading-loose;
     @apply text-xs;
     height: 14rem
