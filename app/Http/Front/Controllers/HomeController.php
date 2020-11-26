@@ -11,7 +11,7 @@ class HomeController
         $singlePurchasableId = config('services.spatie_prices_api.single_purchasable_id');
         $singlePrices = SpatiePriceApi::getPriceForPurchasable($singlePurchasableId);
 
-        $unlimitedPurchasableId = config('services.spatie_prices_api.single_purchasable_id');
+        $unlimitedPurchasableId = config('services.spatie_prices_api.unlimited_purchasable_id');
         $unlimitedPrices = SpatiePriceApi::getPriceForPurchasable($unlimitedPurchasableId);
 
         return view('front.home.index', [
