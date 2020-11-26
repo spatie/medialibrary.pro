@@ -1,6 +1,3 @@
-@php
-    $coupon = \App\Support\Coupon::forCouponName('default')
-@endphp
 
 <section id="pricecard" class="mt-16 md:mt-24 w-full max-w-5xl mx-auto px-4 sm:px-12">
     <div class="mb-8 flex justify-center">
@@ -45,7 +42,7 @@
 
             @if ($coupon->active())
             <p class="mb-6 text-center text-blue-500 text-xs leading-relaxed">
-                Use coupon <code class="px-2 py-1 bg-blue-50 bg-opacity-50 rounded">{{ $coupon->code() }}</code> 
+                Use coupon <code class="px-2 py-1 bg-blue-50 bg-opacity-50 rounded">{{ $coupon->code() }}</code>
                 <br>to get <strong>{{ $coupon->percentage()  }}%</strong> off during checkout!
             </p>
             @endif
@@ -96,7 +93,7 @@
 
             @if ($coupon->active())
             <p class="mb-6 text-center text-blue-500 text-xs leading-relaxed">
-                Use coupon <code class="px-2 py-1 bg-blue-50 bg-opacity-50 rounded">{{ $coupon->code() }}</code> 
+                Use coupon <code class="px-2 py-1 bg-blue-50 bg-opacity-50 rounded">{{ $coupon->code() }}</code>
                 <br>to get <strong>{{ $coupon->percentage()  }}%</strong> off during checkout!
             </p>
             @endif
@@ -131,9 +128,9 @@
     </div>
 
     <div class="markup-links text-xs text-center opacity-75">
-        Are you planning to distribute these components in a commercial product? 
+        Are you planning to distribute these components in a commercial product?
         <br>
-        <a href="mailto:support@spatie.be">Contact us</a> to discuss licensing. 
+        <a href="mailto:support@spatie.be">Contact us</a> to discuss licensing.
     </div>
 </section>
 
@@ -163,7 +160,7 @@
 
             document.querySelector(`[data-id="current-currency-${productId}"]`).innerHTML = currencySymbol;
             document.querySelector(`[data-id="current-price-${productId}"]`).innerHTML = Math.ceil(price * factor);
-            
+
             if(factor < 1) {
                 document.querySelector(`[data-id="original-display-${productId}"]`).classList.remove('hidden');
             }
