@@ -28,6 +28,10 @@
                 </li>
                 <li class="flex items-baseline">
                     <i class="mr-2 far fa-angle-right text-yellow-300 text-sm"></i>
+                    May be built into a SaaS product
+                </li>                
+                <li class="flex items-baseline">
+                    <i class="mr-2 far fa-angle-right text-yellow-300 text-sm"></i>
                     Includes a year of updates
                 </li>
                 <li class="flex items-baseline">
