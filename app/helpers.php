@@ -8,3 +8,12 @@ function formatBytes($size, $precision = 2)
 
     return round(pow(1024, $base - floor($base)), $precision) .' '. $suffixes[floor($base)];
 }
+
+function spatieUrl(string $url = 'https://spatie.be'): string
+{
+    if($referrer = session()->get('referrer')) {
+        return $url . "?referrer={$referrer}";
+    }
+
+    return $url;
+}

@@ -14,7 +14,7 @@
                     <span class="text-red-500">Pro</span>
                 </a>
                 <div class="logo-author absolute top-0 mt-4">
-                    <a href="https://spatie.be" class="text-xxs text-white opacity-50 leading-tight hover:underline">by Spatie</a>
+                    <a href="{{ spatieUrl() }}" class="text-xxs text-white opacity-50 leading-tight hover:underline">by Spatie</a>
                 </div>
             </div>
         </div>
@@ -22,8 +22,8 @@
         <nav>
             <ul class="flex space-x-4 sm:space-x-12 text-xs uppercase tracking-logo leading-tight font-medium text-blue-100">
                 <li><a href="{{ route('demo') }}" class="hover:text-yellow-300">Demo</a></li>
-                <li><a href="https://spatie.be/docs/laravel-medialibrary/v9/handling-uploads-with-media-library-pro/introduction" class="hover:text-yellow-300">Docs</a></li>
-                <li><a href="https://spatie.be/products/media-library-pro" class=" hover:text-blue-900 bg-blue-500 hover:bg-yellow-300 rounded-sm px-4 py-2 transition-colors duration-200">Buy</a></li>
+                <li><a href="{{spatieUrl('https://spatie.be/docs/laravel-medialibrary/v9/handling-uploads-with-media-library-pro/introduction')}}" class="hover:text-yellow-300">Docs</a></li>
+                <li><a href="{{spatieUrl('https://spatie.be/products/media-library-pro')}}" class=" hover:text-blue-900 bg-blue-500 hover:bg-yellow-300 rounded-sm px-4 py-2 transition-colors duration-200">Buy</a></li>
             </ul>
         </nav>
     </div>

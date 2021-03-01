@@ -4,7 +4,7 @@
 
 @section('h1')
 UI components <br>for
-<a class="underline hover:text-yellow-300" href="https://spatie.be/docs/laravel-medialibrary">
+<a class="underline hover:text-yellow-300" href="{{spatieUrl('https://spatie.be/docs/laravel-medialibrary')}}">
     laravel-medialibrary
 </a>
 @endsection

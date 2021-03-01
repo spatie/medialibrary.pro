@@ -13,7 +13,7 @@
         <span class="hidden sm:inline-block m-4 w-2 h-2 rounded-full bg-yellow-300"></span>
 
         <span class="mt-4 sm:mt-0">
-            Made by <a class="uppercase tracking-wider hover:text-blue-200 underline" href="https://spatie.be">Spatie</a>
+            Made by <a class="uppercase tracking-wider hover:text-blue-200 underline" href="{{spatieUrl()}}">Spatie</a>
         </span>
     </div>
 </footer>

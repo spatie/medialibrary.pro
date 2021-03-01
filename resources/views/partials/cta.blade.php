@@ -12,7 +12,7 @@
             </h2>
 
             <div class="text-right">
-                <a href="https://spatie.be/products/media-library-pro">
+                <a href="{{spatieUrl('https://spatie.be/products/media-library-pro')}}">
                     <x-animated-button textClass="text-2xl" bgClass="bg-yellow-300" shadowClass="bg-white">
                         Pick a license
                     </x-animated-button>

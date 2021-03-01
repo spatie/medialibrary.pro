@@ -29,7 +29,7 @@
                 <li class="flex items-baseline">
                     <i class="mr-2 far fa-angle-right text-yellow-300 text-sm"></i>
                     May be built into a SaaS product
-                </li>                
+                </li>
                 <li class="flex items-baseline">
                     <i class="mr-2 far fa-angle-right text-yellow-300 text-sm"></i>
                     Includes a year of updates
@@ -45,7 +45,7 @@
             </ul>
 
             <div class="flex justify-center">
-                <a href="https://spatie.be/products/media-library-pro">
+                <a href="{{spatieUrl('https://spatie.be/products/media-library-pro')}}">
                     <x-animated-button textClass="text-xl">
                         Buy license
                     </x-animated-button>
@@ -95,7 +95,7 @@
             </ul>
 
             <div class="flex justify-center">
-                <a href="https://spatie.be/products/media-library-pro">
+                <a href="{{spatieUrl('https://spatie.be/products/media-library-pro')}}">
                     <x-animated-button bgClass="bg-blue-100">
                         Buy license
                     </x-animated-button>
