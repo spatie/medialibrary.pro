@@ -16,4 +16,4 @@ We highly appreciate you sending us a postcard from your hometown, mentioning wh
 
 ## Security
 
-If you discover any security related issues, please email [freek@spatie.be](mailto:freek@spatie.be) instead of using the issue tracker.
+If you discover any security related issues, please email [security@spatie.be](mailto:security@spatie.be) instead of using the issue tracker.
