@@ -1,3 +1,6 @@
+
+[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/support-ukraine.svg?t=1" />](https://supportukrainenow.org)
+
 # medialibrary.pro
 
 This is the source code of https://medialibrary.pro
@@ -13,4 +16,4 @@ We highly appreciate you sending us a postcard from your hometown, mentioning wh
 
 ## Security
 
-If you discover any security related issues, please email [freek@spatie.be](mailto:freek@spatie.be) instead of using the issue tracker.
+If you discover any security related issues, please email [security@spatie.be](mailto:security@spatie.be) instead of using the issue tracker.
