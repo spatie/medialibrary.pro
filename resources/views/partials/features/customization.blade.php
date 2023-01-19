@@ -38,9 +38,9 @@
         All components have been designed from the ground up to be customized or extended. There are slots for the list, a media item, the props and item fields, so you can play with every part of the components.
     </p>
     <p x-show="tech === 'vue'">
-        Learn how to <a class="underline" href="{{spatieUrl('https://spatie.be/docs/laravel-medialibrary/v9/handling-uploads-with-media-library-pro/creating-custom-vue-components')}}">create custom Vue components</a>.
+        Learn how to <a class="underline" href="{{spatieUrl('https://spatie.be/docs/laravel-medialibrary/V10/handling-uploads-with-media-library-pro/creating-custom-vue-components')}}">create custom Vue components</a>.
     </p>
     <p x-show="tech === 'react'">
-        Learn how to <a class="underline" href="{{spatieUrl('https://spatie.be/docs/laravel-medialibrary/v9/handling-uploads-with-media-library-pro/creating-custom-react-components')}}">create custom React components</a>.
+        Learn how to <a class="underline" href="{{spatieUrl('https://spatie.be/docs/laravel-medialibrary/V10/handling-uploads-with-media-library-pro/creating-custom-react-components')}}">create custom React components</a>.
     </p>
 </div>
