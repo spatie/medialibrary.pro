@@ -12,7 +12,7 @@
             </h2>
 
             <div class="text-right">
-                <a href="{{spatieUrl('https://spatie.be/docs/laravel-medialibrary/V10/handling-uploads-with-media-library-pro/introduction')}}">
+                <a href="{{spatieUrl('https://spatie.be/docs/laravel-medialibrary-pro/v6/introduction')}}">
                     <x-animated-button textClass="text-2xl" bgClass="bg-yellow-300" shadowClass="bg-white">
                         Read the docs
                     </x-animated-button>

@@ -22,7 +22,7 @@
                     <li>You can use the components inside your Blade views, no Livewire knowledge needed. Alternatively, you can also used them within Livewire components</li>
                     <li>Extensive validation rules ensure that only files you expect get persisted</li>
                     <li>Support for Laravel Vapor (Vue and React components)</li>
-                    <li>Built on rock solid foundation of <a class="underline" href="{{spatieUrl('https://spatie.be/docs/laravel-medialibrary/V10/introduction')}}">Media Library</a> which has been downloaded over three million times.</li>
+                    <li>Built on rock solid foundation of <a class="underline" href="{{spatieUrl('https://spatie.be/docs/laravel-medialibrary/V11/introduction')}}">Media Library</a> which has been downloaded over three million times.</li>
                 </ul>
             </div>
 
@@ -41,7 +41,7 @@
         </div>
 
         <div class="mt-24 flex justify-center space-x-8 pt-8 border-t-8 border-blue-200">
-            <a href="{{spatieUrl('https://spatie.be/docs/laravel-medialibrary/V10/handling-uploads-with-media-library-pro/introduction')}}" class="underline text-xl font-medium hover:text-blue-600">Read the docs</a>
+            <a href="{{spatieUrl('https://spatie.be/docs/laravel-medialibrary-pro/v6/introduction')}}" class="underline text-xl font-medium hover:text-blue-600">Read the docs</a>
             <a href="{{ route('demo') }}" class="underline text-xl font-medium hover:text-blue-600">Try the demo</a>
         </div>
     </div>

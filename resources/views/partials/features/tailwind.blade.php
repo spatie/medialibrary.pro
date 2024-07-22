@@ -14,6 +14,6 @@
 
     <h3 class="mt-5 text-xl font-bold">Tailwind CSS support</h3>
     <p class="mt-4 font-medium leading-snug">
-        Media Library Pro ships with a clean design that can be used as is, or integrates with your own <code>tailwind.config.js</code> to use your apps color scheme and settings. Nothing stops you to go even further and <a class="underline" href="{{spatieUrl('https://spatie.be/docs/laravel-medialibrary/V10/handling-uploads-with-media-library-pro/customizing-css')}}">adjust every little detail</a> with custom CSS.
+        Media Library Pro ships with a clean design that can be used as is, or integrates with your own <code>tailwind.config.js</code> to use your apps color scheme and settings. Nothing stops you to go even further and <a class="underline" href="{{spatieUrl('https://spatie.be/docs/laravel-medialibrary-pro/v6/advanced/customizing')}}">adjust every little detail</a> with custom CSS.
     </p>
 </div>

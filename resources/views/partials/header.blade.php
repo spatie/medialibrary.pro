@@ -22,7 +22,7 @@
         <nav>
             <ul class="flex space-x-4 sm:space-x-12 text-xs uppercase tracking-logo leading-tight font-medium text-blue-100">
                 <li><a href="{{ route('demo') }}" class="hover:text-yellow-300">Demo</a></li>
-                <li><a href="{{spatieUrl('https://spatie.be/docs/laravel-medialibrary/V10/handling-uploads-with-media-library-pro/introduction')}}" class="hover:text-yellow-300">Docs</a></li>
+                <li><a href="{{spatieUrl('https://spatie.be/docs/laravel-medialibrary-pro/v6/introduction')}}" class="hover:text-yellow-300">Docs</a></li>
                 <li><a href="{{spatieUrl('https://spatie.be/products/media-library-pro')}}" class=" hover:text-blue-900 bg-blue-500 hover:bg-yellow-300 rounded-sm px-4 py-2 transition-colors duration-200">Buy</a></li>
             </ul>
         </nav>
