@@ -3,7 +3,7 @@
     @include('partials.features.techNav')
     <div class="code-center">
         <div x-show="tech === 'blade'">
-            <pre><code class="html">&lt;!-- Livewire and Blade --&gt;
+            <pre><code class="html">&lt;!-- Livewire 4 and Blade --&gt;
 &lt;x-media-library-collection
     name="media"
     properties-view="uploads.partials.properties"

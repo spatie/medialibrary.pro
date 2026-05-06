@@ -39,7 +39,7 @@
         @include('partials.features.techNav')
 
         <div x-show="tech === 'blade'">
-        <pre><code class="html h-auto">&lt;!-- Livewire and Blade --&gt;
+        <pre><code class="html h-auto">&lt;!-- Livewire 4 and Blade --&gt;
 &lt;x-media-library-attachment
    name="media"
    rules="mimes:png,jpeg,pdf|max:1024"

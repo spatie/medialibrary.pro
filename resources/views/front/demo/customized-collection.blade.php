@@ -82,7 +82,7 @@
         @include('partials.features.techNav')
 
         <div x-show="tech === 'blade'">
-        <pre><code class="html h-auto">&lt;!-- Livewire and Blade --&gt;
+        <pre><code class="html h-auto">&lt;!-- Livewire 4 and Blade --&gt;
 &lt;x-media-library-collection
     name="downloads"
     :model="$formSubmission"
