@@ -8,35 +8,40 @@ return [
     |--------------------------------------------------------------------------
     |
     | This file is for storing the credentials for third party services such
-    | as Mailgun, Postmark, AWS and more. This file provides the de facto
+    | as Resend, Postmark, AWS, and more. This file provides the de facto
     | location for this type of information, allowing packages to have
     | a conventional file to locate the various service credentials.
     |
     */
 
     'spatie_prices_api' => [
-        'single_purchasable_id' => env('SINGLE_PURCHASABLE_ID'),
-        'unlimited_purchasable_id' => env('UNLIMITED_PURCHASABLE_ID'),
-
+        'single_purchasable_id' => (int) env('SINGLE_PURCHASABLE_ID', 9),
+        'unlimited_purchasable_id' => (int) env('UNLIMITED_PURCHASABLE_ID', 11),
     ],
 
     'mailcoach' => [
         'list_uuid' => env('MAILCOACH_LIST_UUID'),
     ],
 
-    'mailgun' => [
-        'domain' => env('MAILGUN_DOMAIN'),
-        'secret' => env('MAILGUN_SECRET'),
-        'endpoint' => env('MAILGUN_ENDPOINT', 'api.mailgun.net'),
+    'postmark' => [
+        'key' => env('POSTMARK_API_KEY'),
     ],
 
-    'postmark' => [
-        'token' => env('POSTMARK_TOKEN'),
+    'resend' => [
+        'key' => env('RESEND_API_KEY'),
     ],
 
     'ses' => [
-        'key' => env('SES_AWS_ACCESS_KEY_ID'),
-        'secret' => env('SES_AWS_SECRET_ACCESS_KEY'),
-        'region' => env('SES_AWS_DEFAULT_REGION', 'us-east-1'),
+        'key' => env('AWS_ACCESS_KEY_ID'),
+        'secret' => env('AWS_SECRET_ACCESS_KEY'),
+        'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
+
+    'slack' => [
+        'notifications' => [
+            'bot_user_oauth_token' => env('SLACK_BOT_USER_OAUTH_TOKEN'),
+            'channel' => env('SLACK_BOT_USER_DEFAULT_CHANNEL'),
+        ],
+    ],
+
 ];

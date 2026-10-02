@@ -6,8 +6,8 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Support\Str;
 use Illuminate\View\Component;
 use League\CommonMark\CommonMarkConverter;
+use League\CommonMark\ConverterInterface;
 use League\CommonMark\GithubFlavoredMarkdownConverter;
-use League\CommonMark\MarkdownConverterInterface;
 
 class Markdown extends Component
 {
@@ -54,10 +54,10 @@ class Markdown extends Component
             $markdown = $this->generateAnchors($markdown);
         }
 
-        return $this->converter()->convertToHtml($markdown);
+        return $this->converter()->convert($markdown)->getContent();
     }
 
-    protected function converter(): MarkdownConverterInterface
+    protected function converter(): ConverterInterface
     {
         $options = array_merge($this->options, [
             'html_input' => $this->htmlInput,
@@ -95,9 +95,9 @@ class Markdown extends Component
                 }
 
                 $title = trim(Str::after($line, '# '));
-                $anchor = '<a class="anchor" name="' . Str::slug($title) . '"></a>';
+                $anchor = '<a class="anchor" name="'.Str::slug($title).'"></a>';
 
-                return $anchor . PHP_EOL . $line;
+                return $anchor.PHP_EOL.$line;
             })
             ->implode(PHP_EOL);
 

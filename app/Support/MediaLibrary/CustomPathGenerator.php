@@ -2,44 +2,28 @@
 
 namespace App\Support\MediaLibrary;
 
-use \Spatie\MediaLibrary\MediaCollections\Models\Media;
-use Spatie\MediaLibrary\Support\PathGenerator\PathGenerator as BasePathGenerator;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
+use Spatie\MediaLibrary\Support\PathGenerator\PathGenerator;
 
-class CustomPathGenerator implements BasePathGenerator
+class CustomPathGenerator implements PathGenerator
 {
-    /**
-     * Get the path for the given media, relative to the root storage path.
-     *
-     * @param \Spatie\MediaLibrary\MediaCollections\Models\Media $media
-     *
-     * @return string
-     */
     public function getPath(Media $media): string
     {
-        return md5($media->id . config('app.key')) . '/';
+        return $this->basePath($media).'/';
     }
 
-    /**
-     * Get the path for conversions of the given media, relative to the root storage path.
-     *
-     * @param \Spatie\MediaLibrary\MediaCollections\Models\Media $media
-     *
-     * @return string
-     */
     public function getPathForConversions(Media $media): string
     {
-        return md5($media->id . config('app.key')) . '/conversions/';
+        return $this->basePath($media).'/conversions/';
     }
 
-    /**
-     * Get the path for responsive images of the given media, relative to the root storage path.
-     *
-     * @param \Spatie\MediaLibrary\MediaCollections\Models\Media $media
-     *
-     * @return string
-     */
     public function getPathForResponsiveImages(Media $media): string
     {
-        return md5($media->id . config('app.key')) . '/responsive-images/';
+        return $this->basePath($media).'/responsive-images/';
+    }
+
+    protected function basePath(Media $media): string
+    {
+        return md5($media->getKey().config('app.key'));
     }
 }

@@ -1,57 +1,35 @@
 {
-    "name": "laravel/laravel",
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "spatie/medialibrary.pro",
     "type": "project",
-    "description": "The Laravel Framework.",
-    "keywords": [
-        "framework",
-        "laravel"
-    ],
+    "description": "The website of Media Library Pro.",
+    "license": "MIT",
     "repositories": [
         {
             "type": "composer",
             "url": "https://satis.spatie.be"
         }
     ],
-    "license": "MIT",
     "require": {
-        "php": "^7.4|^8.0",
+        "php": "^8.5",
         "ext-json": "*",
-        "ext-openssl": "*",
-        "ext-zip": "*",
-        "facade/ignition": "^2.3.6",
-        "fideloper/proxy": "^4.2",
-        "fruitcake/laravel-cors": "^2.0",
-        "guzzlehttp/guzzle": "^7.0.1",
-        "laravel/framework": "^8.9",
-        "laravel/tinker": "^2.0",
-        "league/commonmark": "^1.4",
-        "spatie/laravel-flash": "^1.7",
-        "spatie/laravel-honeypot": "^3.0",
-        "spatie/laravel-medialibrary": "^9.0",
-        "spatie/laravel-medialibrary-pro": "^1.0.0",
-        "spatie/spatie-price-api": "^1.0"
+        "guzzlehttp/guzzle": "^7.9",
+        "laravel/framework": "^13.0",
+        "laravel/tinker": "^3.0",
+        "league/commonmark": "^2.7",
+        "spatie/laravel-flash": "^1.10",
+        "spatie/laravel-honeypot": "^4.6",
+        "spatie/laravel-medialibrary": "^11.0",
+        "spatie/laravel-medialibrary-pro": "^6.4",
+        "spatie/spatie-price-api": "^1.6"
     },
     "require-dev": {
-        "mockery/mockery": "^1.3.1",
-        "nunomaduro/collision": "^5.0",
-        "phpunit/phpunit": "^9.3",
-        "fzaninotto/faker": "^1.9.1"
-    },
-    "config": {
-        "optimize-autoloader": true,
-        "preferred-install": "dist",
-        "sort-packages": true,
-        "platform": {
-            "php": "7.4"
-        },
-        "allow-plugins": {
-            "composer/package-versions-deprecated": true
-        }
-    },
-    "extra": {
-        "laravel": {
-            "dont-discover": []
-        }
+        "fakerphp/faker": "^1.23",
+        "laravel/pint": "^1.27",
+        "mockery/mockery": "^1.6",
+        "nunomaduro/collision": "^8.6",
+        "pestphp/pest": "^4.0",
+        "pestphp/pest-plugin-laravel": "^4.0"
     },
     "autoload": {
         "psr-4": {
@@ -68,9 +46,11 @@
             "Tests\\": "tests/"
         }
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "scripts": {
+        "test": [
+            "@php artisan config:clear --ansi @no_additional_args",
+            "@php artisan test"
+        ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
@@ -80,6 +60,25 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
+        ],
+        "pre-package-uninstall": [
+            "Illuminate\\Foundation\\ComposerScripts::prePackageUninstall"
         ]
-    }
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
 }
