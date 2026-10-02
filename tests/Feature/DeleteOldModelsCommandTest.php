@@ -32,10 +32,11 @@ it('deletes form submissions and temporary uploads older than ten minutes', func
     Storage::disk('media')->assertMissing($oldPath);
 });
 
-it('schedules the cleanup commands every minute', function () {
+it('schedules the cleanup commands', function () {
     $events = collect(app(Schedule::class)->events())
         ->mapWithKeys(fn ($event) => [$event->command => $event->expression]);
 
     expect($events->first(fn ($expression, $command) => str_contains($command, 'delete-old-models')))->toBe('* * * * *')
-        ->and($events->first(fn ($expression, $command) => str_contains($command, 'media-library:delete-old-temporary-uploads')))->toBe('* * * * *');
+        ->and($events->first(fn ($expression, $command) => str_contains($command, 'media-library:delete-old-temporary-uploads')))->toBe('* * * * *')
+        ->and($events->first(fn ($expression, $command) => str_contains($command, 'delete-old-media-files')))->toBe('*/5 * * * *');
 });
