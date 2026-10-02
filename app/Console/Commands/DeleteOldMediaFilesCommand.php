@@ -7,13 +7,15 @@ use Illuminate\Support\Facades\Storage;
 use League\Flysystem\StorageAttributes;
 
 /**
- * Demo uploads are removed together with their models after ten minutes. Files whose models
- * are gone in another way (the SQLite database is recreated on every deploy) are removed here
- * by age, so the media bucket never keeps growing.
+ * Demo uploads are removed together with their models by the daily cleanup. Files whose models
+ * are gone in another way (the SQLite database is recreated whenever the instance starts) are
+ * removed here by age, so the media bucket never keeps growing. The default age is longer than
+ * the gap between the model cleanup and this command, so files of models that survived the model
+ * cleanup are kept.
  */
 class DeleteOldMediaFilesCommand extends Command
 {
-    protected $signature = 'delete-old-media-files {--minutes=15}';
+    protected $signature = 'delete-old-media-files {--minutes=30}';
 
     protected $description = 'Delete files on the media disk that are older than the given number of minutes';
 
