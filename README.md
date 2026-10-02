@@ -2,6 +2,10 @@
 
 This is the source code of https://medialibrary.pro
 
+## Deployment
+
+This site runs on [Laravel Cloud](https://cloud.laravel.com). Every push to `master` is deployed automatically.
+
 ## Support us
 
 [<img src="https://github-ads.s3.eu-central-1.amazonaws.com/laravel-medialibrary.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/laravel-medialibrary)
