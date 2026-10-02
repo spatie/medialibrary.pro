@@ -3,7 +3,7 @@
 @section('title', 'Demo: collection')
 
 @push('scripts')
-    <script defer src="/js/vue/app.js"></script>
+    @vite('resources/js/app.js')
 @endpush
 
 @section('demo')

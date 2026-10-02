@@ -1,5 +1,20 @@
 module.exports = {
     important: true,
+    purge: {
+        content: [
+            './resources/views/**/*.blade.php',
+            './resources/js/**/*.js',
+            './app/**/*.php',
+        ],
+        options: {
+            whitelistPatterns: [/🖼/, /^media-library/, /^hljs/],
+            whitelistPatternsChildren: [/🖼/, /^media-library/, /^hljs/],
+        },
+    },
+    future: {
+        removeDeprecatedGapUtilities: false,
+        purgeLayersByDefault: false,
+    },
     theme: {
         fontFamily: {
             sans: [

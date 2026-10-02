@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Http;
 beforeEach(function () {
     Http::preventStrayRequests();
 
-    $this->withoutMix();
+    $this->withoutVite();
 });
 
 function fakePriceApi(bool $discountActive = false): void

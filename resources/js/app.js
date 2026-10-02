@@ -1,12 +1,10 @@
-import Vue from "vue";
+import { createApp } from 'vue';
+import { MediaLibraryAttachment } from 'media-library-pro-vue3-attachment';
+import { MediaLibraryCollection } from 'media-library-pro-vue3-collection';
 
-import { MediaLibraryAttachment } from "media-library-pro-vue2-attachment";
-import { MediaLibraryCollection } from "media-library-pro-vue2-collection";
-
-new Vue({
+createApp({
     components: { MediaLibraryAttachment, MediaLibraryCollection },
     data: () => ({
         window,
     }),
-    el: "#app"
-});
+}).mount('#app');

@@ -14,9 +14,9 @@
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
     @if($custom ?? false)
-    <link href="{{ mix('css/app-custom.css') }}" rel="stylesheet">
+    @vite('resources/css/app-custom.css')
     @else
-    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    @vite('resources/css/app.css')
     @endif
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">

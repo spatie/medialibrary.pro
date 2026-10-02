@@ -9,7 +9,7 @@ use Spatie\MediaLibraryPro\Models\TemporaryUpload;
 beforeEach(function () {
     Storage::fake('media');
 
-    $this->withoutMix();
+    $this->withoutVite();
 });
 
 function uploadTemporaryFile(string $name = 'photo.jpg'): array

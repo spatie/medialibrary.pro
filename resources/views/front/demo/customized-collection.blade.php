@@ -3,7 +3,7 @@
 @section('title', 'Demo: customized collection')
 
 @push('scripts')
-    <script defer src="/js/vue/app.js"></script>
+    @vite('resources/js/app.js')
 @endpush
 
 @section('demo')
@@ -25,8 +25,7 @@
                     :validation-errors="{{ $errors }}"
                 >
                     <template
-                        slot="fields"
-                        slot-scope="{
+                        #fields="{
                             object,
                             getCustomPropertyInputProps,
                             getCustomPropertyInputListeners,
