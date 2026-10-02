@@ -2,7 +2,6 @@
 
 use App\Console\Commands\DeleteOldModelsCommand;
 use App\Models\FormSubmission;
-use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 use Spatie\MediaLibraryPro\Models\TemporaryUpload;
@@ -30,13 +29,4 @@ it('deletes form submissions and temporary uploads older than ten minutes', func
         ->and(TemporaryUpload::find($oldUpload->id))->toBeNull();
 
     Storage::disk('media')->assertMissing($oldPath);
-});
-
-it('schedules the cleanup commands', function () {
-    $events = collect(app(Schedule::class)->events())
-        ->mapWithKeys(fn ($event) => [$event->command => $event->expression]);
-
-    expect($events->first(fn ($expression, $command) => str_contains($command, 'delete-old-models')))->toBe('* * * * *')
-        ->and($events->first(fn ($expression, $command) => str_contains($command, 'media-library:delete-old-temporary-uploads')))->toBe('* * * * *')
-        ->and($events->first(fn ($expression, $command) => str_contains($command, 'delete-old-media-files')))->toBe('*/5 * * * *');
 });

@@ -67,8 +67,8 @@
             <x-animated-button>Submit</x-animated-button>
 
             <p class="text-lg">
-                The collection above will display files that are uploaded in this session. We'll delete any files that
-                are older than 10 minutes.
+                The collection above will display files that are uploaded in this session. We delete uploaded files
+                every day.
                 You can test out the component with any file under 1 Mb. We've configured this collection so it can
                 hold a maximum of three files.
             </p>
