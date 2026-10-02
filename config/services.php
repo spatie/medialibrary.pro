@@ -34,10 +34,6 @@ return [
         'token' => env('POSTMARK_TOKEN'),
     ],
 
-    'satis' => [
-        'license' => env('SATIS_LICENSE'),
-    ],
-
     'ses' => [
         'key' => env('SES_AWS_ACCESS_KEY_ID'),
         'secret' => env('SES_AWS_SECRET_ACCESS_KEY'),
