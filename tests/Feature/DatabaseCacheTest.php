@@ -15,7 +15,7 @@ it('can store sessions in the database', function () {
 
     $this->withoutVite();
 
-    $this->get('/terms-of-use')->assertOk();
+    $this->get('/demo-attachment')->assertOk();
 
     $this->assertDatabaseCount('sessions', 1);
 });

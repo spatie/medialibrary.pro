@@ -23,7 +23,7 @@
         "spatie/laravel-honeypot": "^4.6",
         "spatie/laravel-medialibrary": "^11.0",
         "spatie/laravel-medialibrary-pro": "^6.4",
-        "spatie/spatie-price-api": "^1.6"
+        "spatie/spatie-price-api": "^1.7"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",

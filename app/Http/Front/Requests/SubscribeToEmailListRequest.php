@@ -6,7 +6,10 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class SubscribeToEmailListRequest extends FormRequest
 {
-    public function rules()
+    protected $redirect = '/?subscription-failed=1';
+
+    /** @return array<string, array<int, string>> */
+    public function rules(): array
     {
         return [
             'email' => ['required', 'email:rfc,dns'],

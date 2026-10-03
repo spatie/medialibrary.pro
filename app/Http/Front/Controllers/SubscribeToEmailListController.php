@@ -14,9 +14,7 @@ class SubscribeToEmailListController
         $listUuid = config('services.mailcoach.list_uuid');
 
         if (! $listUuid) {
-            flash()->error('Subscribing is not possible at the moment.');
-
-            return back();
+            return redirect()->action(HomeController::class, ['subscription-failed' => 1]);
         }
 
         $response = Http::asForm()->post("https://spatie.be/mailcoach/subscribe/{$listUuid}", [
@@ -28,8 +26,6 @@ class SubscribeToEmailListController
             throw new Exception("Could not subscribe, status code is {$response->status()}");
         }
 
-        session()->flash('subscribed');
-
-        return back();
+        return redirect()->action(HomeController::class, ['subscribed' => 1]);
     }
 }

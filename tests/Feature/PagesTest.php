@@ -8,50 +8,68 @@ beforeEach(function () {
     $this->withoutVite();
 });
 
-function fakePriceApi(bool $discountActive = false): void
-{
-    Http::fake([
-        'spatie.be/api/price/*' => Http::response([
-            'actual' => ['price_in_cents' => 6900, 'currency_code' => 'EUR', 'currency_symbol' => '€', 'formatted_price' => '€ 69'],
-            'without_discount' => ['price_in_cents' => 9900, 'currency_code' => 'EUR', 'currency_symbol' => '€', 'formatted_price' => '€ 99'],
-            'discount' => ['active' => $discountActive, 'percentage' => 30, 'name' => 'BLACK FRIDAY', 'expires_at' => (string) now()->addDays(3)->timestamp],
-        ]),
-    ]);
-}
-
-it('shows the home page with the prices', function () {
-    fakePriceApi();
-
+it('shows the home page without fetching prices on the server', function () {
     $this->get('/')
         ->assertOk()
         ->assertSee('https://spatie.be/products/media-library-pro')
-        ->assertDontSee('BLACK FRIDAY ends in');
+        ->assertSee('x-data="spatiePrice(9)"', false)
+        ->assertSee('x-data="spatiePrice(11)"', false)
+        ->assertSee('window.spatiePrice', false)
+        ->assertSee('countdown.seconds', false)
+        ->assertSee('Unlimited applications')
+        ->assertSee('Single application');
 
-    Http::assertSent(fn ($request) => str_starts_with($request->url(), 'https://spatie.be/api/price/9/'));
-    Http::assertSent(fn ($request) => str_starts_with($request->url(), 'https://spatie.be/api/price/11/'));
+    Http::assertNothingSent();
 });
 
-it('shows a countdown when a discount is active', function () {
-    fakePriceApi(discountActive: true);
+it('remembers the referrer in the browser', function () {
+    $this->get('/?referrer=freek')
+        ->assertOk()
+        ->assertSee("searchParams.set('referrer', rememberedReferrer)", false)
+        ->assertDontSee('?referrer=freek');
+});
+
+it('confirms a newsletter subscription', function () {
+    $this->get('/?subscribed=1')
+        ->assertOk()
+        ->assertSee("Thanks! You'll hear from us soon", false)
+        ->assertDontSee('We could not subscribe you.');
+});
+
+it('shows that a subscription failed', function () {
+    $this->get('/?subscription-failed=1')
+        ->assertOk()
+        ->assertSee('We could not subscribe you.')
+        ->assertDontSee("Thanks! You'll hear from us soon", false);
+});
+
+it('does not show subscription messages by default', function () {
+    $this->get('/')
+        ->assertSee('Your address will only be used for updates on Media Library Pro')
+        ->assertDontSee("Thanks! You'll hear from us soon", false)
+        ->assertDontSee('We could not subscribe you.');
+});
+
+it('does not show flash messages on the cacheable pages', function () {
+    flash()->success('A flashed message');
 
     $this->get('/')
         ->assertOk()
-        ->assertSee('BLACK FRIDAY ends in')
-        ->assertSee('x-text="timer.days"', false);
+        ->assertDontSee('A flashed message');
 });
 
-it('shows the home page when the prices cannot be fetched', function () {
-    Http::fake(['spatie.be/api/price/*' => Http::response(status: 500)]);
-
-    $this->get('/')->assertOk();
-});
-
-it('remembers the referrer in the links to spatie.be', function () {
-    fakePriceApi();
-
-    $this->get('/?referrer=freek')
+it('does not render a csrf token in the newsletter form', function () {
+    $this->get('/')
         ->assertOk()
-        ->assertSee('https://spatie.be/products/media-library-pro?referrer=freek');
+        ->assertSee('action="/subscribe"', false)
+        ->assertDontSee('name="_token"', false);
+});
+
+it('serves robots.txt', function () {
+    $this->get('/robots.txt')
+        ->assertOk()
+        ->assertHeader('Content-Type', 'text/plain; charset=UTF-8')
+        ->assertSee('User-agent: *');
 });
 
 it('shows the static pages', function (string $url, string $text) {
