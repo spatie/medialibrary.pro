@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "177983552dfe0774ed57621e38662e4c",
+    "content-hash": "2476a2f4fd691d134bf2572303d9942c",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -2574,16 +2574,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "3.14.1",
+            "version": "3.14.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CarbonPHP/carbon.git",
-                "reference": "34e9109535165bf1d7ff17a610492372ae73a896"
+                "reference": "94cfc34887f07ab5c0efa07914c8f527544e3224"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CarbonPHP/carbon/zipball/34e9109535165bf1d7ff17a610492372ae73a896",
-                "reference": "34e9109535165bf1d7ff17a610492372ae73a896",
+                "url": "https://api.github.com/repos/CarbonPHP/carbon/zipball/94cfc34887f07ab5c0efa07914c8f527544e3224",
+                "reference": "94cfc34887f07ab5c0efa07914c8f527544e3224",
                 "shasum": ""
             },
             "require": {
@@ -2603,7 +2603,7 @@
                 "doctrine/orm": "^2.15.2 || ^3.0",
                 "friendsofphp/php-cs-fixer": "^v3.87.1",
                 "kylekatarnls/multi-tester": "^2.5.3",
-                "phpmd/phpmd": "^2.15.0",
+                "phpmd/phpmd": "^3.0@dev",
                 "phpstan/extension-installer": "^1.4.3",
                 "phpstan/phpstan": "^2.1.22",
                 "phpunit/phpunit": "^10.5.53",
@@ -2675,7 +2675,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-09-27T12:07:26+00:00"
+            "time": "2026-10-02T07:26:52+00:00"
         },
         {
             "name": "nette/schema",
@@ -4635,16 +4635,16 @@
         },
         {
             "name": "spatie/spatie-price-api",
-            "version": "1.6.0",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/spatie-price-api.git",
-                "reference": "131fd8f5f4d42a985b5039ed4087d65c71870d2e"
+                "reference": "dbf5aedc9252728b990b3bbf8124929d601b5aa9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/spatie-price-api/zipball/131fd8f5f4d42a985b5039ed4087d65c71870d2e",
-                "reference": "131fd8f5f4d42a985b5039ed4087d65c71870d2e",
+                "url": "https://api.github.com/repos/spatie/spatie-price-api/zipball/dbf5aedc9252728b990b3bbf8124929d601b5aa9",
+                "reference": "dbf5aedc9252728b990b3bbf8124929d601b5aa9",
                 "shasum": ""
             },
             "require": {
@@ -4684,7 +4684,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/spatie-price-api/issues",
-                "source": "https://github.com/spatie/spatie-price-api/tree/1.6.0"
+                "source": "https://github.com/spatie/spatie-price-api/tree/1.7.0"
             },
             "funding": [
                 {
@@ -4696,7 +4696,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2026-03-23T09:12:05+00:00"
+            "time": "2026-10-03T14:27:38+00:00"
         },
         {
             "name": "spatie/temporary-directory",

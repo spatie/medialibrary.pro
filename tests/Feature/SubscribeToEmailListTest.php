@@ -11,10 +11,8 @@ it('subscribes an email address to the newsletter', function () {
 
     Http::fake(['spatie.be/mailcoach/subscribe/*' => Http::response()]);
 
-    $this->from('/')
-        ->post('/subscribe', ['email' => 'freek@spatie.be'])
-        ->assertRedirect('/')
-        ->assertSessionHas('subscribed');
+    $this->post('/subscribe', ['email' => 'freek@spatie.be'])
+        ->assertRedirect('/?subscribed=1');
 
     Http::assertSent(fn ($request) => $request->url() === 'https://spatie.be/mailcoach/subscribe/test-uuid'
         && $request['email'] === 'freek@spatie.be'
@@ -26,10 +24,8 @@ it('does not subscribe when no list uuid is configured', function () {
 
     Http::fake();
 
-    $this->from('/')
-        ->post('/subscribe', ['email' => 'freek@spatie.be'])
-        ->assertRedirect('/')
-        ->assertSessionMissing('subscribed');
+    $this->post('/subscribe', ['email' => 'freek@spatie.be'])
+        ->assertRedirect('/?subscription-failed=1');
 
     Http::assertNothingSent();
 });
@@ -39,10 +35,18 @@ it('requires a valid email address', function () {
 
     Http::fake();
 
-    $this->from('/')
-        ->post('/subscribe', ['email' => 'not-an-email'])
-        ->assertRedirect('/')
-        ->assertSessionHasErrors('email');
+    $this->post('/subscribe', ['email' => 'not-an-email'])
+        ->assertRedirect('/?subscription-failed=1');
 
     Http::assertNothingSent();
+});
+
+it('does not need a session to subscribe', function () {
+    config()->set('services.mailcoach.list_uuid', 'test-uuid');
+
+    Http::fake(['spatie.be/mailcoach/subscribe/*' => Http::response()]);
+
+    $response = $this->post('/subscribe', ['email' => 'freek@spatie.be']);
+
+    expect($response->headers->getCookies())->toBeEmpty();
 });

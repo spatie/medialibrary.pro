@@ -5,6 +5,15 @@
     @yield('title')
 @endsection
 
+@section('flash')
+    @if(flash()->message)
+        <div
+            class="z-50 fixed top-0 right-0 px-6 py-4 font-semibold  {{ flash()->class =='error' ? 'bg-red-500 text-red-100' : 'bg-green-500 text-green-100' }}">
+            {{ flash()->message }}
+        </div>
+    @endif
+@endsection
+
 @section('content')
 
     @include('partials.header', ['compact' => true])

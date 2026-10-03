@@ -1,25 +1,22 @@
 <section id="pricecard" class="mt-16 md:mt-24 w-full max-w-5xl mx-auto px-4 sm:px-12">
     <div class="md:flex mb-12">
         <div
-            class="z-10 flex-grow flex flex-col items-center py-12 px-12 md:pl-8 md:pr-16 border-8 border-yellow-300 shadow-lg rounded">
+            class="z-10 flex-grow flex flex-col items-center py-12 px-12 md:pl-8 md:pr-16 border-8 border-yellow-300 shadow-lg rounded"
+            x-data="spatiePrice({{ config('services.spatie_prices_api.unlimited_purchasable_id') }})" x-init="init()">
             <h2 class="h-12 flex items-center justify-center text-3xl font-semibold">
                 Unlimited applications
             </h2>
 
-            @if($couldFetchUnlimitedPrice)
-                <p class="py-8 flex justify-center items-start">
-                    @if($unlimitedDiscount->active)
-                        <del class="text-red-400 font-semibold">
-                            <span>{{ $unlimitedPriceWithoutDiscount->formattedPrice() }}</span>
-                        </del>
-                    @endif
-                    <ins class="ml-2 no-underline text-3xl font-semibold">
-                        <span>{{ $unlimitedPrice->formattedPrice() }}</span>
-                    </ins>
-                </p>
+            <p class="py-8 flex justify-center items-start" x-show="couldFetchPrice" style="display: none">
+                <del class="text-red-400 font-semibold" x-show="discount.active" style="display: none">
+                    <span x-text="priceWithoutDiscount"></span>
+                </del>
+                <ins class="ml-2 no-underline text-3xl font-semibold">
+                    <span x-text="price"></span>
+                </ins>
+            </p>
 
-                @include('partials.discount', ['discount' => $unlimitedDiscount])
-            @endif
+            @include('partials.discount')
 
             <ul class="mb-8 text-sm lg:text-base text-blue-600 font-medium space-y-2 leading-snug">
                 <li class="flex items-baseline">
@@ -54,26 +51,21 @@
         </div>
 
         <div
-            class="flex-grow flex flex-col items-center -mt-6 mx-4 md:my-6 md:-ml-12 md:mr-0 py-6 px-12 md:pl-16 md:pr-8 border-8 border-blue-50 rounded-r">
+            class="flex-grow flex flex-col items-center -mt-6 mx-4 md:my-6 md:-ml-12 md:mr-0 py-6 px-12 md:pl-16 md:pr-8 border-8 border-blue-50 rounded-r"
+            x-data="spatiePrice({{ config('services.spatie_prices_api.single_purchasable_id') }})" x-init="init()">
             <h2 class="h-12 flex items-center justify-center text-xl font-semibold">
                 Single application
             </h2>
-            @if($couldFetchSinglePrice)
-                <p class="py-8 flex justify-center items-start">
-                    @if($singleDiscount->active)
-                        <del class="text-red-400 font-semibold">
-                        <span>
-                            {{ $singlePriceWithoutDiscount->formattedPrice() }}
-                        </span>
-                        </del>
-                    @endif
-                    <ins class="ml-2 no-underline text-3xl font-semibold">
-                        <span>{{ $singlePrice->formattedPrice() }}</span>
-                    </ins>
-                </p>
+            <p class="py-8 flex justify-center items-start" x-show="couldFetchPrice" style="display: none">
+                <del class="text-red-400 font-semibold" x-show="discount.active" style="display: none">
+                    <span x-text="priceWithoutDiscount"></span>
+                </del>
+                <ins class="ml-2 no-underline text-3xl font-semibold">
+                    <span x-text="price"></span>
+                </ins>
+            </p>
 
-                @include('partials.discount', ['discount' => $singleDiscount])
-            @endif
+            @include('partials.discount')
 
             <ul class="mb-8 text-sm lg:text-base text-blue-600 font-medium space-y-2 leading-snug">
                 <li class="flex items-baseline">

@@ -1,3 +1,4 @@
+@use('Spatie\PriceApi\SpatiePriceApi')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,6 +23,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
     <link href="/fontawesome-pro-5.15.1-web/css/all.css" rel="stylesheet">
 
+    {{ SpatiePriceApi::scripts() }}
     <script src="/js/alpine.js" defer></script>
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js"></script>
 
@@ -31,17 +33,13 @@
         });
     </script>
 
+    @include('partials.referrer')
     @include('partials.favicon')
     @include('partials.socialMetaTags')
 </head>
 <body class="flex flex-col min-h-screen font-sans text-blue-900">
 
-@if(flash()->message)
-    <div
-        class="z-50 fixed top-0 right-0 px-6 py-4 font-semibold  {{ flash()->class =='error' ? 'bg-red-500 text-red-100' : 'bg-green-500 text-green-100' }}">
-        {{ flash()->message }}
-    </div>
-@endif
+@yield('flash')
 
 <div>
     @yield('content')

@@ -117,3 +117,25 @@ it('validates the collection demo', function () {
         ->assertRedirect('/demo-collection')
         ->assertSessionHasErrors();
 });
+
+it('shows flash messages on the demo pages', function () {
+    $upload = uploadTemporaryFile();
+
+    continueSession();
+
+    $this->followingRedirects()
+        ->from('/demo-attachment')
+        ->post('/demo-attachment', [
+            'media' => [$upload['uuid'] => ['uuid' => $upload['uuid'], 'name' => 'photo.jpg', 'order' => 0]],
+        ])
+        ->assertOk()
+        ->assertSee('Thanks for uploading your file!');
+});
+
+it('renders a csrf token in the demo forms', function (string $url) {
+    $this->get($url)->assertOk()->assertSee('name="_token"', false);
+})->with([
+    '/demo-attachment',
+    '/demo-collection',
+    '/demo-customized-collection',
+]);
