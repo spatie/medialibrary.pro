@@ -2,8 +2,10 @@
 
 namespace App\Providers;
 
+use App\Support\BucketAssets;
 use App\Support\Database\EnsureSqliteDatabaseExists;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 use Spatie\Flash\Flash;
 
@@ -19,5 +21,18 @@ class AppServiceProvider extends ServiceProvider
             'success' => 'success',
             'error' => 'error',
         ]);
+
+        $this->serveAssetsFromBucket();
+    }
+
+    protected function serveAssetsFromBucket(): void
+    {
+        $bucketAssetsUrl = BucketAssets::url();
+
+        if (! $bucketAssetsUrl) {
+            return;
+        }
+
+        URL::useAssetOrigin($bucketAssetsUrl);
     }
 }

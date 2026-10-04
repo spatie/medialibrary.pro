@@ -1,6 +1,6 @@
 <header class="relative bg-blue-900 pt-8 mb-16">
-    <img style="opacity:0.45" class="absolute top-0 left-0 h-full w-full object-cover" loading="eager" srcset="/images/header-600.jpg 600w,
-                    /images/header-1200.jpg 1200w, /images/header-2400.jpg 2400w" sizes="100vw" src="/images/header-2400.jpg" alt="Picture by Andrew Neel | Unsplash">
+    <img style="opacity:0.45" class="absolute top-0 left-0 h-full w-full object-cover" loading="eager" srcset="{{ asset('images') }}/header-600.jpg 600w,
+                    {{ asset('images') }}/header-1200.jpg 1200w, {{ asset('images') }}/header-2400.jpg 2400w" sizes="100vw" src="{{ asset('images') }}/header-2400.jpg" alt="Picture by Andrew Neel | Unsplash">
 
     <div class="w-full max-w-5xl mx-auto px-4 sm:px-12 flex items-center justify-between">
         <div class="flex items-center">
@@ -62,7 +62,7 @@
                 <div id="intro" @mouseLeave="hideIntro()" @mouseEnter="showIntro()"  class="my-8
                             md:absolute top-0 left-0 w-full md:h-full md:ml-8 md:-mt-16
                             bg-blue-900 shadow-2xl">
-                    <img src="/images/intro-1600.jpg" class="border-2 border-blue-500 md:absolute inset-0 w-full h-full object-cover">
+                    <img src="{{ asset('images') }}/intro-1600.jpg" class="border-2 border-blue-500 md:absolute inset-0 w-full h-full object-cover">
                     <a @click="video=true" href="#" class="group flex justify-center items-start absolute inset-0
                                 bg-opacity-10 hover:bg-opacity-25 transition-all duration-200
                                 bg-blue-900">

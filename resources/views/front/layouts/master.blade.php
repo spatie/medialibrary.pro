@@ -21,10 +21,10 @@
     @endif
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
-    <link href="/fontawesome-pro-5.15.1-web/css/all.css" rel="stylesheet">
+    <link href="{{ asset('fontawesome-pro-5.15.1-web') }}/css/all.css" rel="stylesheet">
 
     {{ SpatiePriceApi::scripts() }}
-    <script src="/js/alpine.js" defer></script>
+    <script src="{{ asset('js') }}/alpine.js" defer></script>
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js"></script>
 
     <script>
