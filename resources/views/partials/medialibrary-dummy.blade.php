@@ -99,7 +99,7 @@
             </div>
 
             <div class="media-library-thumb">
-                <img class="media-library-thumb-img" src="{{ asset('images') }}/dummy-01.jpg" alt="laravel-beyond-crud.jpg">
+                <img class="media-library-thumb-img" src="{{ asset('images/dummy-01.jpg') }}" alt="laravel-beyond-crud.jpg">
 
                 <div class="media-library-replace">
                     <button type="button" class="media-library-dropzone media-library-dropzone-replace">
@@ -146,7 +146,7 @@
             </div>
 
             <div class="media-library-thumb">
-                <img class="media-library-thumb-img" src="{{ asset('images') }}/dummy-02.jpg" alt="mailcoach.jpg">
+                <img class="media-library-thumb-img" src="{{ asset('images/dummy-02.jpg') }}" alt="mailcoach.jpg">
 
                 <div class="media-library-replace">
                     <button type="button" class="media-library-dropzone media-library-dropzone-replace">
@@ -193,7 +193,7 @@
             </div>
 
             <div class="media-library-thumb">
-                <img class="media-library-thumb-img" src="{{ asset('images') }}/dummy-03.jpg" alt="front-line-php.jpg">
+                <img class="media-library-thumb-img" src="{{ asset('images/dummy-03.jpg') }}" alt="front-line-php.jpg">
 
                 <div class="media-library-replace">
                     <button type="button" class="media-library-dropzone media-library-dropzone-replace">

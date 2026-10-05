@@ -2,9 +2,9 @@
     <div class="mx-auto w-full max-w-5xl px-4 sm:px-12">
         <div class="px-4 py-16 sm:px-16 sm:py-24  bg-red-500 shadow-logo rounded-sm">
             <div class="🖼">
-                <img loading="eager" srcset="{{ asset('images') }}/frames-1000.jpg 1000w,
-                    {{ asset('images') }}/frames-750.jpg 750w,
-                    {{ asset('images') }}/frames-500.jpg 500w," sizes="(min-width: 1024px) 540px, (min-width: 640px) 50vw, 100vw" src="{{ asset('images') }}/frames-1000.jpg" alt="Picture by Andrew Neel | Unsplash">
+                <img loading="eager" srcset="{{ asset('images/frames-1000.jpg') }} 1000w,
+                    {{ asset('images/frames-750.jpg') }} 750w,
+                    {{ asset('images/frames-500.jpg') }} 500w," sizes="(min-width: 1024px) 540px, (min-width: 640px) 50vw, 100vw" src="{{ asset('images/frames-1000.jpg') }}" alt="Picture by Andrew Neel | Unsplash">
             </div>
 
             <h2 class="font-bold text-white text-2xl text-left leading-tight | sm:text-3xl | lg:text-5xl">
