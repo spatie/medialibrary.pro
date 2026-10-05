@@ -11,6 +11,11 @@ use Spatie\Flash\Flash;
 
 class AppServiceProvider extends ServiceProvider
 {
+    public function register(): void
+    {
+        $this->throwOnFailedBucketWrites();
+    }
+
     public function boot(): void
     {
         $this->app->booted(fn () => app(EnsureSqliteDatabaseExists::class)(config('database.default')));
@@ -23,6 +28,17 @@ class AppServiceProvider extends ServiceProvider
         ]);
 
         $this->serveAssetsFromBucket();
+    }
+
+    /*
+     * On Laravel Cloud the media and assets buckets are attached to the environment as the
+     * `media` and `assets` disks. That replaces their configuration with one that silently
+     * ignores failed writes, so a failed upload of media or assets would go unnoticed.
+     */
+    protected function throwOnFailedBucketWrites(): void
+    {
+        config()->set('filesystems.disks.media.throw', true);
+        config()->set('filesystems.disks.assets.throw', true);
     }
 
     protected function serveAssetsFromBucket(): void

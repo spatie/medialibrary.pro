@@ -2,6 +2,7 @@
 
 use App\Providers\AppServiceProvider;
 use App\Support\BucketAssets;
+use Illuminate\Foundation\CloudBootstrapper;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
@@ -118,4 +119,45 @@ it('points the asset urls of pages to the bucket', function () {
         ->assertSee("{$bucketAssetsUrl}/images/social-card.jpg", false)
         ->assertSee("{$bucketAssetsUrl}/favicon-32x32.png", false)
         ->assertSee('href="/site.webmanifest"', false);
+});
+
+it('uses the assets bucket attached on laravel cloud', function () {
+    $_SERVER['LARAVEL_CLOUD_DISK_CONFIG'] = json_encode([
+        [
+            'disk' => 'media',
+            'access_key_id' => 'media-key',
+            'access_key_secret' => 'media-secret',
+            'bucket' => 'attached-media-bucket',
+            'url' => 'https://media.example.com',
+            'endpoint' => 'https://r2.example.com',
+        ],
+        [
+            'disk' => 'assets',
+            'access_key_id' => 'assets-key',
+            'access_key_secret' => 'assets-secret',
+            'bucket' => 'attached-assets-bucket',
+            'url' => 'https://attached-assets.example.com',
+            'endpoint' => 'https://r2.example.com',
+        ],
+    ]);
+
+    CloudBootstrapper::configureDisks(app());
+
+    (new AppServiceProvider(app()))->register();
+
+    unset($_SERVER['LARAVEL_CLOUD_DISK_CONFIG']);
+
+    expect(config('filesystems.disks.assets'))
+        ->bucket->toBe('attached-assets-bucket')
+        ->key->toBe('assets-key')
+        ->url->toBe('https://attached-assets.example.com')
+        ->throw->toBeTrue();
+
+    expect(config('filesystems.disks.media'))
+        ->bucket->toBe('attached-media-bucket')
+        ->throw->toBeTrue();
+
+    File::put(BucketAssets::versionFilePath(), 'abc123');
+
+    expect(BucketAssets::url())->toBe('https://attached-assets.example.com/abc123');
 });
