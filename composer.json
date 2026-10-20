@@ -14,7 +14,7 @@
         "php": "^8.5",
         "ext-json": "*",
         "guzzlehttp/guzzle": "^7.9",
-        "laravel/framework": "^13.0",
+        "laravel/framework": "^13.38.0",
         "laravel/tinker": "^3.0",
         "league/commonmark": "^2.7",
         "league/flysystem-aws-s3-v3": "^3.35",
